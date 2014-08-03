@@ -1,6 +1,8 @@
 #ifndef __SEVECTOR__
 #define __SEVECTOR__
 
+#include <iostream>
+
 template< class T>
 
 class SEVector
