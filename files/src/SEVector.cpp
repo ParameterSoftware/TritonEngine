@@ -22,14 +22,14 @@ SEVector::SEVector( T x, T y, T z )
 	this.z = z;
 }
 
-SEVector::checkFor(T check)
+bool SEVector::checkFor(T check)
 {
 	if(check == this.x || check == this.y || check == this.z)
 		return true;
 	return false;
 }
 
-SEVector::operator+(SEVector other)
+SEVector SEVector::operator+(SEVector other)
 {
 	T x = this.x + other.x;
 	T y = this.y + other.y;
@@ -37,7 +37,7 @@ SEVector::operator+(SEVector other)
 	return SEVector(x, y, z);
 }
 
-SEVector::operator-(SEVector other)
+SEVector SEVector::operator-(SEVector other)
 {
 	T x = this.x - other.x;
 	T y = this.y - other.y;
@@ -45,7 +45,7 @@ SEVector::operator-(SEVector other)
 	return SEVector(x, y, z);
 }
 
-SEVector::operator*(SEVector other)
+SEVector SEVector::operator*(SEVector other)
 {
 	T x = this.x * other.x;
 	T y = this.y * other.y;
@@ -53,7 +53,7 @@ SEVector::operator*(SEVector other)
 	return SEVector(x, y, z);
 }
 
-SEVector::operator/(SEVector other)
+SEVector SEVector::operator/(SEVector other)
 {
 	T x = this.x / other.x;
 	T y = this.y / other.y;
@@ -61,7 +61,7 @@ SEVector::operator/(SEVector other)
 	return SEVector(x, y, z);
 }
 
-SEVector::operator=(SEVector other)
+SEVector SEVector::operator=(SEVector other)
 {
 	T x = this.x = other.x;
 	T y = this.y = other.y;
@@ -69,7 +69,7 @@ SEVector::operator=(SEVector other)
 	return SEVector(x, y, z);
 }
 
-SEVector::operator+(T other)
+SEVector SEVector::operator+(T other)
 {
 	T x = this.x + other;
 	T y = this.y + other;
@@ -77,7 +77,7 @@ SEVector::operator+(T other)
 	return SEVector(x, y, z);
 }
 
-SEVector::operator-(T other)
+SEVector SEVector::operator-(T other)
 {
 	T x = this.x - other;
 	T y = this.y - other;
@@ -85,7 +85,7 @@ SEVector::operator-(T other)
 	return SEVector(x, y, z);
 }
 
-SEVector::operator*(T other)
+SEVector SEVector::operator*(T other)
 {
 	T x = this.x * other;
 	T y = this.y * other;
@@ -93,7 +93,7 @@ SEVector::operator*(T other)
 	return SEVector(x, y, z);
 }
 
-SEVector::operator+(T other)
+SEVector SEVector::operator+(T other)
 {
 	T x = this.x / other;
 	T y = this.y / other;
@@ -101,7 +101,7 @@ SEVector::operator+(T other)
 	return SEVector(x, y, z);
 }
 
-SEVector::operator+(T other)
+SEVector SEVector::operator+(T other)
 {
 	T x = this.x = other;
 	T y = this.y = other;
