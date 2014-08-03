@@ -1,9 +1,6 @@
 #include <iostream>
+#include "SEPhysics.h"
 
-class SEPhysics
+SEPhysics::SEPhysics()
 {
-private:
-	static SEPhysics instance;
-
-	
-};
+}
