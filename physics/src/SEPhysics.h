@@ -13,6 +13,7 @@ private:
 public:
 	static SEPhysics getInstance();
 	void setGravity(SEVector gravity);
+	SEVector getGravity();
 };
 
 
