@@ -26,6 +26,7 @@ public:
 	SEVector operator*(T other);
 	SEVector operator/(T other);
 	SEVector operator=(T other);
+	int size();
 }
 
 #endif //define(__SEVECTOR__)
