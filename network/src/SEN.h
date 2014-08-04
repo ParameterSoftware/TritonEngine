@@ -1,3 +1,6 @@
+#ifndef __SEN__
+#define __SEN__
+
 // platform detection
 
 #define PLATFORM_WINDOWS  1
@@ -32,3 +35,5 @@ public:
 	bool InitializeSockets();
 	void ShutdownSockets()
 };
+
+#endif /* define(__SEN__) */
