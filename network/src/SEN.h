@@ -24,7 +24,8 @@
 #include <fcntl.h>
 #endif
 
-bool senInitializeSockets();
-void senShutdownSockets();
+bool senInitialize(bool enable_experimental=false);
+void senShutdown();
+
 
 #endif /* define(__SEN__) */
