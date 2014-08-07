@@ -25,7 +25,7 @@ class SENSocket
 public:
 	Socket(bool blocking_mode=false);
 	~Socket();
-	bool Open( unsigned short port );
+	bool Open( unsigned short port, bool bm=false);
 	void Close();
 	bool IsOpen() const;
 	bool Send( const Address & destination, const void * data, int size );
