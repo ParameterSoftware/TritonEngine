@@ -13,10 +13,10 @@ SEPhysics SEPhysics::getInstance()
 
 void SEPhysics::setGravity(SEVector gravity)
 {
-	this.gravity = gravity;
+	this->gravity = gravity;
 }
 
 SEVector SEPhysics::getGravity()
 {
-	return this.gravity
+	return this->gravity
 }
