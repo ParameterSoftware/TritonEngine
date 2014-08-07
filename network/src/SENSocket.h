@@ -31,7 +31,7 @@ public:
 	bool Send( const Address & destination, const void * data, int size );
 	int Receive( Address & sender, void * data, int size );
 private:
-	int handle;
+	int socket;
 };
 
 #endif /* define(__SENSOCKET__) */
