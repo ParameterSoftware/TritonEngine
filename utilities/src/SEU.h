@@ -3,7 +3,7 @@
 #ifndef __SEU__
 #define __SEU__
 
-seuConvertToInt(char obj);
-seuConvertToChar(int obj);
+int seuConvertToInt(char obj);
+char seuConvertToChar(int obj);
 
 #endif /* define(__SEU__) */
