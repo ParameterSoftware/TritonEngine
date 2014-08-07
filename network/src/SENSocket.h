@@ -23,7 +23,7 @@ private:
 class SENSocket
 {
 public:
-	Socket();
+	Socket(bool blocking_mode=false);
 	~Socket();
 	bool Open( unsigned short port );
 	void Close();
