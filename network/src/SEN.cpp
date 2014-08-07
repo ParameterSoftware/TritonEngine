@@ -1,28 +1,6 @@
-#include "SEUException.h"
 #include "SEN.h"
 
-SocketManager::SocketManager()
-{
-	if(!(this.InitializeSockets()))
-		throw SEUException("Socket Intialization Failed: Windows Socket Application Failed");
-}
-
-SocketManager SocketManager::getInstance()
-{
-	if(SocketManager::instance == NULL)
-	{
-		instance = new SocketManager();
-		this = instance;
-	}
-	return instance;
-}
-
-SocketManager::~SocketManager()
-{
-	this.ShutdownSockets();
-}
-
-bool SocketManager::InitializeSockets()
+bool senInitializeSockets()
 {
 	#if PLATFORM == PLATFORM_WINDOWS
 	WSADATA WsaData;
@@ -32,7 +10,7 @@ bool SocketManager::InitializeSockets()
 	#endif
 }
 
-void SocketManager::ShutodwnSockets()
+void senShutodwnSockets()
 {
 	#if PLATFORM == PLATFORM_WINDOWS
 	WSACleanup();
