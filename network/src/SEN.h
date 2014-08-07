@@ -24,16 +24,7 @@
 #include <fcntl.h>
 #endif
 
-class SocketManager
-{
-private:
-	static SocketManager instance;
-	SocketManager();
-public:
-	static SocketManager getInstance();
-	~SocketManager();
-	bool InitializeSockets();
-	void ShutdownSockets()
-};
+bool senInitializeSockets();
+void senShutdownSockets();
 
 #endif /* define(__SEN__) */
