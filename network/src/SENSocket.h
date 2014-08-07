@@ -15,6 +15,9 @@ public:
 	unsigned char GetC() const;
 	unsigned char GetD() const;
 	unsigned short GetPort() const;
+	bool operator == ( const Address & other ) const;
+	bool operator != ( const Address & other ) const;
+	sockaddr_in to_sai();
 private:
 	unsigned int address;
 	unsigned short port;
