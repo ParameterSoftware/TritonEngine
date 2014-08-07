@@ -19,7 +19,7 @@ public:
 	void Stop();
 	bool IsRunning() const;
 	void Listen();
-	void Connect( const Address & address );
+	void Connect( const SENAddress & address );
 	bool IsConnecting() const;
 	bool ConnectFailed() const;
 	bool IsConnected() const;
