@@ -13,8 +13,8 @@ public:
 		Server
 	};
 	
-	Connection( unsigned int protocolId, float timeout );
-	virtual ~Connection();
+	SENConnection( unsigned int protocolId, float timeout );
+	virtual ~SENConnection();
 	bool Start( int port );
 	void Stop();
 	bool IsRunning() const;
