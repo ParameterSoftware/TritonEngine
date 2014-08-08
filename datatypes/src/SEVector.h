@@ -3,7 +3,7 @@
 
 #include <iostream>
 
-template< class T>
+template<typedef T>
 
 class SEVector
 {
