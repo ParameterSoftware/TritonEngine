@@ -32,7 +32,6 @@ public:
 private:
 	unsigned int vaoID[1];
 	unsigned int vboID[1];
-	SEGVertexHolder holder;
 };
 
 #endif /* define(__SEGVBO__) */
