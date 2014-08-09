@@ -178,12 +178,12 @@ unsigned short GetPort()
 	return port;
 }
 
-bool operator == ( const Address & other )
+bool SENAddress::operator == ( const SENAddress & other )
 {
 	return this->address == other.address && this->port == other.port;
 }
 
-bool operator != ( const Address & other )
+bool SENAddress::operator != ( const SENAddress & other )
 {
 	return ! ( *this == other );
 }
