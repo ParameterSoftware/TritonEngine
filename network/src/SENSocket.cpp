@@ -142,7 +142,7 @@ SENAddress::SENAddress( unsigned char a, unsigned char b, unsigned char c, unsig
 	this->port = port;
 }
 
-Address( unsigned int address, unsigned short port )
+SENAddress::SENAddress( unsigned int address, unsigned short port )
 {
 	this->address = address;
 	this->port = port;
