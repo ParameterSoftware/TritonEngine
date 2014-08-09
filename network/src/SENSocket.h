@@ -6,9 +6,9 @@
 class SENAddress
 {
 public:
-	Address();
-	Address( unsigned char a, unsigned char b, unsigned char c, unsigned char d, unsigned short port );
-	Address( unsigned int address, unsigned short port );
+	SENAddress();
+	SENAddress( unsigned char a, unsigned char b, unsigned char c, unsigned char d, unsigned short port );
+	SENAddress( unsigned int address, unsigned short port );
 	unsigned int GetAddress() const;
 	unsigned char GetA() const;
 	unsigned char GetB() const;
@@ -26,8 +26,8 @@ private:
 class SENSocket
 {
 public:
-	Socket(unsigned short port=0, bool blocking_mode=false);
-	~Socket();
+	SENSocket(unsigned short port=0, bool blocking_mode=false);
+	~SENSocket();
 	bool Open( unsigned short port, bool bm=false);
 	void Close();
 	bool IsOpen() const;
