@@ -6,14 +6,13 @@
 class SEUPGame
 {
 public:
-	SEUPGame(std::string game_name, SENAddress update_address);
+	SEUPGame(std::string game_name, unsigned short update_port);
 	~SEUPGame();
 	bool Update();
 	virtual bool OnFailedUpdate();
 private:
 	std::string game_name;
 	SENSocket update_socket;
-	SENAddress update_address;
 };
 
 class SEUPEngine
