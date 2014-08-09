@@ -6,7 +6,7 @@
 class SEUPGame
 {
 public:
-	SEUPGame(std::string game_name, std::string update_address);
+	SEUPGame(std::string game_name, SENAddress update_address);
 	~SEUPGame();
 	bool Update();
 	virtual bool OnFailedUpdate();
