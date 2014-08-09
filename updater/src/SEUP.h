@@ -13,6 +13,8 @@ public:
 private:
 	std::string game_name;
 	SENSocket update_socket;
+	void* recieved_data;
+	int last_packet_size;
 };
 
 class SEUPEngine
