@@ -15,8 +15,8 @@ public:
 	unsigned char GetC() const;
 	unsigned char GetD() const;
 	unsigned short GetPort() const;
-	bool operator == ( const Address & other ) const;
-	bool operator != ( const Address & other ) const;
+	bool operator == ( const SENAddress & other ) const;
+	bool operator != ( const SENAddress & other ) const;
 	sockaddr_in to_sai();
 private:
 	unsigned int address;
@@ -31,8 +31,8 @@ public:
 	bool Open( unsigned short port, bool bm=false);
 	void Close();
 	bool IsOpen() const;
-	bool Send( const Address & destination, const void * data, int size );
-	int Receive( Address & sender, void * data, int size );
+	bool Send( const SENAddress & destination, const void * data, int size );
+	int Receive( SENAddress & sender, void * data, int size );
 private:
 	int socket;
 };
