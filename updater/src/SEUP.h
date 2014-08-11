@@ -8,6 +8,7 @@ class SEUPGame
 public:
 	SEUPGame(std::string game_name, unsigned short update_port);
 	~SEUPGame();
+	bool CheckForUpdate();
 	bool Update();
 	virtual bool OnFailedUpdate();
 private:
