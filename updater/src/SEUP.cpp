@@ -11,8 +11,21 @@ SEUPGame::~SEUPGame()
 	delete update_socket;
 }
 
+bool SEUPGame::CheckForUpdate()
+{
+	SENAddress update_address;
+	int size = 1;
+	update_socket.Recieve( update_address, recieved_data, size );
+	delete update_address;
+	int number_data = seuConvertToInt(recieved_data);
+	if(recieved_data == 't' || recieved_data == 'T' || recieved_data == '1' || recieved_data == 'y' || recieved_data == 'Y' || number_data > 0)
+		return this->Update();
+	return false;
+}
+
 bool SEUPGame::Update()
 {
+	SENAddress update_address;
 	int size = 10;
 	int recieved_bytes = update_socket.Recieve( update_address, recieved_data, size );
 	recieved_data = seuConvertToInt(recieved_data);
