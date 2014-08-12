@@ -23,13 +23,16 @@ class SEUPEngine
 public:
 	SEUPEngine();
 	~SEUPEngine();
+	bool CheckForUpdate();
 	bool Update();
 	bool OnFailedUpdate();
 	void SetGameUpdater(SEUPGame updater);
 private:
 	std::string engine_name = "Spartan Engine";
 	SEUPGame game_updater;
-	SENSocket update_address;
+	SENSocket update_socket;
+	void* recieved_data;
+	int last_packet_size;
 };
 
 #endif /* define(__SEUP__) */
