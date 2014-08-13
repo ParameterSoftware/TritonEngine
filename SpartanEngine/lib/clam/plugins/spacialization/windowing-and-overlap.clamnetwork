@@ -1,0 +1,86 @@
+<network id="Unnamed">
+
+  <processing id="AudioBuffer2Stream_0" position="288,210" size="173,58" type="AudioBuffer2Stream">
+    <HopSize>512</HopSize>
+    <BufferSize>1024</BufferSize>
+  </processing>
+
+  <processing id="AudioMixer_0" position="389,128" size="115,62" type="AudioMixer">
+    <NumberOfInPorts>2</NumberOfInPorts>
+    </processing>
+
+  <processing id="AudioSource_0" position="20,83" size="128,108" type="AudioSource" />
+
+  <processing id="AudioWindowing_0" position="99,237" size="149,58" type="AudioStream2Buffer">
+    <HopSize>512</HopSize>
+    <BufferSize>1024</BufferSize>
+    </processing>
+
+  <processing id="BufferOscilloscope_0" position="223,315" size="214,134" type="BufferOscilloscope" />
+
+  <processing id="Gain 0" position="246,38" size="181,73" type="OutControlSender">
+    <Min>-1</Min>
+    <Default>-1</Default>
+    <Max>0</Max>
+    <Step>0.01</Step>
+    <ControlRepresentation>Horizontal Slider</ControlRepresentation>
+  </processing>
+
+  <processing id="Gain 1" position="451,27" size="177,73" type="OutControlSender">
+    <Min>0</Min>
+    <Default>0.5</Default>
+    <Max>1</Max>
+    <Step>0.005</Step>
+    <ControlRepresentation>Horizontal Slider</ControlRepresentation>
+  </processing>
+
+  <processing id="Oscilloscope_0" position="521,133" size="205,173" type="Oscilloscope" />
+
+  <processing id="Oscilloscope_1" position="444,311" size="198,132" type="Oscilloscope" />
+
+  <port_connection>
+    <out>AudioBuffer2Stream_0.Audio stream</out>
+    <in>AudioMixer_0.Input 1</in>
+  </port_connection>
+
+  <port_connection>
+    <out>AudioBuffer2Stream_0.Audio stream</out>
+    <in>Oscilloscope_1.Input</in>
+  </port_connection>
+
+  <port_connection>
+    <out>AudioMixer_0.Output Audio</out>
+    <in>Oscilloscope_0.Input</in>
+  </port_connection>
+
+  <port_connection>
+    <out>AudioSource_0.1</out>
+    <in>AudioWindowing_0.Audio stream</in>
+  </port_connection>
+
+  <port_connection>
+    <out>AudioSource_0.1</out>
+    <in>AudioMixer_0.Input 0</in>
+  </port_connection>
+
+  <port_connection>
+    <out>AudioWindowing_0.Audio buffer</out>
+    <in>AudioBuffer2Stream_0.Audio buffer</in>
+  </port_connection>
+
+  <port_connection>
+    <out>AudioWindowing_0.Audio buffer</out>
+    <in>BufferOscilloscope_0.Input</in>
+  </port_connection>
+
+  <control_connection>
+    <out>Gain 0.out</out>
+    <in>AudioMixer_0.Gain 0</in>
+  </control_connection>
+
+  <control_connection>
+    <out>Gain 1.out</out>
+    <in>AudioMixer_0.Gain 1</in>
+  </control_connection>
+
+</network>

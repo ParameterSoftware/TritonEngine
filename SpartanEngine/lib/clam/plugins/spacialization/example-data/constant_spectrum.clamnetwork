@@ -1,0 +1,55 @@
+<network id="Unnamed">
+
+  <processing id="AudioBuffer2Stream" position="274,4" size="159,58" type="AudioBuffer2Stream">
+    <HopSize>32768</HopSize>
+    <BufferSize>65536</BufferSize>
+    </processing>
+
+  <processing id="AudioSink_0" position="365,111" size="128,111" type="AudioSink" />
+
+  <processing id="BufferOscilloscope" position="46,54" size="284,120" type="BufferOscilloscope" />
+
+  <processing id="ConstantSpectrum" position="3,4" size="151,62" type="ConstantSpectrum">
+    <AudioFile>Carnel_3P.wav</AudioFile>
+    <FrameSize>32768</FrameSize>
+  </processing>
+
+  <processing id="MagPhaseSpectrum2Spectrum_0" position="163,161" size="241,58" type="MagPhaseSpectrum2Spectrum" />
+
+  <processing id="MyIFFT" position="174,2" size="74,58" type="MyIFFT">
+    <AudioSize>65536</AudioSize>
+  </processing>
+
+  <processing id="SpectrumView_0" position="113,203" size="351,121" type="SpectrumView" />
+
+  <port_connection>
+    <out>AudioBuffer2Stream.Audio stream</out>
+    <in>AudioSink_0.1</in>
+  </port_connection>
+
+  <port_connection>
+    <out>ConstantSpectrum.Complex Spectrum</out>
+    <in>MyIFFT.Complex Spectrum</in>
+  </port_connection>
+
+  <port_connection>
+    <out>ConstantSpectrum.MagPhase Spectrum</out>
+    <in>MagPhaseSpectrum2Spectrum_0.MagPhaseSpectrum</in>
+  </port_connection>
+
+  <port_connection>
+    <out>MagPhaseSpectrum2Spectrum_0.Spectrum</out>
+    <in>SpectrumView_0.Input</in>
+  </port_connection>
+
+  <port_connection>
+    <out>MyIFFT.Audio Buffer</out>
+    <in>AudioBuffer2Stream.Audio buffer</in>
+  </port_connection>
+
+  <port_connection>
+    <out>MyIFFT.Audio Buffer</out>
+    <in>BufferOscilloscope.Input</in>
+  </port_connection>
+
+</network>

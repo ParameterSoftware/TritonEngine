@@ -1,0 +1,204 @@
+<network id="Unnamed">
+
+  <processing id="AudioAmplifier" position="869,226" size="133,59" type="AudioAmplifier">
+    <MaxGain>2</MaxGain>
+  </processing>
+
+  <processing id="AudioSink" position="1044,80" size="128,111" type="AudioSink" />
+
+  <processing id="AudioSource" position="16,164" size="128,108" type="AudioSource" />
+
+  <processing id="AudioSwitch" position="1005,323" size="109,62" type="AudioSwitch">
+    <NumberOfInPorts>2</NumberOfInPorts>
+    <FrameSize>512</FrameSize>
+  </processing>
+
+  <processing id="Compression" position="442,-9" size="189,76" type="OutControlSender">
+    <Min>0</Min>
+    <Default>9</Default>
+    <Max>10</Max>
+    <Step>0.05</Step>
+    <ControlRepresentation>Horizontal Slider</ControlRepresentation>
+  </processing>
+
+  <processing id="Distortion" position="282,-9" size="177,73" type="OutControlSender">
+    <Min>0</Min>
+    <Default>0</Default>
+    <Max>1</Max>
+    <Step>0.01</Step>
+    <ControlRepresentation>Horizontal Slider</ControlRepresentation>
+    <Mapping>Log</Mapping>
+  </processing>
+
+  <processing id="FFT" position="392,342" size="55,58" type="FFT">
+    <AudioSize>1024</AudioSize>
+  </processing>
+
+  <processing id="Factor Distortion" position="389,87" size="158,59" type="GuitarDistortion">
+    <DistortionType>Factor</DistortionType>
+  </processing>
+
+  <processing id="Gain" position="846,79" size="181,76" type="OutControlSender">
+    <Min>0</Min>
+    <Default>1</Default>
+    <Max>2</Max>
+    <Step>0.01</Step>
+    <ControlRepresentation>Horizontal Slider</ControlRepresentation>
+  </processing>
+
+  <processing id="HighCutoff" position="443,200" size="225,73" type="OutControlSender">
+    <Min>0</Min>
+    <Default>1000</Default>
+    <Max>1e+06</Max>
+    <Step>10</Step>
+    <ControlRepresentation>Horizontal Slider</ControlRepresentation>
+  </processing>
+
+  <processing id="HighGain" position="655,182" size="193,73" type="OutControlSender">
+    <Min>0</Min>
+    <Default>5</Default>
+    <Max>100</Max>
+    <Step>0.5</Step>
+    <ControlRepresentation>Horizontal Slider</ControlRepresentation>
+  </processing>
+
+  <processing id="IFFT" position="636,341" size="58,58" type="IFFT">
+    <AudioSize>1024</AudioSize>
+  </processing>
+
+  <processing id="LowCutoff" position="231,200" size="225,73" type="OutControlSender">
+    <Min>0</Min>
+    <Default>100</Default>
+    <Max>1e+06</Max>
+    <Step>10</Step>
+    <ControlRepresentation>Horizontal Slider</ControlRepresentation>
+  </processing>
+
+  <processing id="LowGain" position="655,61" size="193,73" type="OutControlSender">
+    <Min>0</Min>
+    <Default>5</Default>
+    <Max>100</Max>
+    <Step>0.5</Step>
+    <ControlRepresentation>Horizontal Slider</ControlRepresentation>
+  </processing>
+
+  <processing id="MidGain" position="655,120" size="193,73" type="OutControlSender">
+    <Min>0</Min>
+    <Default>5</Default>
+    <Max>100</Max>
+    <Step>0.5</Step>
+    <ControlRepresentation>Horizontal Slider</ControlRepresentation>
+  </processing>
+
+  <processing id="Oscilloscope" position="641,427" size="384,211" type="Oscilloscope" />
+
+  <processing id="Oscilloscope_1" position="67,421" size="337,235" type="Oscilloscope" />
+
+  <processing id="Switch" position="1043,157" size="109,142" type="OutControlSender">
+    <Min>0</Min>
+    <Default>0</Default>
+    <Max>1</Max>
+    <Step>1</Step>
+    <ControlRepresentation>Knot</ControlRepresentation>
+  </processing>
+
+  <processing id="ThreeBandFilter" position="489,338" size="132,58" type="ThreeBandFilter">
+    <PreserveOuts>0</PreserveOuts>
+  </processing>
+
+  <port_connection>
+    <out>AudioAmplifier.Audio Output</out>
+    <in>AudioSwitch.Input 1</in>
+  </port_connection>
+
+  <port_connection>
+    <out>AudioSource.1</out>
+    <in>Factor Distortion.Input Audio</in>
+  </port_connection>
+
+  <port_connection>
+    <out>AudioSource.1</out>
+    <in>Oscilloscope_1.Input</in>
+  </port_connection>
+
+  <port_connection>
+    <out>AudioSource.1</out>
+    <in>AudioSwitch.Input 0</in>
+  </port_connection>
+
+  <port_connection>
+    <out>AudioSwitch.Output Audio</out>
+    <in>AudioSink.1</in>
+  </port_connection>
+
+  <port_connection>
+    <out>AudioSwitch.Output Audio</out>
+    <in>Oscilloscope.Input</in>
+  </port_connection>
+
+  <port_connection>
+    <out>FFT.Spectrum Output</out>
+    <in>ThreeBandFilter.In Spectrum</in>
+  </port_connection>
+
+  <port_connection>
+    <out>Factor Distortion.Audio Output</out>
+    <in>FFT.Audio Input</in>
+  </port_connection>
+
+  <port_connection>
+    <out>IFFT.Audio Output</out>
+    <in>AudioAmplifier.Input Audio</in>
+  </port_connection>
+
+  <port_connection>
+    <out>ThreeBandFilter.Out Spectrum</out>
+    <in>IFFT.Spectrum Input</in>
+  </port_connection>
+
+  <control_connection>
+    <out>Compression.out</out>
+    <in>Factor Distortion.Param_1</in>
+  </control_connection>
+
+  <control_connection>
+    <out>Distortion.out</out>
+    <in>Factor Distortion.Param_0</in>
+  </control_connection>
+
+  <control_connection>
+    <out>Gain.out</out>
+    <in>AudioAmplifier.Gain</in>
+  </control_connection>
+
+  <control_connection>
+    <out>HighCutoff.out</out>
+    <in>ThreeBandFilter.HighCutoff</in>
+  </control_connection>
+
+  <control_connection>
+    <out>HighGain.out</out>
+    <in>ThreeBandFilter.HighGain</in>
+  </control_connection>
+
+  <control_connection>
+    <out>LowCutoff.out</out>
+    <in>ThreeBandFilter.LowCutoff</in>
+  </control_connection>
+
+  <control_connection>
+    <out>LowGain.out</out>
+    <in>ThreeBandFilter.LowGain</in>
+  </control_connection>
+
+  <control_connection>
+    <out>MidGain.out</out>
+    <in>ThreeBandFilter.MidGain</in>
+  </control_connection>
+
+  <control_connection>
+    <out>Switch.out</out>
+    <in>AudioSwitch.Switch</in>
+  </control_connection>
+
+</network>

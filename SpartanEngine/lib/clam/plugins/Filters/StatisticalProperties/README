@@ -1,0 +1,8 @@
+== Description ==
+
+Realtime statistical properties calculation (mean, Standard deviation, min, max, etc)
+
+== Install ==
+
+scons clam_prefix=path/to/installed/clam/prefix
+scons install

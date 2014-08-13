@@ -1,0 +1,83 @@
+#!/usr/bin/env python
+import os, glob, sys, subprocess
+
+moduleName='osc'
+libraryName='clam_'+moduleName
+version = "1.4.0"
+description = "Experimental OSC support for the CLAM framework"
+url = 'http://clam-project.org'
+clamDependencies = [
+	'clam_core',
+	'clam_processing',
+	'clam_sndfile',
+	]
+otherDependencies = [
+	]
+
+options = Variables('options.cache', ARGUMENTS)
+options.Add(PathVariable('clam_prefix', 'The prefix where CLAM was installed', ''))
+options.Add(BoolVariable('verbose', 'Display the full command line', 'no') )
+options.Add(PathVariable('prefix', 'Installation prefix (normally /usr, by default this is clam_prefix)', "", validator=PathVariable.PathAccept))
+options.Add(PathVariable('sandbox_path', 'Path where third party libraries were installed (in windows)', "", validator=PathVariable.PathAccept))
+if sys.platform=='linux2' :
+	options.Add(BoolVariable('crossmingw', 'Using MinGW crosscompiler mode', 'no') )
+
+toolChain = 'default'
+if sys.platform == "win32": toolChain = 'mingw'
+env = Environment(ENV=os.environ, tools=[toolChain], options=options)
+options.Save('options.cache', env)
+Help(options.GenerateHelpText(env))
+env.SConsignFile() # Single signature file
+
+CLAMInstallDir = env['clam_prefix']
+if not env['prefix'] : env['prefix'] = env['clam_prefix']
+
+clam_sconstoolspath = os.path.join(CLAMInstallDir,'share','clam','sconstools')
+if not os.access(os.path.join(clam_sconstoolspath,"clam.py"),os.R_OK):
+	raise Exception("CLAM not installed at '%s'. Use clam_prefix option."%CLAMInstallDir)
+if env['crossmingw'] :
+	env.Tool('crossmingw', toolpath=[clam_sconstoolspath])
+env.Tool('clam', toolpath=[clam_sconstoolspath])
+env.EnableClamModules(clamDependencies, CLAMInstallDir)
+
+# Sources and headers
+sourcePaths = ["."]
+sources = env.scanFiles('*.cxx', sourcePaths) + env.scanFiles('*.c', sourcePaths)
+sources = dict.fromkeys(sources).keys()
+headers = env.scanFiles('*.hxx', sourcePaths) + env.scanFiles('*.h', sourcePaths)
+env.AppendUnique(CPPPATH=sourcePaths)
+
+if subprocess.call("pkg-config --atleast-version=0.26 liblo",shell=True)==0:
+	env.Append( LIBPATH=['/usr/local/lib'] )
+	env.Append( CPPDEFINES=['__MULTICAST_LIBLO__'] )
+env.ParseConfig('pkg-config --cflags --libs liblo')
+
+if sys.platform=="darwin" : #TODO fix. should be available in clamlibs pc
+	env.Append( LIBPATH=['/opt/local/lib'] )
+	env.Append( LIBS=['fftw3'] )
+
+# TODO: All this (but the ws2_32 in windows) can be retrieved from pkg-config
+if env['sandbox_path'] :
+	env.Append( CPPPATH=os.path.join(env['sandbox_path'],'local/include') )
+	env.Append( LIBPATH=os.path.join(env['sandbox_path'],'local/lib') )
+	env.Append( LIBS=['ws2_32'] )
+	env.Append( LIBS=['pthread'] )
+	env.ParseConfig('PKG_CONFIG_PATH=%s pkg-config --cflags --libs sndfile'%os.path.join(env['sandbox_path'],'local','lib','pkgconfig'))
+
+env.Append( CCFLAGS=['-g','-O3','-Wall'] )
+
+install, default = env.ClamModule(
+	moduleName,
+	version,
+	description = description,
+	url = url,
+	sources = sources,
+	headers = headers,
+	clamDependencies = clamDependencies,
+	otherDependencies = otherDependencies,
+	)
+
+env.Alias('install', install)
+env.Default(*default)
+
+

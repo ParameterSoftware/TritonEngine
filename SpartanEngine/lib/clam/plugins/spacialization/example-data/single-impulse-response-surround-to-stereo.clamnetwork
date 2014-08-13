@@ -1,0 +1,598 @@
+<network id="Unnamed">
+
+  <processing id="2StreamR" position="1151,429" size="95,58" type="AudioBuffer2Stream">
+    <HopSize>512</HopSize>
+    <BufferSize>1024</BufferSize>
+    </processing>
+
+  <processing id="2streamL" position="1154,278" size="92,58" type="AudioBuffer2Stream">
+    <HopSize>512</HopSize>
+    <BufferSize>1024</BufferSize>
+    </processing>
+
+  <processing id="AudioInput" position="55,57" size="128,108" type="AudioSource" />
+
+  <processing id="AudioWindowing" position="182,56" size="135,58" type="AudioStream2Buffer">
+    <HopSize>512</HopSize>
+    <BufferSize>1024</BufferSize>
+    </processing>
+
+  <processing id="Cartesian2PolarControl" position="213,527" size="179,58" type="Cartesian2PolarControl" />
+
+  <processing id="ControlPrinter" position="214,598" size="161,84" type="ControlPrinter">
+    <Identifier>ControlPrinter</Identifier>
+    <NumberOfInputs>1</NumberOfInputs>
+    <GuiOnly>1</GuiOnly>
+  </processing>
+
+  <processing id="Conv C" position="901,349" size="76,62" type="LowLatencyConvolution">
+    <MaxFrames>0</MaxFrames>
+    <FrameSize>512</FrameSize>
+  </processing>
+
+  <processing id="Conv L to L" position="941,22" size="101,62" type="LowLatencyConvolution">
+    <MaxFrames>0</MaxFrames>
+    <FrameSize>512</FrameSize>
+  </processing>
+
+  <processing id="Conv L to R" position="916,516" size="103,62" type="LowLatencyConvolution">
+    <MaxFrames>0</MaxFrames>
+    <FrameSize>512</FrameSize>
+  </processing>
+
+  <processing id="Conv R to L" position="940,73" size="103,62" type="LowLatencyConvolution">
+    <MaxFrames>0</MaxFrames>
+    <FrameSize>512</FrameSize>
+  </processing>
+
+  <processing id="Conv R to R" position="917,565" size="105,62" type="LowLatencyConvolution">
+    <MaxFrames>0</MaxFrames>
+    <FrameSize>512</FrameSize>
+  </processing>
+
+  <processing id="Conv SL to L" position="939,122" size="109,62" type="LowLatencyConvolution">
+    <MaxFrames>0</MaxFrames>
+    <FrameSize>512</FrameSize>
+  </processing>
+
+  <processing id="Conv SL to R" position="915,614" size="111,62" type="LowLatencyConvolution">
+    <MaxFrames>0</MaxFrames>
+    <FrameSize>512</FrameSize>
+  </processing>
+
+  <processing id="Conv SR to L" position="944,172" size="111,62" type="LowLatencyConvolution">
+    <MaxFrames>0</MaxFrames>
+    <FrameSize>512</FrameSize>
+  </processing>
+
+  <processing id="Conv SR to R" position="913,661" size="113,62" type="LowLatencyConvolution">
+    <MaxFrames>0</MaxFrames>
+    <FrameSize>512</FrameSize>
+  </processing>
+
+  <processing id="Convolution_P" position="316,128" size="121,62" type="LowLatencyConvolution">
+    <MaxFrames>0</MaxFrames>
+    <FrameSize>512</FrameSize>
+  </processing>
+
+  <processing id="Convolution_Vx" position="308,192" size="127,62" type="LowLatencyConvolution">
+    <MaxFrames>0</MaxFrames>
+    <FrameSize>512</FrameSize>
+  </processing>
+
+  <processing id="Convolution_Vy" position="309,261" size="127,62" type="LowLatencyConvolution">
+    <MaxFrames>0</MaxFrames>
+    <FrameSize>512</FrameSize>
+  </processing>
+
+  <processing id="FFT C" position="731,390" size="67,58" type="MyFFT">
+    <AudioSize>1024</AudioSize>
+  </processing>
+
+  <processing id="FFT L" position="731,448" size="65,58" type="MyFFT">
+    <AudioSize>1024</AudioSize>
+  </processing>
+
+  <processing id="FFT R" position="737,510" size="67,58" type="MyFFT">
+    <AudioSize>1024</AudioSize>
+  </processing>
+
+  <processing id="FFT SL" position="730,557" size="73,58" type="MyFFT">
+    <AudioSize>1024</AudioSize>
+  </processing>
+
+  <processing id="FFT SR" position="730,608" size="75,58" type="MyFFT">
+    <AudioSize>1024</AudioSize>
+  </processing>
+
+  <processing id="IR0" position="749,324" size="53,58" type="ImpulseResponseLoader">
+    <FrameSize>512</FrameSize>
+    <ImpulseResponse>HRTFs/elev0/L0e000a.wav</ImpulseResponse>
+  <IsBFormatFile>0</IsBFormatFile></processing>
+
+  <processing id="IR110" position="721,252" size="69,58" type="ImpulseResponseLoader">
+    <FrameSize>512</FrameSize>
+    <ImpulseResponse>HRTFs/elev0/L0e110a.wav</ImpulseResponse>
+  <IsBFormatFile>0</IsBFormatFile></processing>
+
+  <processing id="IR250" position="731,186" size="69,58" type="ImpulseResponseLoader">
+    <FrameSize>512</FrameSize>
+    <ImpulseResponse>HRTFs/elev0/L0e250a.wav</ImpulseResponse>
+  <IsBFormatFile>0</IsBFormatFile></processing>
+
+  <processing id="IR30" position="742,104" size="61,58" type="ImpulseResponseLoader">
+    <FrameSize>512</FrameSize>
+    <ImpulseResponse>HRTFs/elev0/L0e030a.wav</ImpulseResponse>
+  <IsBFormatFile>0</IsBFormatFile></processing>
+
+  <processing id="IR330" position="750,38" size="69,58" type="ImpulseResponseLoader">
+    <FrameSize>512</FrameSize>
+    <ImpulseResponse>HRTFs/elev0/L0e330a.wav</ImpulseResponse>
+  <IsBFormatFile>0</IsBFormatFile></processing>
+
+  <processing id="ImpulseResponseLoader P" position="81,145" size="198,58" type="ImpulseResponseLoader">
+    <FrameSize>512</FrameSize>
+    <ImpulseResponse>room1/p_emissor_0-0-0_receptor_0-9-0.wav</ImpulseResponse>
+  <IsBFormatFile>0</IsBFormatFile></processing>
+
+  <processing id="ImpulseResponseLoader vx" position="76,209" size="202,58" type="ImpulseResponseLoader">
+    <FrameSize>512</FrameSize>
+    <ImpulseResponse>room1/vx_emissor_0-0-0_receptor_0-9-0.wav</ImpulseResponse>
+  <IsBFormatFile>0</IsBFormatFile></processing>
+
+  <processing id="ImpulseResponseLoader vy" position="72,276" size="202,58" type="ImpulseResponseLoader">
+    <FrameSize>512</FrameSize>
+    <ImpulseResponse>room1/vy_emissor_0-0-0_receptor_0-9-0.wav</ImpulseResponse>
+  <IsBFormatFile>0</IsBFormatFile></processing>
+
+  <processing id="L" position="1257,278" size="128,111" type="AudioSink" />
+
+  <processing id="MyFFT" position="337,56" size="71,58" type="MyFFT">
+    <AudioSize>1024</AudioSize>
+  </processing>
+
+  <processing id="MyIFFT" position="455,127" size="74,58" type="MyIFFT">
+    <AudioSize>1024</AudioSize>
+  </processing>
+
+  <processing id="MyIFFT_1" position="453,194" size="88,58" type="MyIFFT">
+    <AudioSize>1024</AudioSize>
+  </processing>
+
+  <processing id="MyIFFT_2" position="454,264" size="88,58" type="MyIFFT">
+    <AudioSize>1024</AudioSize>
+  </processing>
+
+  <processing id="MyIFFT_6" position="1058,279" size="88,58" type="MyIFFT">
+    <AudioSize>1024</AudioSize>
+  </processing>
+
+  <processing id="MyIFFT_7" position="1053,428" size="88,58" type="MyIFFT">
+    <AudioSize>1024</AudioSize>
+  </processing>
+
+  <processing id="R" position="1255,429" size="128,111" type="AudioSink" />
+
+  <processing id="Receiver Orientation" position="210,335" size="160,180" type="ControlSurface">
+    <MinX>-1</MinX>
+    <DefaultX>0</DefaultX>
+    <MaxX>1</MaxX>
+    <MinY>-1</MinY>
+    <DefaultY>0</DefaultY>
+    <MaxY>1</MaxY>
+  </processing>
+
+  <processing id="Sum" position="1044,539" size="61,62" type="ComplexSpectrumSum" />
+
+  <processing id="Sum2" position="1042,610" size="69,62" type="ComplexSpectrumSum" />
+
+  <processing id="Sum3" position="974,426" size="69,62" type="ComplexSpectrumSum" />
+
+  <processing id="Sum4" position="1129,568" size="69,62" type="ComplexSpectrumSum" />
+
+  <processing id="SumL" position="1058,42" size="67,62" type="ComplexSpectrumSum" />
+
+  <processing id="SumL2" position="1064,136" size="75,62" type="ComplexSpectrumSum" />
+
+  <processing id="SumL3" position="1152,90" size="75,62" type="ComplexSpectrumSum" />
+
+  <processing id="SumL4" position="971,281" size="75,62" type="ComplexSpectrumSum" />
+
+  <processing id="Surround" position="480,464" size="92,110" type="Surround" />
+
+  <processing id="toStream P" position="573,132" size="104,58" type="AudioBuffer2Stream">
+    <HopSize>512</HopSize>
+    <BufferSize>1024</BufferSize>
+    </processing>
+
+  <processing id="toStream Vx" position="576,190" size="110,58" type="AudioBuffer2Stream">
+    <HopSize>512</HopSize>
+    <BufferSize>1024</BufferSize>
+    </processing>
+
+  <processing id="toStream Vy" position="581,255" size="110,58" type="AudioBuffer2Stream">
+    <HopSize>512</HopSize>
+    <BufferSize>1024</BufferSize>
+    </processing>
+
+  <processing id="win C" position="648,394" size="66,58" type="AudioStream2Buffer">
+    <HopSize>512</HopSize>
+    <BufferSize>1024</BufferSize>
+    </processing>
+
+  <processing id="win L" position="650,447" size="64,58" type="AudioStream2Buffer">
+    <HopSize>512</HopSize>
+    <BufferSize>1024</BufferSize>
+    </processing>
+
+  <processing id="win R" position="648,511" size="66,58" type="AudioStream2Buffer">
+    <HopSize>512</HopSize>
+    <BufferSize>1024</BufferSize>
+    </processing>
+
+  <processing id="win SL" position="649,561" size="72,58" type="AudioStream2Buffer">
+    <HopSize>512</HopSize>
+    <BufferSize>1024</BufferSize>
+    </processing>
+
+  <processing id="win SR" position="650,605" size="74,58" type="AudioStream2Buffer">
+    <HopSize>512</HopSize>
+    <BufferSize>1024</BufferSize>
+    </processing>
+
+  <port_connection>
+    <out>2StreamR.Audio stream</out>
+    <in>R.1</in>
+  </port_connection>
+
+  <port_connection>
+    <out>2streamL.Audio stream</out>
+    <in>L.1</in>
+  </port_connection>
+
+  <port_connection>
+    <out>AudioInput.1</out>
+    <in>AudioWindowing.Audio stream</in>
+  </port_connection>
+
+  <port_connection>
+    <out>AudioWindowing.Audio buffer</out>
+    <in>MyFFT.Audio Buffer</in>
+  </port_connection>
+
+  <port_connection>
+    <out>Conv C.Output</out>
+    <in>SumL4.Term1</in>
+  </port_connection>
+
+  <port_connection>
+    <out>Conv C.Output</out>
+    <in>Sum3.Term1</in>
+  </port_connection>
+
+  <port_connection>
+    <out>Conv L to L.Output</out>
+    <in>SumL.Term1</in>
+  </port_connection>
+
+  <port_connection>
+    <out>Conv L to R.Output</out>
+    <in>Sum.Term1</in>
+  </port_connection>
+
+  <port_connection>
+    <out>Conv R to L.Output</out>
+    <in>SumL.Term2</in>
+  </port_connection>
+
+  <port_connection>
+    <out>Conv R to R.Output</out>
+    <in>Sum.Term2</in>
+  </port_connection>
+
+  <port_connection>
+    <out>Conv SL to L.Output</out>
+    <in>SumL2.Term1</in>
+  </port_connection>
+
+  <port_connection>
+    <out>Conv SL to R.Output</out>
+    <in>Sum2.Term1</in>
+  </port_connection>
+
+  <port_connection>
+    <out>Conv SR to L.Output</out>
+    <in>SumL2.Term2</in>
+  </port_connection>
+
+  <port_connection>
+    <out>Conv SR to R.Output</out>
+    <in>Sum2.Term2</in>
+  </port_connection>
+
+  <port_connection>
+    <out>Convolution_P.Output</out>
+    <in>MyIFFT.Complex Spectrum</in>
+  </port_connection>
+
+  <port_connection>
+    <out>Convolution_Vx.Output</out>
+    <in>MyIFFT_1.Complex Spectrum</in>
+  </port_connection>
+
+  <port_connection>
+    <out>Convolution_Vy.Output</out>
+    <in>MyIFFT_2.Complex Spectrum</in>
+  </port_connection>
+
+  <port_connection>
+    <out>FFT C.Complex Spectrum</out>
+    <in>Conv C.Input</in>
+  </port_connection>
+
+  <port_connection>
+    <out>FFT L.Complex Spectrum</out>
+    <in>Conv L to L.Input</in>
+  </port_connection>
+
+  <port_connection>
+    <out>FFT L.Complex Spectrum</out>
+    <in>Conv L to R.Input</in>
+  </port_connection>
+
+  <port_connection>
+    <out>FFT R.Complex Spectrum</out>
+    <in>Conv R to L.Input</in>
+  </port_connection>
+
+  <port_connection>
+    <out>FFT R.Complex Spectrum</out>
+    <in>Conv R to R.Input</in>
+  </port_connection>
+
+  <port_connection>
+    <out>FFT SL.Complex Spectrum</out>
+    <in>Conv SL to R.Input</in>
+  </port_connection>
+
+  <port_connection>
+    <out>FFT SL.Complex Spectrum</out>
+    <in>Conv SL to L.Input</in>
+  </port_connection>
+
+  <port_connection>
+    <out>FFT SR.Complex Spectrum</out>
+    <in>Conv SR to L.Input</in>
+  </port_connection>
+
+  <port_connection>
+    <out>FFT SR.Complex Spectrum</out>
+    <in>Conv SR to R.Input</in>
+  </port_connection>
+
+  <port_connection>
+    <out>IR0.W</out>
+    <in>Conv C.ImpulseResponse</in>
+  </port_connection>
+
+  <port_connection>
+    <out>IR110.W</out>
+    <in>Conv SL to R.ImpulseResponse</in>
+  </port_connection>
+
+  <port_connection>
+    <out>IR110.W</out>
+    <in>Conv SR to L.ImpulseResponse</in>
+  </port_connection>
+
+  <port_connection>
+    <out>IR250.W</out>
+    <in>Conv SL to L.ImpulseResponse</in>
+  </port_connection>
+
+  <port_connection>
+    <out>IR250.W</out>
+    <in>Conv SR to R.ImpulseResponse</in>
+  </port_connection>
+
+  <port_connection>
+    <out>IR30.W</out>
+    <in>Conv L to R.ImpulseResponse</in>
+  </port_connection>
+
+  <port_connection>
+    <out>IR30.W</out>
+    <in>Conv R to L.ImpulseResponse</in>
+  </port_connection>
+
+  <port_connection>
+    <out>IR330.W</out>
+    <in>Conv L to L.ImpulseResponse</in>
+  </port_connection>
+
+  <port_connection>
+    <out>IR330.W</out>
+    <in>Conv R to R.ImpulseResponse</in>
+  </port_connection>
+
+  <port_connection>
+    <out>ImpulseResponseLoader P.W</out>
+    <in>Convolution_P.ImpulseResponse</in>
+  </port_connection>
+
+  <port_connection>
+    <out>ImpulseResponseLoader vx.W</out>
+    <in>Convolution_Vx.ImpulseResponse</in>
+  </port_connection>
+
+  <port_connection>
+    <out>ImpulseResponseLoader vy.W</out>
+    <in>Convolution_Vy.ImpulseResponse</in>
+  </port_connection>
+
+  <port_connection>
+    <out>MyFFT.Complex Spectrum</out>
+    <in>Convolution_P.Input</in>
+  </port_connection>
+
+  <port_connection>
+    <out>MyFFT.Complex Spectrum</out>
+    <in>Convolution_Vx.Input</in>
+  </port_connection>
+
+  <port_connection>
+    <out>MyFFT.Complex Spectrum</out>
+    <in>Convolution_Vy.Input</in>
+  </port_connection>
+
+  <port_connection>
+    <out>MyIFFT.Audio Buffer</out>
+    <in>toStream P.Audio buffer</in>
+  </port_connection>
+
+  <port_connection>
+    <out>MyIFFT_1.Audio Buffer</out>
+    <in>toStream Vx.Audio buffer</in>
+  </port_connection>
+
+  <port_connection>
+    <out>MyIFFT_2.Audio Buffer</out>
+    <in>toStream Vy.Audio buffer</in>
+  </port_connection>
+
+  <port_connection>
+    <out>MyIFFT_6.Audio Buffer</out>
+    <in>2streamL.Audio buffer</in>
+  </port_connection>
+
+  <port_connection>
+    <out>MyIFFT_7.Audio Buffer</out>
+    <in>2StreamR.Audio buffer</in>
+  </port_connection>
+
+  <port_connection>
+    <out>Sum.Sum</out>
+    <in>Sum4.Term1</in>
+  </port_connection>
+
+  <port_connection>
+    <out>Sum2.Sum</out>
+    <in>Sum4.Term2</in>
+  </port_connection>
+
+  <port_connection>
+    <out>Sum3.Sum</out>
+    <in>MyIFFT_7.Complex Spectrum</in>
+  </port_connection>
+
+  <port_connection>
+    <out>Sum4.Sum</out>
+    <in>Sum3.Term2</in>
+  </port_connection>
+
+  <port_connection>
+    <out>SumL.Sum</out>
+    <in>SumL3.Term1</in>
+  </port_connection>
+
+  <port_connection>
+    <out>SumL2.Sum</out>
+    <in>SumL3.Term2</in>
+  </port_connection>
+
+  <port_connection>
+    <out>SumL3.Sum</out>
+    <in>SumL4.Term2</in>
+  </port_connection>
+
+  <port_connection>
+    <out>SumL4.Sum</out>
+    <in>MyIFFT_6.Complex Spectrum</in>
+  </port_connection>
+
+  <port_connection>
+    <out>Surround.center</out>
+    <in>win C.Audio stream</in>
+  </port_connection>
+
+  <port_connection>
+    <out>Surround.right</out>
+    <in>win R.Audio stream</in>
+  </port_connection>
+
+  <port_connection>
+    <out>Surround.surroundRight</out>
+    <in>win SR.Audio stream</in>
+  </port_connection>
+
+  <port_connection>
+    <out>Surround.surroundLeft</out>
+    <in>win SL.Audio stream</in>
+  </port_connection>
+
+  <port_connection>
+    <out>Surround.left</out>
+    <in>win L.Audio stream</in>
+  </port_connection>
+
+  <port_connection>
+    <out>toStream P.Audio stream</out>
+    <in>Surround.W</in>
+  </port_connection>
+
+  <port_connection>
+    <out>toStream Vx.Audio stream</out>
+    <in>Surround.X</in>
+  </port_connection>
+
+  <port_connection>
+    <out>toStream Vy.Audio stream</out>
+    <in>Surround.Y</in>
+  </port_connection>
+
+  <port_connection>
+    <out>win C.Audio buffer</out>
+    <in>FFT C.Audio Buffer</in>
+  </port_connection>
+
+  <port_connection>
+    <out>win L.Audio buffer</out>
+    <in>FFT L.Audio Buffer</in>
+  </port_connection>
+
+  <port_connection>
+    <out>win R.Audio buffer</out>
+    <in>FFT R.Audio Buffer</in>
+  </port_connection>
+
+  <port_connection>
+    <out>win SL.Audio buffer</out>
+    <in>FFT SL.Audio Buffer</in>
+  </port_connection>
+
+  <port_connection>
+    <out>win SR.Audio buffer</out>
+    <in>FFT SR.Audio Buffer</in>
+  </port_connection>
+
+  <control_connection>
+    <out>Cartesian2PolarControl.angle</out>
+    <in>Surround.beta</in>
+  </control_connection>
+
+  <control_connection>
+    <out>Cartesian2PolarControl.angle</out>
+    <in>ControlPrinter.In Control</in>
+  </control_connection>
+
+  <control_connection>
+    <out>Receiver Orientation.outX</out>
+    <in>Cartesian2PolarControl.x</in>
+  </control_connection>
+
+  <control_connection>
+    <out>Receiver Orientation.outY</out>
+    <in>Cartesian2PolarControl.y</in>
+  </control_connection>
+
+</network>

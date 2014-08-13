@@ -1,0 +1,70 @@
+#!/usr/bin/env python
+import os, glob, sys
+
+moduleName='samplebysample'
+version = "1.4.0"
+description = "Sample by sample processing for the CLAM framework"
+url = 'http://clam-project.org'
+clamDependencies = [
+	'clam_core',
+	'clam_audioio',
+	'clam_processing',
+	]
+otherDependencies = [
+	]
+
+options = Variables('options.cache', ARGUMENTS)
+options.Add(PathVariable('clam_prefix', 'The prefix where CLAM was installed', '/usr/local'))
+options.Add(PathVariable('prefix', 'Installation prefix (normally /usr, by default this is clam_prefix)', "", validator=PathVariable.PathAccept))
+options.Add(BoolVariable('verbose', 'Display the full command line', 'no') )
+options.Add(PathVariable('sandbox_path', 'Path where third party libraries were installed (in windows)', "", validator=PathVariable.PathAccept))
+options.Add(BoolVariable('crossmingw', 'Using MinGW crosscompiler mode', 'no') )
+toolChain = 'mingw' if sys.platform == "win32" else 'default'
+env = Environment(ENV=os.environ, tools=[toolChain], options=options)
+options.Save('options.cache', env)
+Help(options.GenerateHelpText(env))
+env.SConsignFile() # Single signature file
+
+CLAMInstallDir = env['clam_prefix']
+if not env['prefix'] : env['prefix'] = env['clam_prefix']
+
+clam_sconstoolspath = os.path.join(CLAMInstallDir,'share','clam','sconstools')
+if not os.access(os.path.join(clam_sconstoolspath,"clam.py"),os.R_OK):
+	raise Exception("CLAM not installed at '%s'. Use clam_prefix option."%CLAMInstallDir)
+if env['crossmingw'] :
+	env.Tool('crossmingw', toolpath=[clam_sconstoolspath])
+env.Tool('clam', toolpath=[clam_sconstoolspath])
+env.EnableClamModules(clamDependencies, CLAMInstallDir)
+
+sourcePaths = ["src"]
+sources = env.scanFiles('*.cxx', sourcePaths)
+sources = dict.fromkeys(sources).keys()
+headers = env.scanFiles('*.hxx', sourcePaths)
+env.Append( CCFLAGS=['-g','-O3','-Wall'] )
+
+if sys.platform=="darwin" : #TODO fix. should be available in clamlibs pc
+	env.Append( LIBPATH=['/opt/local/lib'] )
+if sys.platform=="win32" or 'crossmingw' in env['TOOLS'] :
+	env.Append( LIBPATH=[os.path.join(env['sandbox_path'],'local','lib')] )
+
+install, default = env.ClamModule(
+	moduleName,
+	version,
+	description = description,
+	url = url,
+	sources = sources,
+	headers = headers,
+	clamDependencies = clamDependencies,
+	otherDependencies = otherDependencies,
+	)
+
+examples = env.scanFiles('*.clamnetwork', ['example-data'])
+examples+= env.scanFiles('*.ui', ['example-data'])
+
+install+= [
+	env.Install(os.path.join(env['prefix'],'share','networkeditor','example-data'), examples)
+	]
+
+env.Alias('install', install)
+env.Default(default)
+

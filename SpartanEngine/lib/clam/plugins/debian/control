@@ -1,0 +1,36 @@
+Source: clam-plugins
+Section: sound
+Priority: optional
+Maintainer: CLAM Team <developers@clam-project.org>
+Uploaders: David García Garzón <dgarcia_debian@iua.upf.edu>
+Homepage: http://clam-project.org
+Build-Depends: debhelper (>= 5.0.0), scons, libclam-dev, liblo0-dev
+Standards-Version: 3.8.3
+
+Package: libclam-plugins
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends} 
+Recommends: clam-networkeditor
+Description: Extension plugins for the CLAM framework
+ This package provides several plugins for the CLAM audio library, including:
+  * OSC support
+  * Real-time 3D acoustics scene simulation (ambisonics, raytracing, HRTF's)
+  * Speech synthesis and analysis
+  * Simple SMS based synthesizer
+  * Guitar effects
+  * Sample by sample convolution effects
+  * Lock-free wave file reader
+
+Package: libclam-plugins-dev
+Architecture: any
+section: libdevel
+Depends:  ${shlibs:Depends}, ${misc:Depends}, clam-devel, libclam-plugins (= ${binary:Version})
+Description: Development files for the extensions to the CLAM framework
+ This package provides the development files needed by applications explicitly
+ using the symbols defined in libclam-plugins package.
+ This package is not needed at all if you just want to use such black box manipulation
+ of the extension objects like NetworkEditor and Prototyper applications do.
+ Black box manipulation is limited to create processings by type name and using
+ common interfaces defined in libclam-core to manipolate them.
+ 
+

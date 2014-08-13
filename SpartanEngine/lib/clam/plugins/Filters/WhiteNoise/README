@@ -1,0 +1,9 @@
+== Description ==
+
+Uniform and gaussian white noise.
+
+
+== Install ==
+
+scons clam_prefix=path/to/installed/clam/prefix
+scons install

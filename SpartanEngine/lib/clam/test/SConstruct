@@ -1,0 +1,71 @@
+#!/usr/bin/python
+import sys, os
+
+# CLAM unit tests build
+
+clamToolPath="../scons/sconstools"
+
+options = Variables('options.cache')
+
+options.Add( PathVariable( 'clam_prefix', 'Prefix were CLAM was installed', '') )
+if sys.platform == 'darwin' :
+	options.Add( PathVariable( 'cppunit_prefix', 'Prefix were cppunit was installed', '/opt/local' ))
+else:
+	options.Add( PathVariable( 'cppunit_prefix', 'Prefix were cppunit was installed', '/usr' ))
+options.Add( BoolVariable( 'release', 'Build CLAM Tests enabling compiler optimizations', 'no') )
+options.Add( PathVariable( 'test_data_path', 'Path to the TestDataPrefix', '') )
+options.Add(BoolVariable('crossmingw', 'Using MinGW crosscompiler mode in linux', 'no') )
+
+toolchain='default'
+if sys.platform == 'win32': toolchain = 'mingw'
+env = Environment(ENV=os.environ, tools=[toolchain], options=options)
+env.Tool('clam', toolpath=[clamToolPath])
+
+options.Update(env)
+options.Save('options.cache', env)
+Help(options.GenerateHelpText(env))
+
+env['project'] = 'CLAMTests'
+
+
+env.SConsignFile() # Single signature file
+
+crosscompiling = env["crossmingw"]
+if crosscompiling :
+	env.Tool('crossmingw', toolpath=[clamToolPath])
+
+env.EnableClamModules([
+	'clam_core',
+	'clam_audioio',
+	'clam_processing'
+	], env['clam_prefix'] )
+
+env.Append( CCFLAGS=['-O3', '-fomit-frame-pointer', '-g','-Wall'] )
+env.Append( CPPFLAGS = ['-DTEST_DATA_PATH="\\"%s\\""' % env['test_data_path'] ] )
+env.Append( CPPFLAGS = ['-DCLAM_MODULE="\\"tests\\""'] )
+
+env.ParseConfig( 'pkg-config --cflags --libs cppunit')
+
+if sys.platform == 'darwin':
+	env.AppendUnique( LIBS=['xerces-c'] )
+	env.AppendUnique( LIBPATH=['/opt/local/lib'] )
+
+if 'crossmingw' in env['TOOLS']:
+#	env.ParseVariables( 'PKG_CONFIG=~/CajitasDeArena/mingw/local/lib/pkgconfig pkg-config -libs'  )
+	env.Append( LIBS="xerces-c2_8_0 xml++-2.6 xml2 glibmm-2.4 gobject-2.0 sigc-2.0 glib-2.0".split())
+
+
+#TODO: KLUDGE to allow old style and new style CLAM headers
+env.Append(CPPPATH=env['clam_prefix']+'/include/CLAM')
+env.Append(CPPPATH=env['clam_prefix']+'/include')
+env.Append(CPPPATH=['include'])
+env.Append(CPPPATH=os.path.join('..','UnitTests', 'CommonHelpers'))
+env.Append(CPPPATH=os.path.join('..','UnitTests'))
+env.Append(CPPPATH=os.path.join('..','FunctionalTests','CommonHelpers'))
+
+Export( 'env' )
+SConscript('UnitTests/SConscript')
+SConscript('FunctionalTests/SConscript')
+
+Alias( 'all', ['run_unit_tests','run_functional_tests'] )
+

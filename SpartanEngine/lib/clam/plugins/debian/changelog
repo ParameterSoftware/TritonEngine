@@ -1,0 +1,32 @@
+clam-plugins (1.4.0~svn13920-1) unstable; urgency=low
+
+  * New upstream release 1.4.0
+  * Added clam-plugins-dev
+  * Addapted to the new plugins structure in 1.4.0
+
+ -- CLAM Team <developers@clam-project.org>  Tue, 9 Feb 2009 22:42:33 +0100
+
+clam-plugins (1.3.1~svn12860-1) unstable; urgency=low
+
+  * Excluded TestAudioDatabaseReader binary: is a test binary
+  * Excluded EbowSynthesizer binary: old version for 
+    ContinuousExcitationSynthesizer
+  * Man pages added for ContinuousExcitationSynthesizer
+  * Added David García Garzón as Uploader
+
+ -- CLAM Team <developers@clam-project.org>  Wed, 18 Mar 2009 02:40:23 +0100
+
+clam-plugins (1.3.0-1) unstable; urgency=low
+
+  * Updated the new website to http://clam-project.org
+  * debian specific files moved to a different svn branch
+  * Changed CLAM Team mantainer web
+
+ -- CLAM Team <developers@clam-project.org>  Wed, 04 Mar 2009 21:44:36 +0100
+
+clam-plugins (1.1.0-1) unstable; urgency=low
+
+  * First package
+
+ -- CLAM Team <clam@iua.upf.edu>  Fri,  10 Jan 2008 21:01:51 +0100
+

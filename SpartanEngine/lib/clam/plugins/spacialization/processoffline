@@ -1,0 +1,100 @@
+#!/usr/bin/python
+
+import os
+
+def run(command) :
+	print "\033[32m:: ", command, "\033[0m"
+	return os.system(command)
+	for line in os.popen(command) :
+		print line,
+		sys.stdout.flush()
+def norun(command) :
+	print "\033[31mXX ", command, "\033[0m"
+
+enable_surround = True
+enable_hrtf = True
+enable_wav_surround = False
+enable_zip = False
+
+examples = [
+	('explorer3', 'db18'),
+	('realitzacio2', 'db18'),
+	('explorer3', 'db19'),
+	('realitzacio2', 'db19'),
+	('explorer3', 'db20'),
+	('realitzacio2', 'db20'),
+	('explorer3', 'db21'),
+	('realitzacio2', 'db21'),
+	('explorer3', 'db22'),
+]
+examples = [
+	('realitzacio3', 'db18'),
+]
+instruments = [
+	('gui', 'wavs/flamenco_guitar.wav', 'source0'),
+	('voz', 'wavs/flamenco_voz.wav', 'source1' ),
+	('caj', 'wavs/flamenco_cajon_inspirado.wav', 'source2' ),
+	('bai', 'wavs/flamenco_bailaora_inspirada.wav', 'source3' ),
+]
+for realization_name, db in examples:
+	vars = {
+		'pathfile': 'realitzacions/%s.data'%realization_name,
+		'outdir': 'renderedfiles/%s/%s'%(db, realization_name), 
+		'realization_name': realization_name,
+	}
+	# clean and setup db and path to use
+	run("rm -rf %(outdir)s" % vars)
+	run("mkdir -p %(outdir)s/stereo" % vars)
+	run("rm -f current_path.data && ln -s %(pathfile)s current_path.data" % vars)
+	for instrument, inputwav, dbsubdir in instruments :
+		print '%sL.wav'%instrument
+		print inputwav
+		print dbsubdir
+		vars['lwav']='%sL.wav'%instrument
+		vars['rwav']='%sR.wav'%instrument
+		vars['slwav']='%sSL.wav'%instrument
+		vars['srwav']='%sSR.wav'%instrument
+		vars['cwav']='%sC.wav'%instrument
+		vars['inputwav']=inputwav
+		vars['db']='%s/%s'%(db,dbsubdir)
+		print vars
+
+		# set the db corresponding to the instrument db
+		run("rm -f db && ln -s %(db)s db" % vars)
+		if enable_surround:
+			# process 5.0 network
+			cmd = "./OfflinePlayer sequenced_networks/offline1_surround.clamnetwork %(inputwav)s %(outdir)s/%(cwav)s %(outdir)s/%(lwav)s %(outdir)s/%(rwav)s %(outdir)s/%(slwav)s %(outdir)s/%(srwav)s" % vars
+			run(cmd) 
+		if enable_hrtf:
+			cmd = "./OfflinePlayer sequenced_networks/offline1_surround.clamnetwork %(inputwav)s %(outdir)s/%(cwav)s %(outdir)s/%(lwav)s %(outdir)s/%(rwav)s %(outdir)s/%(slwav)s %(outdir)s/%(srwav)s" % vars
+			# process hrtf network
+			cmd_stereo = "./OfflinePlayer sequenced_networks/offline1.clamnetwork %(inputwav)s %(outdir)s/stereo/%(lwav)s %(outdir)s/stereo/%(rwav)s" % vars
+			run(cmd_stereo)
+	if enable_surround:
+		# mix instruments
+		run("cd %(outdir)s && sox -m *L.wav L.wav"%vars)
+		run("cd %(outdir)s && sox -m *R.wav R.wav"%vars)
+		run("cd %(outdir)s && sox -m *SL.wav SL.wav"%vars)
+		run("cd %(outdir)s && sox -m *SR.wav SR.wav"%vars)
+		run("cd %(outdir)s && sox -m *C.wav C.wav"%vars)
+		# encode surround for ac3 file
+		run("cd %(outdir)s && sox -M L.wav R.wav C.wav SL.wav SR.wav surround_ac3_order.wav" % vars)
+		run("cd %(outdir)s && aften -b 448 -cmix 0 -smix 0 -dsur 2 -acmod 7 surround_ac3_order.wav surround.ac3" % vars)
+		# encode avi surround ac3
+		run("mencoder -ovc copy realitzacions/%(realization_name)s_22fps.avi -audiofile %(outdir)s/surround.ac3 -oac copy -o %(outdir)s/%(realization_name)s_ac3.avi" % vars)
+	if enable_wav_surround :
+		# encode surround wav 48khz 
+		run("cd %(outdir)s && sox -M L.wav R.wav SL.wav SR.wav C.wav surround.wav" % vars)
+		# encode avi surround wav 48khz
+		run("mencoder -ovc copy realitzacions/%(realization_name)s.avi -audiofile %(outdir)s/surround.wav -oac copy -o %(outdir)s/%(realization_name)s.avi" % vars)
+	if enable_hrtf:	
+		# mix instruments
+		run("cd %(outdir)s/stereo/ && sox -m *L.wav L.wav"%vars)
+		run("cd %(outdir)s/stereo/ && sox -m *R.wav R.wav"%vars)
+		# encode stereo file
+		run("cd %(outdir)s/stereo && sox -M L.wav R.wav stereo.wav" % vars)
+		run("cd %(outdir)s/stereo && sox stereo.wav stereo_boosted.wav vol 6" % vars)
+		# encode avi stereo
+		run("mencoder -ovc copy realitzacions/%(realization_name)s.avi -audiofile %(outdir)s/stereo/stereo_boosted.wav -oac copy -o %(outdir)s/%(realization_name)s_hrtf_stereo.avi" % vars)
+	if enable_zip:
+		run("cd %(outdir)s/.. && zip -r %(realization_name)s.zip %(realization_name)s/" % vars ) #zip

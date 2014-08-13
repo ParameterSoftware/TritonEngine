@@ -1,0 +1,77 @@
+<network id="Unnamed">
+
+  <processing id="AudioSink" position="665,195" size="128,111" type="AudioSink" />
+
+  <processing id="AudioSource" position="11,226" size="128,108" type="AudioSource" />
+
+  <processing id="AudioSwitch" position="472,253" size="109,62" type="AudioSwitch">
+    <NumberOfInPorts>2</NumberOfInPorts>
+    <FrameSize>512</FrameSize>
+  </processing>
+
+  <processing id="Bypass" position="516,58" size="110,132" type="OutControlSender">
+    <Min>0</Min>
+    <Default>0</Default>
+    <Max>1</Max>
+    <Step>1</Step>
+    <ControlRepresentation>Knot</ControlRepresentation>
+  </processing>
+
+  <processing id="Drive amount" position="318,60" size="177,132" type="OutControlSender">
+    <Min>0</Min>
+    <Default>0</Default>
+    <Max>1</Max>
+    <Step>0.01</Step>
+    <ControlRepresentation>Knot</ControlRepresentation>
+    <Mapping>Log</Mapping>
+  </processing>
+
+  <processing id="Input" position="137,357" size="319,137" type="Oscilloscope" />
+
+  <processing id="Output" position="629,349" size="310,137" type="Oscilloscope" />
+
+  <processing id="ZynDistortion" position="325,200" size="118,58" type="ZynDistortion">
+    <DistortionType>Arctangent</DistortionType>
+  </processing>
+
+  <port_connection>
+    <out>AudioSource.1</out>
+    <in>Input.Input</in>
+  </port_connection>
+
+  <port_connection>
+    <out>AudioSource.1</out>
+    <in>ZynDistortion.Input Audio</in>
+  </port_connection>
+
+  <port_connection>
+    <out>AudioSource.1</out>
+    <in>AudioSwitch.Input 1</in>
+  </port_connection>
+
+  <port_connection>
+    <out>AudioSwitch.Output Audio</out>
+    <in>AudioSink.1</in>
+  </port_connection>
+
+  <port_connection>
+    <out>AudioSwitch.Output Audio</out>
+    <in>Output.Input</in>
+  </port_connection>
+
+  <port_connection>
+    <out>ZynDistortion.Audio Output</out>
+    <in>AudioSwitch.Input 0</in>
+  </port_connection>
+
+  <control_connection>
+    <out>Bypass.out</out>
+    <in>AudioSwitch.Switch</in>
+  </control_connection>
+
+  <control_connection>
+    <out>Drive amount.out</out>
+    <in>ZynDistortion.Drive amount</in>
+  </control_connection>
+
+</network>

@@ -1,0 +1,60 @@
+#!/usr/bin/python
+from clam_build_helpers import *
+
+module = 'core'
+Import(module+'_env version install_dirs crosscompiling')
+env=core_env
+moduleDependencies = []
+
+folders = [
+	'src/core',
+	'src/Base',
+	'src/Data/Base',
+	'src/Data/BasicProcessing/Audio.*',
+	'src/Data/Descriptors/Pool',
+	'src/Data/Editable',
+	'src/Defines',
+	'src/Errors',
+	'src/Flow/Ports',
+	'src/Flow/Networks',
+	'src/Flow/Controls',
+	'src/Processing/Base',
+	'src/Processing/AudioSink*xx',
+	'src/Processing/AudioSource*xx',
+	'src/Processing/AudioBufferSink*xx',
+	'src/Processing/AudioBufferSource*xx',
+	'src/Processing/ControlSink*xx',
+	'src/Processing/ControlSource*xx',
+	'src/Processing/Plugins',
+	'src/Standard',
+	'src/Storage',
+	'src/Storage/Base',
+	'src/Storage/XML',
+	'src/System',
+	'src/System/Threads',
+	'externals/CbLib',
+	'src/Tools/MIDIIO/Message',
+	]
+
+blacklist = [
+	]
+
+if sys.platform == 'win32' or crosscompiling :
+	folders.append('src/Defines/Windows')
+
+if env['xmlbackend'] == 'xercesc' :
+	blacklist.append( 'LibXml.+')
+	blacklist.append( 'NullDom.+' )
+elif env['xmlbackend'] == 'xmlpp' :
+	blacklist.append( 'Xerces.+')
+	blacklist.append( 'NullDom.+' )
+elif env['xmlbackend'] == 'none' :
+	blacklist.append( 'Xerces.+' )
+	blacklist.append( 'LibXml.+' )
+
+if not env.has_key('with_ladspa') or env['with_ladspa'] == False :
+	blacklist.append( 'Ladspa.+' )
+
+lib_tgt, install_tgt = lib_rules( module, version, folders, blacklist, install_dirs, env, moduleDependencies)
+Return( 'lib_tgt', 'install_tgt' )
+

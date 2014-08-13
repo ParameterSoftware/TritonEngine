@@ -1,0 +1,62 @@
+<network id="Unnamed">
+
+  <processing id="ControlPrinter" position="129,186" size="291,285" type="ControlPrinter">
+    <Identifier>ControlPrinter</Identifier>
+    <NumberOfInputs>7</NumberOfInputs>
+    <GuiOnly>1</GuiOnly>
+  </processing>
+
+  <processing id="MultiLibloSource" position="50,21" size="130,65" type="MultiLibloSource">
+    <OscPath>/clam/target1</OscPath>
+    <ServerPort>8000</ServerPort>
+    <OSCTypeSpec>fff</OSCTypeSpec>
+  <EnableMulticast>0</EnableMulticast><MultiCastIP>224.0.0.1</MultiCastIP></processing>
+
+  <processing id="MultiLibloSource_1" position="181,21" size="144,65" type="MultiLibloSource">
+    <OscPath>/clam/target1</OscPath>
+    <ServerPort>8000</ServerPort>
+    <OSCTypeSpec>f</OSCTypeSpec>
+  <EnableMulticast>0</EnableMulticast><MultiCastIP>224.0.0.1</MultiCastIP></processing>
+
+  <processing id="MultiLibloSource_2" position="314,20" size="144,65" type="MultiLibloSource">
+    <OscPath>/clam/target2</OscPath>
+    <ServerPort>8000</ServerPort>
+    <OSCTypeSpec>fff</OSCTypeSpec>
+  <EnableMulticast>0</EnableMulticast><MultiCastIP>224.0.0.1</MultiCastIP></processing>
+
+  <control_connection>
+    <out>MultiLibloSource.0</out>
+    <in>ControlPrinter.ControlPrinter_0</in>
+  </control_connection>
+
+  <control_connection>
+    <out>MultiLibloSource.1</out>
+    <in>ControlPrinter.ControlPrinter_1</in>
+  </control_connection>
+
+  <control_connection>
+    <out>MultiLibloSource.2</out>
+    <in>ControlPrinter.ControlPrinter_2</in>
+  </control_connection>
+
+  <control_connection>
+    <out>MultiLibloSource_1.0</out>
+    <in>ControlPrinter.ControlPrinter_3</in>
+  </control_connection>
+
+  <control_connection>
+    <out>MultiLibloSource_2.0</out>
+    <in>ControlPrinter.ControlPrinter_4</in>
+  </control_connection>
+
+  <control_connection>
+    <out>MultiLibloSource_2.1</out>
+    <in>ControlPrinter.ControlPrinter_5</in>
+  </control_connection>
+
+  <control_connection>
+    <out>MultiLibloSource_2.2</out>
+    <in>ControlPrinter.ControlPrinter_6</in>
+  </control_connection>
+
+</network>

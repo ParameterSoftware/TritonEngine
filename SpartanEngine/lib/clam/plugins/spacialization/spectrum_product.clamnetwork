@@ -1,0 +1,173 @@
+<network id="Unnamed">
+
+  <processing id="AudioMixer_0" position="667,319" size="115,58" type="AudioMixer">
+    <NumberOfInPorts>1</NumberOfInPorts>
+    </processing>
+
+  <processing id="AudioSink_0" position="809,258" size="128,111" type="AudioSink" />
+
+  <processing id="AudioSource_0" position="-167,184" size="128,108" type="AudioSource" />
+
+  <processing id="ConstantSpectrum_0" position="37,126" size="165,62" type="ConstantSpectrum">
+    <AudioFile>Carnel_3P.wav</AudioFile>
+    <FrameSize>65536</FrameSize>
+  </processing>
+
+  <processing id="Gain 0" position="441,56" size="354,78" type="OutControlSender">
+    <Min>0</Min>
+    <Default>1</Default>
+    <Max>1000</Max>
+    <Step>0.01</Step>
+    <ControlRepresentation>Horizontal Slider</ControlRepresentation>
+  </processing>
+
+  <processing id="MagPhaseSpectrumProduct_0" position="333,134" size="222,62" type="MagPhaseSpectrumProduct" />
+
+  <processing id="Oscilloscope_0" position="816,387" size="217,163" type="Oscilloscope" />
+
+  <processing id="OverlapAdd_0" position="515,322" size="119,58" type="OverlapAdd">
+    <FrameSize>1024</FrameSize>
+  </processing>
+
+  <processing id="SpectralAnalysis_0" position="1,184" size="150,58" type="SpectralAnalysis">
+    <WindowGenerator>
+      <Type>None</Type>
+      <Size>65537</Size>
+      <MaxSize>0</MaxSize>
+      <UseTable>1</UseTable>
+      <Normalize>NormalizationForAnalysis</Normalize>
+      <Invert>0</Invert>
+    </WindowGenerator>
+    <CircularShift>
+      <Amount>-32768</Amount>
+    </CircularShift>
+    <FFT>
+      <AudioSize>65536</AudioSize>
+    </FFT>
+    <prHopSize>1024</prHopSize>
+    <prZeroPadding>0</prZeroPadding>
+    <prSamplingRate>44100</prSamplingRate>
+    <prFFTSize>65536</prFFTSize>
+    <prWindowSize>65537</prWindowSize>
+    <prWindowType>None</prWindowType>
+  </processing>
+
+  <processing id="SpectralSynthesis_0" position="705,154" size="160,58" type="SpectralSynthesis">
+    <AnalWindowGenerator>
+      <Type>BlackmanHarris92</Type>
+      <Size>65537</Size>
+      <MaxSize>0</MaxSize>
+      <UseTable>1</UseTable>
+      <Normalize>NormalizationForAnalysis</Normalize>
+      <Invert>1</Invert>
+    </AnalWindowGenerator>
+    <SynthWindowGenerator>
+      <Type>Triangular</Type>
+      <Size>2049</Size>
+      <MaxSize>0</MaxSize>
+      <UseTable>1</UseTable>
+      <Normalize>NoNormalization</Normalize>
+      <Invert>0</Invert>
+    </SynthWindowGenerator>
+    <CircularShift>
+      <Amount>32768</Amount>
+    </CircularShift>
+    <IFFT>
+      <AudioSize>65536</AudioSize>
+    </IFFT>
+    <prZeroPadding>0</prZeroPadding>
+    <prSamplingRate>44100</prSamplingRate>
+    <Residual>0</Residual>
+    <prAnalWindowSize>65537</prAnalWindowSize>
+    <prAnalWindowType>BlackmanHarris92</prAnalWindowType>
+    <prHopSize>1024</prHopSize>
+  </processing>
+
+  <processing id="SpectrumView_0" position="268,390" size="287,154" type="SpectrumView" />
+
+  <processing id="SpectrumView_1" position="543,390" size="287,156" type="SpectrumView" />
+
+  <processing id="SpectrumView_2" position="-9,389" size="266,152" type="SpectrumView" />
+
+  <processing id="magphase" position="189,176" size="100,58" type="Spectrum2MagPhaseSpectrum" />
+
+  <processing id="tocompl" position="-121,396" size="84,58" type="MagPhaseSpectrum2Spectrum" />
+
+  <processing id="tocomplex" position="574,134" size="98,58" type="MagPhaseSpectrum2Spectrum" />
+
+  <port_connection>
+    <out>AudioMixer_0.Output Audio</out>
+    <in>AudioSink_0.1</in>
+  </port_connection>
+
+  <port_connection>
+    <out>AudioMixer_0.Output Audio</out>
+    <in>Oscilloscope_0.Input</in>
+  </port_connection>
+
+  <port_connection>
+    <out>AudioSource_0.1</out>
+    <in>SpectralAnalysis_0.Input</in>
+  </port_connection>
+
+  <port_connection>
+    <out>ConstantSpectrum_0.MagPhase Spectrum</out>
+    <in>MagPhaseSpectrumProduct_0.Factor1</in>
+  </port_connection>
+
+  <port_connection>
+    <out>ConstantSpectrum_0.MagPhase Spectrum</out>
+    <in>tocompl.MagPhaseSpectrum</in>
+  </port_connection>
+
+  <port_connection>
+    <out>MagPhaseSpectrumProduct_0.Product</out>
+    <in>tocomplex.MagPhaseSpectrum</in>
+  </port_connection>
+
+  <port_connection>
+    <out>OverlapAdd_0.Audio Output</out>
+    <in>AudioMixer_0.Input 0</in>
+  </port_connection>
+
+  <port_connection>
+    <out>SpectralAnalysis_0.Output</out>
+    <in>magphase.Spectrum</in>
+  </port_connection>
+
+  <port_connection>
+    <out>SpectralAnalysis_0.Output</out>
+    <in>SpectrumView_0.Input</in>
+  </port_connection>
+
+  <port_connection>
+    <out>SpectralSynthesis_0.Output</out>
+    <in>OverlapAdd_0.Audio Input</in>
+  </port_connection>
+
+  <port_connection>
+    <out>magphase.MagPhaseSpectrum</out>
+    <in>MagPhaseSpectrumProduct_0.Factor2</in>
+  </port_connection>
+
+  <port_connection>
+    <out>tocompl.Spectrum</out>
+    <in>SpectrumView_2.Input</in>
+  </port_connection>
+
+  <port_connection>
+    <out>tocomplex.Spectrum</out>
+    <in>SpectrumView_1.Input</in>
+  </port_connection>
+
+  <port_connection>
+    <out>tocomplex.Spectrum</out>
+    <in>SpectralSynthesis_0.Input</in>
+  </port_connection>
+
+  <control_connection>
+    <out>Gain 0.out</out>
+    <in>AudioMixer_0.Gain 0</in>
+  </control_connection>
+
+</network>

@@ -1,0 +1,181 @@
+#!/usr/bin/python
+"""
+This is an example on how the Qt4 examples should be compiled using the
+qt4 tool for scons.
+To use it just copy it on the root of the Qt4 examples tree and type
+'scons -f SConstruct.qt4examples'.
+"""
+
+customToolsLocation='.'
+# crosscompiling should be true in order this file to realize you
+# are using mingw from linux.
+crosscompiling = True
+
+import glob
+import os
+import sys
+
+def recursiveDirs(root) :
+	return filter( (lambda a : a.rfind( "CVS")==-1 ),  [ a[0] for a in os.walk(root)]  )
+
+def unique(list) :
+	return dict.fromkeys(list).keys()
+
+def scanFiles(dir, accept=["*.cpp"], reject=[]) :
+	sources = []
+	paths = recursiveDirs(dir)
+	for path in paths :
+		for pattern in accept :
+			sources+=glob.glob(path+"/"+pattern)
+	for pattern in reject :
+		sources = filter( (lambda a : a.rfind(pattern)==-1 ),  sources )
+	return unique(sources)
+
+def subdirsContaining(root, patterns):
+	dirs = unique(map(os.path.dirname, scanFiles(root, patterns)))
+	dirs.sort()
+	return dirs
+
+
+
+targetDirs = subdirsContaining(".", ["*.cpp"])
+targetDirs = map(os.path.normpath, targetDirs)
+
+# Those are the projects that are to be compiled as shared libraries
+pluginDirs = [
+	"designer/containerextension",
+	"designer/customwidgetplugin",
+	"designer/taskmenuextension",
+	"designer/worldtimeclockplugin",
+	"tools/echoplugin/plugin",
+	"tools/styleplugin/plugin",
+	"tools/plugandpaintplugins/extrafilters",
+]
+# Those are the projects that are to be compiled as static libraries
+staticPluginDirs = [
+	"tools/plugandpaintplugins/basictools",
+]
+# Those are sources that contain alternative main functions within
+# a project which also have a main function.
+singleCppExtraBinaries = [
+	"qdbus/complexpingpong/complexping.cpp",
+	"qdbus/pingpong/ping.cpp",
+	"graphicsview/portedcanvas/blendshadow.cpp",
+	"graphicsview/portedcanvas/makeimg.cpp",
+]
+
+# The following blacklisted directories contain examples that
+# couldn't be compiled with that script and the tool as they are.
+blacklist=[
+	# Empty!! All examples compile!
+]
+blacklist = map(os.path.normpath, blacklist)
+pluginDirs = map(os.path.normpath, pluginDirs)
+staticPluginDirs = map(os.path.normpath, staticPluginDirs)
+
+env = Environment(tools=['default','qt4'], toolpath=[customToolsLocation])
+if crosscompiling : env.Tool('crossmingw', toolpath=[customToolsLocation])
+
+env['CXXFILESUFFIX']='.cpp'
+env.EnableQt4Modules([
+	"QtGui",
+	"QtCore",
+	"QtNetwork",
+	"QtOpenGL",
+	"Qt3Support",
+	"QtXml",
+	"QtUiTools",
+	"QtSvg",
+	"QtSql",
+	"QtTest",
+	"QtAssistant",
+	"QtScript",
+	"QtDBus",
+	"QtDesigner",
+	],
+	debug=False,
+	crosscompiling=crosscompiling,
+	)
+
+programs = []
+for dir in targetDirs:
+	if os.path.normpath(dir) in blacklist: continue
+	# Filtering qdbus examples in windows. Temporary kludge until Qt4.4.
+	if (sys.platform is 'win32' or crosscompiling) and dir.startswith('qdbus') : continue
+
+	sources = scanFiles(dir,
+		accept=["*.cpp", "*.c"], # *.c needed for some 3rd party files on the examples
+		reject=["qrc_", "ui_", "moc_"]+singleCppExtraBinaries)
+	
+	# rcc needs a -name flag because examples use identified resource files
+	def takebasename(file) : return os.path.splitext(os.path.basename(file))[0]
+	resources = [ env.Qrc(qrc, QT4_QRCFLAGS='-name '+takebasename(qrc))
+			for qrc in scanFiles(dir, ['*.qrc'])]
+	interfaces = [env.Uic4(uic)
+			for uic in scanFiles(dir, ['*.ui'])]
+
+	additionalPaths = subdirsContaining(dir, ['*.h', '*.ui'])
+
+	extraDefines = ['QT_SHARED'] # Should this macro be include by the tool itself?
+
+	# Those projects use header or outputs of other projects
+	if dir == 'tools/plugandpaint' :
+		if sys.platform is 'win32' or crosscompiling :
+			sources.append('tools/plugandpaintplugins/basictools/basictools.lib')
+		else :
+			sources.append('tools/plugandpaintplugins/basictools/libbasictools.a')
+	if dir == 'tools/plugandpaintplugins/basictools' :
+		additionalPaths.append("tools/")
+	if dir == 'tools/plugandpaintplugins/extrafilters' :
+		additionalPaths.append("tools/")
+	if dir == 'tools/echoplugin/plugin' :
+		additionalPaths.append("tools/echoplugin/echowindow/")
+
+	# Using explicit moc builders because those headers do not follow
+	# the standard naming convention (should be named as the cpp with .h)
+	# but a '_p' infix was added.
+	if dir == 'qdbus/remotecontrolledcar/car' :
+		sources.append(env.Moc4("qdbus/remotecontrolledcar/car/car_adaptor_p.h"))
+	if dir == 'qdbus/remotecontrolledcar/controller' :
+		sources.append(env.Moc4("qdbus/remotecontrolledcar/controller/car_interface_p.h"))
+
+	# Now choose the builder depending the kind of project (program, plugin, static lib)
+	if dir in staticPluginDirs :
+		print "StaticLib:", dir
+		extraDefines += ['QT_PLUGIN','QT_STATICPLUGIN']
+		builder = env.StaticLibrary
+	elif dir in pluginDirs :
+		print "Plugin:", dir
+		extraDefines += ['QT_PLUGIN','QDESIGNER_EXPORT_WIDGETS'] # The last one is just needed for designer plugins
+		builder = env.SharedLibrary
+	else :
+		print "Program:", dir
+		builder = env.Program
+
+	programs += builder(
+		dir+"/"+os.path.basename(dir),
+		sources+resources,
+		CPPPATH=env['CPPPATH']+additionalPaths+[".."],
+		QT4_MOCCPPPATH=env['QT4_MOCCPPPATH']+additionalPaths+[".."],
+		CPPDEFINES=env['CPPDEFINES']+extraDefines,
+		)
+
+for source in singleCppExtraBinaries :
+	# Filtering qdbus examples in windows. Temporary kludge until Qt4.4.
+	if (sys.platform is 'win32' or crosscompiling) and source.startswith('qdbus') : continue
+	targetBin = os.path.splitext(source)[0]
+	print "Program:", os.path.splitext(source)[0]
+	additionalPaths = subdirsContaining(dir, ['*.h', '*.ui'])
+	extraDefines = ['QT_SHARED']
+	target = env.Program(
+		targetBin,
+		[source],
+		CPPPATH=env['CPPPATH']+additionalPaths+[".."],
+		CPPDEFINES=env['CPPDEFINES']+extraDefines,
+		)
+	programs += target
+
+env.Alias('all', programs)
+env.Default('all')
+
+

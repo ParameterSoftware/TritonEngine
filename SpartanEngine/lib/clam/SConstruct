@@ -1,0 +1,317 @@
+#!/usr/bin/python
+EnsureSConsVersion(0, 96, 92)
+import sys
+import os
+import glob
+
+sys.path.append( os.path.abspath("scons/libs/") )
+from clam_build_helpers import *
+from clam_dependent_libs_checks import *
+
+# crosscompiling option is one option we should know on beforehand
+crosscompiling = False
+if sys.platform == 'linux2' :
+	opts = Variables('options.cache',ARGUMENTS)
+	opts.Add( BoolVariable( 'crossmingw', '', 'no' ))
+	crosscompiling = Environment(options=opts)['crossmingw']
+	if crosscompiling : print "Warning: Crosscompiling mode"
+
+isWindowsPlatform = sys.platform=='win32' or crosscompiling
+isLinuxPlatform = sys.platform=='linux2' and not crosscompiling
+isDarwinPlatform = sys.platform=='darwin'
+
+def load_config_file_to_env( env, dir ):
+	opts = Variables(dir+'/flags.conf')
+	opts.Add( 'CPPPATH', 'CPP PATH')
+	opts.Add( 'CCFLAGS', 'CC FLAGS')
+	opts.Add( 'CPPFLAGS', 'CPP FLAGS')
+	opts.Add( 'LIBPATH', 'LIB PATH')
+	opts.Add( 'LIBS', 'libs to link')
+	opts.Add( 'LINKFLAGS', 'LINKFLAGS') # This one added because on Mac OS X we need additional '-framework OpenGL && AGL'
+	opts.Add( 'pkg_config_available', 'PKG Config Available', 'False')
+	opts.Update(env)
+
+def save_config_file_from_env( env, dir ):
+	# workaround due to bug in scons (if we add the flag after loading it will add "" to the new flagand will fail
+	opts = Variables()
+	opts.Add( 'CPPPATH', 'CPP PATH', '')
+	opts.Add( 'CCFLAGS', 'CC FLAGS', '')
+	opts.Add( 'CPPFLAGS', 'CPP FLAGS', '')
+	opts.Add( 'LIBPATH', 'LIB PATH', '')
+	opts.Add( 'LIBS', 'libs to link', env['LIBS'])
+	opts.Add( 'LINKFLAGS', 'LINKFLAGS', '') # This one added because on Mac OS X we need additional '-framework OpenGL && AGL'
+	opts.Add( 'pkg_config_available', 'PKG Config Available', 'False')
+	opts.Save(dir+'/flags.conf', env)
+
+def configure_clam(clam_env) :
+	print """\
+############################################
+### CLAM GLOBAL DEPENDENCIES CHECKING    ###
+############################################"""
+	# Sandbox setup
+	if isWindowsPlatform :
+		clam_env.AppendUnique( CPPPATH = [os.path.join(clam_env['sandbox_path'], 'local', 'include')] )
+		clam_env.AppendUnique( LIBPATH = [os.path.join(clam_env['sandbox_path'], 'local', 'lib')] )
+		if os.environ.has_key('INCLUDE') :
+			for include in os.environ['INCLUDE'].split(';') :
+				if not include : continue
+				print( 'adding include dir from windows config: ' + include )
+				clam_env.AppendUnique( CPPPATH = [include] )
+	if isLinuxPlatform :
+		clam_env.AppendUnique( CPPPATH= ['/usr/local/include'] )
+	if isDarwinPlatform :
+		clam_env.AppendUnique( CPPPATH= ['/usr/local/include', '/opt/local/include'] )
+
+
+	conf = Configure( clam_env, custom_tests = custom_check_routines )
+	if not setup_global_environment( clam_env, conf ) :
+		Exit(1)
+	clam_env = conf.Finish()
+
+def configure_core(clam_env) :
+	print """\
+#########################################
+### CLAM CORE DEPENDENCIES CHECKING   ###
+#########################################"""
+	core_env = clam_env.Clone()
+	conf = Configure( core_env, custom_tests = custom_check_routines )
+	if not setup_core_environment( core_env, conf ) :
+		Exit(1)
+	core_env = conf.Finish()
+	clam_env['xmlbackend'] = core_env['xmlbackend']
+	return core_env
+
+def configure_processing(core_env) :
+	print """\
+###############################################
+### CLAM PROCESSING DEPENDENCIES CHECKING   ###
+###############################################"""
+	processing_env = core_env.Clone()
+	conf = Configure( processing_env, custom_check_routines )
+	if not setup_processing_environment( processing_env, conf ) :
+		Exit(1)
+	processing_env = conf.Finish()
+	return processing_env
+
+def configure_audioio(processing_env) :
+	print """\
+############################################
+### CLAM AUDIOIO DEPENDENCIES CHECKING   ###
+############################################"""
+	audioio_env = processing_env.Clone()
+
+	conf = Configure( audioio_env, custom_check_routines )
+	if not setup_audioio_environment( audioio_env, conf ) :
+		Exit(1)
+	audioio_env = conf.Finish()
+	return audioio_env
+
+def configureModules( clam_env ) :
+	configure_clam(clam_env)
+	save_config_file_from_env(clam_env, 'scons/libs')
+	core_env = configure_core(clam_env)
+	save_config_file_from_env(core_env, 'scons/libs/core')
+	processing_env = configure_processing(core_env)
+	save_config_file_from_env(processing_env, 'scons/libs/processing')
+	audioio_env = configure_audioio(core_env)
+	save_config_file_from_env(audioio_env, 'scons/libs/audioio')
+
+# helper functions
+def setup_build_options( env ) :
+	# configuration options:
+	opts = Variables('options.cache')
+	
+	# global options
+	opts.Add( PathVariable( 'prefix', 'Install location for CLAM', '/usr/local'))
+	opts.Add( PathVariable( 'prefix_for_packaging', 'Install location when packaging (just for .deb creation)', '.'))
+	if isWindowsPlatform :
+		opts.Add( PathVariable( 'sandbox_path', 'The working directory in mingw where the external libraries are placed', '' ) )
+	opts.Add( BoolVariable( 'release', 'Build CLAM with optimizations and stripping debug symbols', 'no'))
+	opts.Add( BoolVariable( 'intel_optimize', 'Build CLAM with newer intel specific optimizations', 'no'))
+	opts.Add( BoolVariable( 'double', 'CLAM TData type will be double','no'))
+	opts.Add( BoolVariable( 'checks', 'Postcondition checks enabled', 'yes' ))
+	if sys.platform == "linux2" :
+		opts.Add( BoolVariable( 'crossmingw', '', 'no' ))
+
+	opts.Add( BoolVariable( 'verbose', 'Display commands', False) )
+	opts.Add( BoolVariable( 'release_asserts', 'CLAM asserts will be triggered on release builds', 'no'))
+	opts.Add( BoolVariable( 'optimize_and_lose_precision', 'Use tabulated trigonometric functions and the like', 'no' )) 
+	opts.Add( BoolVariable( 'force_avoid_configure', 'Avoid configure phase. Useful for Eclipse scons plugin. Enable it only if you know what you are doing', 'no' ) )
+	# clam_core options
+	opts.Add( EnumVariable( 'xmlbackend', 'XML passivation backend', 'xercesc', ('xercesc','xmlpp','both','none')) )
+	if not isWindowsPlatform :
+		opts.Add( BoolVariable( 'with_jack', 'Enables/Disable JACK support', 'yes') )
+	else :
+		opts.Add( BoolVariable( 'with_jack', 'Enables/Disable JACK support', 'no') )
+
+	ladspa_option = True # (sys.platform == 'linux2' and not crosscompiling)
+	opts.Add( BoolVariable( 'with_ladspa', 'Ladspa plugin support', ladspa_option) )
+	
+	# clam_processing options
+	opts.Add( BoolVariable( 'with_fftw3', 'Selects whether to use fftw3 or not', 'yes'))
+	opts.Add( BoolVariable( 'with_nr_fft', 'Selects whether to use Numerical Recipes fft algorithm implementation or not', 'yes') )
+
+	# clam_audioio options
+	opts.Add( BoolVariable( 'with_sndfile', 'Enables PCM files reading and writing', 'yes' ) )	
+	opts.Add( BoolVariable( 'with_oggvorbis', 'Enables ogg/vorbis reading and writing support', 'yes' ) )
+	opts.Add( BoolVariable( 'with_mad', 'Enables mpeg 1 layer 3 files reading and writing support', 'yes' ) )
+	opts.Add( BoolVariable( 'with_id3', 'Enables support for accesing ID3 tags on mpeg audio streams', 'yes') )
+	opts.Add( BoolVariable( 'with_portaudio', 'Enables audio device I/O using PortAudio', 'yes') )
+	if isLinuxPlatform :
+		opts.Add( BoolVariable( 'with_alsa', 'Enables PCM and MIDI device I/O through ALSA', 'yes' ) )
+	elif isDarwinPlatform :
+		opts.Add( EnumVariable( 'audio_backend', 'Selects audio PCM i/o library used by CLAM backend', 'rtaudio', ('rtaudio','portaudio') ) )
+	elif isWindowsPlatform :
+		opts.Add( EnumVariable( 'audio_backend', 'Selects audio PCM i/o library used by CLAM backend', 'rtaudio', ('rtaudio','directx','portaudio') ) )
+	opts.Add( BoolVariable( 'with_portmidi', 'Enables MIDI device I/O through portmidi', 'no' ) )
+
+	opts.Add( 'distcc_hosts', 'Defines compiling hosts, if defined enables the distcc compiler', '')
+	
+	opts.Update(env)
+	opts.Save('options.cache', env) # Save, so user doesn't have to 
+	  				# specify prefix and other options every time
+
+	Help("""
+configure : Configures clam libraries. This is a mandatory step
+""" + opts.GenerateHelpText(env) )
+
+def compose_install_dirnames( env ) :
+	install_dirs = InstallDirs(env)
+	print """\
+#############################################
+### INSTALL DIRECTORY INFORMATION         ###
+#############################################"""
+	print "Directory to install under:", install_dirs.prefix
+	print "\tLibrary files will be installed at:", install_dirs.lib
+	print "\tExecutable files will be installed at:", install_dirs.bin
+	print "\tInclude files will be installed at:", install_dirs.inc
+	print "\tDocumentation, data and examples will be installed at:", install_dirs.data
+	return install_dirs
+
+
+
+def config_file_missing():
+	dirs = ". core audioio processing"
+	files = [ "scons/libs/"+dir+"/flags.conf" for dir in dirs.split()]
+	func_and = lambda x,y : x and y
+	result = not reduce( func_and, map(os.path.exists, files) ) 
+
+#	if result == False:
+#		print "\n WARNING: at least one module configuration file is missing. Running automatically as a 'scons configure'\n"
+
+	return result
+
+
+
+# SConstruct file for CLAM
+# Main section
+
+toolChain = 'default'
+if sys.platform == "win32": toolChain = 'mingw'
+clam_env = Environment( ENV=os.environ, tools=[toolChain])
+clam_env.SConsignFile()
+# scons optimizations
+clam_env.Decider('MD5-timestamp') # do not MD5 if the dates don't differ
+clam_env.SetOption('max_drift', 60) # just 60 seconds of clock drift
+clam_env.SetOption('implicit_cache', 1)
+setup_build_options( clam_env )
+SetupSpawn(clam_env) # to solve long command line problems (in win32)
+
+if not clam_env['verbose']:
+	clam_env['CXXCOMSTR'] = '== Compiling $SOURCE'
+	clam_env['SHCXXCOMSTR'] = '== Compiling shared $SOURCE'
+	clam_env['LINKCOMSTR'] = '== Linking $TARGET'
+	clam_env['SHLINKCOMSTR'] = '== Linking library $TARGET'
+
+crosscompiling = clam_env.has_key('crossmingw') and clam_env['crossmingw']
+if crosscompiling :
+	clam_env.Tool('crossmingw',toolpath=['scons/sconstools'])
+
+clam_env.Tool('textfile',toolpath=['scons/sconstools'])
+clam_env.Tool('pc',toolpath=['scons/sconstools'])
+
+if clam_env['distcc_hosts'] :
+	clam_env['CXX'] = 'distcc '+clam_env['CXX']
+	clam_env['ENV']['DISTCC_HOSTS'] = clam_env['distcc_hosts']
+	SetOption('num_jobs', len( clam_env['distcc_hosts'].split() ))
+
+
+sys.path.append('scons/sconstools')
+import versionInfo
+version, fullVersion = versionInfo.versionFromLocalInfo("CLAM", "CHANGES")
+Export('version')
+print "Version: ", version
+print "Package version: ", fullVersion
+
+
+versionInfo.generateVersionSources(os.path.join('src','Defines','CLAMVersion'), "CLAM", version, fullVersion)
+
+Export('clam_env')
+
+#registering custom checks
+custom_check_routines = dict()
+custom_check_routines.update(package_checks)
+custom_check_routines.update(tool_checks)
+custom_check_routines.update(generic_checks)
+custom_check_routines['CheckPkgConfigFile']=CheckPkgConfigFile
+custom_check_routines['CheckLibrarySample']=CheckLibrarySample
+
+#registering custom_builders
+create_custom_builders(clam_env)
+
+clam_env['CXXFILESUFFIX'] = '.cxx'
+
+#needs configure?
+avoid_configure_option=ARGUMENTS.get('force_avoid_configure',0)
+needs_configure = ('configure' in COMMAND_LINE_TARGETS) or config_file_missing() or len(ARGUMENTS)>0
+avoid_configure = '--help' in COMMAND_LINE_TARGETS or avoid_configure_option=='1' or avoid_configure_option=='yes' or '-c' in ARGUMENTS
+
+if needs_configure and not avoid_configure :
+	print 'Configure phase...'
+	configureModules(clam_env)
+	print "Finished. Invoke 'scons' now."
+	Exit(0)
+
+
+core_env = clam_env.Clone()
+processing_env = clam_env.Clone()
+audioio_env = clam_env.Clone()
+
+modules = [ 'core', 'processing', 'audioio']
+
+Export("crosscompiling")
+
+# install dirs composition
+install_dirs = compose_install_dirnames(clam_env)
+Export('install_dirs')
+
+#building
+if not clam_env.GetOption('clean') :
+	for module in modules :
+		load_config_file_to_env(eval(module+'_env'), 'scons/libs/'+module)
+
+for module in modules :
+	Export(module+'_env')
+	SConscript('scons/libs/'+module+'/SConscript')
+
+doxygen = clam_env.Command("DoxyLog", "doxygen.cfg",
+	'(cat $SOURCE; echo "PROJECT_NUMBER = %s" ) | doxygen - 2>&1 | tee $TARGET'%fullVersion)
+clam_env.Alias("doxygen", doxygen)
+
+sconstoolsTargetDir = os.path.join(install_dirs.data, 'clam', 'sconstools')
+sconstoolsInstall = clam_env.Install(sconstoolsTargetDir, glob.glob('scons/sconstools/*.py'))
+clam_env.Alias('install_sconstools', sconstoolsInstall)
+Depends('install_core', sconstoolsInstall)
+
+# Module dependenciesa
+all_alias = Alias( 'all', modules)
+install_alias = Alias( 'install', ['install_%s'%module for module in modules])
+
+Default( all_alias )
+
+print """\
+##############################################
+### BUILDING CLAM LIBRARIES                ###
+##############################################"""
+
+

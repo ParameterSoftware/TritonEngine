@@ -1,0 +1,162 @@
+
+This is a CLAM plugin which contains some processings to simulate 3D acoustics.
+That means simulating moving sound emitters and receptor within a virtual 3D scenario.
+It works by having a database of impulse responses (pressure and velocities) for
+each receiver and emitter position within a discrete position grid.
+
+Of course you can reuse the building blocks for simpler or more complex systems:
+- Simpler spectral processing (FFT, IFFT, arithmetic operation and conversions)
+- Processing of impulse response representation in DFT (computation, interpolation, DB's loading)
+- Low latency real-time convolution
+- Simulation of physical acoustic magnitudes
+- Decoding physical magnitudes and b-format to exhibition systems
+
+Some examples (.clamnetwork files) needs external databases. You should have them in your disk and link (ln -s) the following directories:
+- HRTFs
+- wavs
+
+Included Processings:
+=====================
+
+To get a comprehensive description of the included processings,
+conventions and other details, please, refer to the doxygen documentation.
+
+To generate it, just execute 'doxygen' from the root of the plugin source.
+You can start browsing the documentation at html/index.html
+
+Example Networks:
+=================
+
+Spectral Processinh
+-------------------
+
+double_size_spectrum_product.clamnetwork
+fft_spectrum_product.clamnetwork
+spectrum_mixer.clamnetwork
+	This network exemplifies how to do a mixing in spectral domain.
+	The outputs of two frequency and amplitude controlable oscillators
+	are feed to two spectral analysis pipelines and then the complex
+	spectrums added and the result resintesized.
+
+windowing-and-overlap.clamnetwork
+	
+complex_fourier_transforms.clamnetwork
+	This network measures the error of a successive FFT-IFFT tranformation
+	by subtracting the output to the input.
+	A perfect transformation should give absolute silence.
+	The windowing affects by a factor the output of the transformations.
+	You can change it on the mixer processing.
+
+spectrum_representation_benchmark.clamnetwork
+	This benchmark is used to compare with profilers such as callgrind
+	the performance of spectrum multiplication in different spectrum
+	representations (complex and polar) considering also the needed
+	conversions.
+
+constant_spectrum.clamnetwork
+	A test for the ConstantSpectrum processing that keeps at the output
+	the spectrum of the first frame of an audio file.
+	The example resynthesizes and visualizes such spectrum each frame.
+
+Real Time Convolution
+---------------------
+
+lowlatencyconvolution.clamnetwork
+	An example effect of LowLatencyConvolution which is able to apply
+	a reverb using a recorded impulse response with a very long tail
+	faster than time domain convolution (logarithmic time to the frame)
+	and with lower latency than spectrum domain convolution (indeed
+	the latency is just the input block size).
+
+lowlatencyconvolution-withdoubleframesize.clamnetwork
+	The same as lowlatencyconvolution but using 1024 hops instead of 512.
+
+
+IR and HRTFs Databases
+----------------------
+
+single-impulse-response-surround.clamnetwork
+	Convolves the input sound with p, vx and vy components of an
+	impulse response and obtains the surround output.
+
+single-impulse-response-surround-to-stereo.clamnetwork
+	Convolves the input sound with p, vx and vy components of an
+	impulse response, obtains the surround output and turns it
+	into stereo using hrtf's for the speakers positions.
+
+impulse-response-database-only-pressure.clamnetwork
+	Virtual room navigation with a single component (p).
+	Simulates emitter and receiver moving on a room by convolving
+	the source with impulse responses at different emitter-receiver
+	positions combinations. Crossfading is used when the dominant
+	impulse response changes.
+
+impulse-response-database-surround.clamnetwork
+	Virtual room navigation with direccionality (vx, vy) and surround output.
+	Simulates emitter and receiver moving on a room by convolving
+	the source with impulse responses at different emitter-receiver
+	positions combinations. Crossfading is used when the dominant
+	impulse response changes.
+	p, vx and vy components is considered so we can later compute the
+	surround output.
+
+impulse-response-database-surround-to-stereo.clamnetwork
+	Extends the room simulation by turning the 5 surround channels
+	into stereo using specific hrtf impulse responses for the locations
+	of the surround speakers.
+
+hrtf-database.clamnetwork
+	Places the input sound at a given azimuth and elevation using
+	an HRTF database.
+
+
+IR-Interpolation
+----------------
+	
+interpolate-between-two-points.clamnetwork
+	Simulates receiver movements between two points where we
+	have recorded the impulse response from a fixed emitter point.
+	It does such simulation by interpolation (pondered sum) of
+	both impulse responses. It does just for the p component.
+
+interpolate-between-two-points-surround.clamnetwork
+	Simulates receiver movements between two points where we
+	have recorded the impulse response from a fixed emitter point.
+	It does such simulation by interpolation (pondered sum) of
+	both impulse responses. By processing p, vx and vy components
+	in parallel we can get the surround output.
+
+B-format handling
+-----------------
+
+mono2bformat.clamnetwork
+	This network is a utility network to generate a synthetic first order
+	B-format signal from a single mono signal applying different gains
+	to the mono signal in order to generate the B-format W,X,Y,Z components.
+	Gains are deduced from the controllable azimuth and elevation.
+	Two independent factors one for the W and another for X,Y,Z.
+	For ambisonics W factor has to be 1/sqrt(2) and X,Y,Z factor should be 1.
+	By changing those defaults values to Wfactor=1 and XYZfactor=-1,
+	you can also obtain the physical magnitudes of pressure and velocity.
+	Some rules of thumb for ambisonics output:
+		W factor: typically set to 1/sqrt(2)
+		X factor: +1 comes from front, -1 comes from back
+		Y factor: +1 comes from left, -1 comes from right
+		Z factor: +1 comes from above, -1 comes from below
+		X,Y,Z factors are normalized to be an unitary vector
+
+bformat2surround.clamnetwork
+	This network decodes a bformat (W,X,Y,Z) input into a 5 channels surround
+	with L R C SL SR channels at 30 -30 0 110 -110 degrees.
+
+bformat2binaural.clamnetwork
+	This network converts a bformat (W,X,Y,Z) signal into a binaural one (L,R).
+	Input channels are convolved with the first order components of the
+	decomposition in spherical harmonics of the HRTF(time,azimut,elevation)
+	function. Such components are expected to be in the working directory
+	with filenames Ew.wav, Ex.wav, Ey.wav, Ez.wav.
+	TODO: Explain how to obtain such spherical harmonics components
+
+
+
+

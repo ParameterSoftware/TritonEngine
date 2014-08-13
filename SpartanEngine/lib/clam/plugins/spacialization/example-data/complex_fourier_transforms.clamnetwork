@@ -1,0 +1,159 @@
+<network id="Unnamed">
+
+  <processing id="AudioBuffer2Stream_0" position="486,216" size="197,60" type="AudioBuffer2Stream">
+    <HopSize>512</HopSize>
+    <BufferSize>1024</BufferSize>
+    </processing>
+
+  <processing id="AudioMixer_0" position="451,116" size="132,62" type="AudioMixer">
+    <NumberOfInPorts>2</NumberOfInPorts>
+    </processing>
+
+  <processing id="AudioSink_0" position="830,46" size="128,111" type="AudioSink" />
+
+  <processing id="AudioSink_1" position="302,18" size="128,111" type="AudioSink" />
+
+  <processing id="AudioWindowing_0" position="65,212" size="171,60" type="AudioStream2Buffer">
+    <HopSize>512</HopSize>
+    <BufferSize>1024</BufferSize>
+    </processing>
+
+  <processing id="BufferOscilloscope_0" position="533,466" size="314,135" type="BufferOscilloscope" />
+
+  <processing id="Complex2MagPhaseSpectrum_0" position="62,346" size="268,60" type="Complex2MagPhaseSpectrum" />
+
+  <processing id="Gain 0" position="431,15" size="187,77" type="OutControlSender">
+    <Min>-1</Min>
+    <Default>-1</Default>
+    <Max>0</Max>
+    <Step>0.01</Step>
+    <ControlRepresentation>Horizontal Slider</ControlRepresentation>
+  </processing>
+
+  <processing id="Gain 1" position="611,13" size="182,77" type="OutControlSender">
+    <Min>0</Min>
+    <Default>0.5</Default>
+    <Max>1</Max>
+    <Step>0.005</Step>
+    <ControlRepresentation>Horizontal Slider</ControlRepresentation>
+  </processing>
+
+  <processing id="MagPhaseSpectrum2Spectrum_0" position="69,392" size="274,60" type="MagPhaseSpectrum2Spectrum" />
+
+  <processing id="MyFFT_0" position="273,215" size="97,60" type="MyFFT">
+    <AudioSize>1024</AudioSize>
+  </processing>
+
+  <processing id="MyIFFT_0" position="378,216" size="101,60" type="MyIFFT">
+    <AudioSize>1024</AudioSize>
+  </processing>
+
+  <processing id="Oscilloscope_0" position="759,111" size="214,177" type="Oscilloscope" />
+
+  <processing id="Oscilloscope_1" position="532,303" size="429,210" type="Oscilloscope" />
+
+  <processing id="Oscilloscope_2" position="315,304" size="230,255" type="Oscilloscope" />
+
+  <processing id="Sin28_0" position="0,0" size="80,58" type="Sin28" />
+
+  <processing id="SpectrumView_0" position="66,435" size="248,122" type="SpectrumView" />
+
+  <processing id="f" position="94,8" size="209,77" type="OutControlSender">
+    <Min>0</Min>
+    <Default>0.25</Default>
+    <Max>4000</Max>
+    <Step>1</Step>
+    <ControlRepresentation>Horizontal Slider</ControlRepresentation>
+  </processing>
+
+  <port_connection>
+    <out>AudioBuffer2Stream_0.Audio stream</out>
+    <in>Oscilloscope_1.Input</in>
+  </port_connection>
+
+  <port_connection>
+    <out>AudioBuffer2Stream_0.Audio stream</out>
+    <in>AudioMixer_0.Input 1</in>
+  </port_connection>
+
+  <port_connection>
+    <out>AudioMixer_0.Output Audio</out>
+    <in>Oscilloscope_0.Input</in>
+  </port_connection>
+
+  <port_connection>
+    <out>AudioMixer_0.Output Audio</out>
+    <in>AudioSink_0.1</in>
+  </port_connection>
+
+  <port_connection>
+    <out>AudioWindowing_0.Audio buffer</out>
+    <in>MyFFT_0.Audio Buffer</in>
+  </port_connection>
+
+  <port_connection>
+    <out>AudioWindowing_0.Audio buffer</out>
+    <in>BufferOscilloscope_0.Input</in>
+  </port_connection>
+
+  <port_connection>
+    <out>Complex2MagPhaseSpectrum_0.MagPhaseSpectrum</out>
+    <in>MagPhaseSpectrum2Spectrum_0.MagPhaseSpectrum</in>
+  </port_connection>
+
+  <port_connection>
+    <out>MagPhaseSpectrum2Spectrum_0.Spectrum</out>
+    <in>SpectrumView_0.Input</in>
+  </port_connection>
+
+  <port_connection>
+    <out>MyFFT_0.Complex Spectrum</out>
+    <in>MyIFFT_0.Complex Spectrum</in>
+  </port_connection>
+
+  <port_connection>
+    <out>MyFFT_0.Complex Spectrum</out>
+    <in>Complex2MagPhaseSpectrum_0.ComplexSpectrum</in>
+  </port_connection>
+
+  <port_connection>
+    <out>MyIFFT_0.Audio Buffer</out>
+    <in>AudioBuffer2Stream_0.Audio buffer</in>
+  </port_connection>
+
+  <port_connection>
+    <out>Sin28_0.out</out>
+    <in>AudioWindowing_0.Audio stream</in>
+  </port_connection>
+
+  <port_connection>
+    <out>Sin28_0.out</out>
+    <in>AudioMixer_0.Input 0</in>
+  </port_connection>
+
+  <port_connection>
+    <out>Sin28_0.out</out>
+    <in>AudioSink_1.1</in>
+  </port_connection>
+
+  <port_connection>
+    <out>Sin28_0.out</out>
+    <in>Oscilloscope_2.Input</in>
+  </port_connection>
+
+  <control_connection>
+    <out>Gain 0.out</out>
+    <in>AudioMixer_0.Gain 0</in>
+  </control_connection>
+
+  <control_connection>
+    <out>Gain 1.out</out>
+    <in>AudioMixer_0.Gain 1</in>
+  </control_connection>
+
+  <control_connection>
+    <out>f.out</out>
+    <in>Sin28_0.f</in>
+  </control_connection>
+
+</network>
