@@ -1,0 +1,3 @@
+include(basics.cmake)
+
+setupVersionNumbers()
