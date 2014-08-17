@@ -1,5 +1,6 @@
-﻿Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C++ Express 2010
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SDL2", "SDL\SDL_VS2010.vcxproj", "{81CE8DAF-EBB2-4761-8E45-B71ABCCA8C68}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SDL2main", "SDLmain\SDLmain_VS2010.vcxproj", "{DA956FD3-E142-46F2-9DD5-C78BEBB56B7A}"
@@ -78,8 +79,8 @@ Global
 		{81CE8DAF-EBB2-4761-8E45-B71ABCCA8C68}.Debug_static|Win32.Build.0 = Debug_static|Win32
 		{81CE8DAF-EBB2-4761-8E45-B71ABCCA8C68}.Debug_static|x64.ActiveCfg = Debug_static|x64
 		{81CE8DAF-EBB2-4761-8E45-B71ABCCA8C68}.Debug_static|x64.Build.0 = Debug_static|x64
-		{81CE8DAF-EBB2-4761-8E45-B71ABCCA8C68}.Debug|Win32.ActiveCfg = Debug|Win32
-		{81CE8DAF-EBB2-4761-8E45-B71ABCCA8C68}.Debug|Win32.Build.0 = Debug|Win32
+		{81CE8DAF-EBB2-4761-8E45-B71ABCCA8C68}.Debug|Win32.ActiveCfg = Release|Win32
+		{81CE8DAF-EBB2-4761-8E45-B71ABCCA8C68}.Debug|Win32.Build.0 = Release|Win32
 		{81CE8DAF-EBB2-4761-8E45-B71ABCCA8C68}.Debug|x64.ActiveCfg = Debug|x64
 		{81CE8DAF-EBB2-4761-8E45-B71ABCCA8C68}.Debug|x64.Build.0 = Debug|x64
 		{81CE8DAF-EBB2-4761-8E45-B71ABCCA8C68}.Release_static|Win32.ActiveCfg = Release_static|Win32
