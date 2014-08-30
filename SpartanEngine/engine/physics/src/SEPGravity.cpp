@@ -1,4 +1,4 @@
-#include "SEP.h"
+#include "SEPGravity.h"
 
 SEPGravity::SEPGravity(SEvector gravity)
 {
