@@ -3,7 +3,7 @@ The Spartan Engine
 
 ##Description
 
-The main goal of this project is to create a game engine that is open source, both complex and easy to use, mostly independent, and free. The engine itself will have top notch graphics and audio, great networking (with a new experimental networking system) and plenty of other features that a normal game engine will have. This engine will allow easy interaction for anyone with minimal programing experience to people who want to control every tiny detail of the entire engine in their game. This engine will evolve to be faster and better with each developing day. Hopefully we can request your help.
+The main goal of this project is to create a game engine that is open source, both complex and easy to use, mostly independent, and free. The engine itself will have top notch graphics and audio, great networking and plenty of other features that a normal game engine will have. This engine will allow easy interaction for anyone with minimal programing experience to people who want to control every tiny detail of the entire engine in their game. This engine will evolve to be faster and better with each developing day. Hopefully we can request your help.
 
 ##Contrbution Guidelines
 
@@ -13,7 +13,7 @@ If you are adding a independent function, please do this in front of it "se(chan
 
 Similar rules apply to new classes but they follow capital letters like SEG for graphics or SEA for audio
 
-On any C or C++ file use the tabs indent mode and 8 indent size
+Use the tabs indent mode and 8 indent size
 
 ##Warning
 
