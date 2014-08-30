@@ -12,3 +12,5 @@ char seuConvertToChar(int obj)
 	char result = iresult;
 	return result;
 }
+
+

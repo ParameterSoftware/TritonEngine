@@ -4,25 +4,23 @@
 #include <iostream>
 #include "SEVector.h"
 
-class EntityState
+class PhysicsState
 {
 public:
 	EntityState(SEVector position, SEVector rotation, SEVector velocity, SEVector acceleration);
+	EntityState(SEVector position, SEVector rotation);
 	EntityState();
 	~EntityState();
-	SEVector GetPositon();
-	SEVector GetRotation();
-	SEVector GetVelocity();
-	SEVector GetAcceleration();
 	void ToggleGravity();
 	void TogglePhysics(bool toggleGravity = true);
 	bool UsesGravity();
 	bool HasPhysics();
-private:
+	
 	SEVector position;
 	SEVector rotation;
 	SEVector velocity;
 	SEVector acceleration;
+private:
 	bool hasPhysics;
 	bool useGravity;
 };
@@ -30,9 +28,10 @@ private:
 class SEPEntity
 {
 public:
-	SEPEntity(EntityState state);
+	SEPEntity(PhysicsState state);
 	~SEPEntity();
-	EntityState entityState;
+	Update();
+	PhysicsState pState;
 };
 
 #endif /* defined(__SEPENTITY__) */
