@@ -1,5 +1,5 @@
-#ifndef __SEP__
-#define __SEP__
+#ifndef __SEPGRAVITY__
+#define __SEPGRAVITY__
 
 #include <iostream>
 #include "SEVector.h"
@@ -24,4 +24,4 @@ private:
 	SEVectir pull_location;
 };
 
-#endif //define(__SEP__)
+#endif //define(__SEPGRAVITY__)
