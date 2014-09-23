@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include "../../utilities/src/SEVector.h"
 
 #ifndef __SEGVBO__
 #define __SEGVBO__
@@ -16,7 +17,7 @@ struct SEGTriangle
 	SEGVertex a;
 	SEGVertex b;
 	SEGVertex c;
-	ushort indices[3];
+	unsigned short indices[3];
 };
 
 struct SEGVertexHolder

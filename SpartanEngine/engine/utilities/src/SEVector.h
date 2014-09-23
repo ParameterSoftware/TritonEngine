@@ -4,7 +4,6 @@
 #include <iostream>
 
 template<typedef T>
-
 class SEVector
 {
 public:

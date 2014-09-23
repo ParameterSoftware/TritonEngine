@@ -1,6 +1,8 @@
 #include "SEGVbo.h"
 
-SEGVbo::SEGVbo(SEGVertexHolder holder)
+using class SEGVBO
+
+SEGVbo(SEGVertexHolder holder)
 {
 	glGenVertexArrays(1, &vaoID[0]);
 	glBindVertexArray(vaoID[0]);
@@ -21,14 +23,12 @@ SEGVbo::SEGVbo(SEGVertexHolder holder)
 	this->Render(holder);
 }
 
-void SEGVbo::Render(SEGVertexHolder holder)
+void Render(SEGVertexHolder holder)
 {
 	glBindVertexArray(vaoID[0]);
 	glDrawArrays(GL_TRIANGLES, 0, );
 	glBindVertexArray(0);
 }
 
-SEGVbo::~SEGVbo()
-{
-	
-}
+~SEGVbo()
+{}

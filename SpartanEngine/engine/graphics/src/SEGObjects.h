@@ -1,5 +1,5 @@
 #include <iostream>
-#include "SEVector.h"
+#include "../../utilities/src/SEVector.h"
 
 #ifndef __SEGOBJECT__
 #define __SEGOBJECT__

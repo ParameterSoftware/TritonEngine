@@ -12,7 +12,7 @@ public:
 	SEWindow();
 	~SEWindow();
 	GLFWwindow* GetWindow();
-	int[2] GetDimensions();
+	int* GetDimensions();
 	const char* GetTitle();
 	bool isFullScreen();
 	void ToggleFullscreen(GLFWmonitor* monitor = glfwGetPrimaryMonitor());
@@ -28,6 +28,6 @@ private:
 	double winDeltaTime;
 };
 
-sewGetMainWindow();
+SEWindow sewGetMainWindow();
 
 #endif /* defined(__SEWINDOW__) */

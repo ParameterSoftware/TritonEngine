@@ -1,4 +1,4 @@
-#include "SEUException.h"
+#include "SEException.h"
 #include "SENSocket.h"
 
 //SENSocket
@@ -23,7 +23,7 @@ bool SENSocket::Open(unsigned short port, bool bm)
 
 	if ( socket <= 0 )
 	{
-		throw SEUException( "Socket Creation Failed\n" );
+		throw SEException( "Socket Creation Failed\n" );
 		socket = 0;
 		return false;
 	}
@@ -36,7 +36,7 @@ bool SENSocket::Open(unsigned short port, bool bm)
 
 	if ( bind( socket, (const sockaddr*) &address, sizeof(sockaddr_in) ) < 0 )
 	{
-		throw SEUException("Socket Binding Failed\n");
+		throw SEException("Socket Binding Failed\n");
 		Close();
 		return false;
 	}
@@ -48,7 +48,7 @@ bool SENSocket::Open(unsigned short port, bool bm)
 		int nonBlocking = 1;
 		if ( fcntl( socket, F_SETFL, O_NONBLOCK, nonBlocking ) == -1 )
 		{
-			throw SEUException( "Non-Blocking Socket Mode failed to be Set (UNIX)\n" );
+			throw SEException( "Non-Blocking Socket Mode failed to be Set (UNIX)\n" );
 			Close();
 			return false;
 		}
@@ -56,7 +56,7 @@ bool SENSocket::Open(unsigned short port, bool bm)
 		DWORD nonBlocking = 1;
 		if ( ioctlsocket( socket, FIONBIO, &nonBlocking ) != 0 )
 		{
-			throw SEUException( "Non-Blocking Socket Mode failed to be Set (Windows)\n" );
+			throw SEException( "Non-Blocking Socket Mode failed to be Set (Windows)\n" );
 			Close();
 			return false;
 		}

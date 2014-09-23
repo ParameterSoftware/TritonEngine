@@ -1,6 +1,6 @@
 #include "SEVector.h"
 
-template< class T>
+template<typedef T>
 SEVector::SEVector( T xyz )
 {
 	x = xyz;

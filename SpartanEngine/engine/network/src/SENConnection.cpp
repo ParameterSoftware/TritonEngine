@@ -131,7 +131,7 @@ bool SENConnection::SendPacket( const unsigned char data[], int size )
 {
 	if ( address.GetAddress() == 0 )
 	{
-		throw SEUException("No Address to Send to");
+		throw SEException("No Address to Send to");
 		return false;
 	}
 	unsigned char* packet = new unsigned char[size+4];
