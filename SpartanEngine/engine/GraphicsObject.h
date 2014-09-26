@@ -1,13 +1,13 @@
 #include <iostream>
-#include "../../utilities/src/Vector.h"
+#include "Vector.h"
 
-#ifndef __PhysicsObject__
-#define __PhysicsObject__
+#ifndef __GOBJ__
+#define __GOBJ__
 
-class PhysicsObject
+class GraphicsObject
 {
 public:
-	PhysicsObject(Vector position);
+	GraphicsObject(Vector position);
 	virtual bool Start();
 	virtual void Update();
 	virtual void Stop();
@@ -18,4 +18,4 @@ private:
 	virtual void UpdateGraphics();
 };
 
-#endif /* define(__PhysicsObject__) */
+#endif /* define(__GOBJ__) */

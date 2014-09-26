@@ -34,6 +34,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\17galbany\Desktop\SpartanEngine\SpartanEngine\includes;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\17galbany\Desktop\SpartanEngine\SpartanEngine\deps;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>true</LinkIncremental>
@@ -50,6 +52,7 @@
       <TargetMachine>MachineX86</TargetMachine>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
+      <AdditionalDependencies>glfw3.lib;glfw3dll.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -68,33 +71,33 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="graphics\src\VBO.cpp" />
-    <ClCompile Include="math\src\Math.cpp" />
-    <ClCompile Include="network\src\Networking.cpp" />
-    <ClCompile Include="network\src\Connection.cpp" />
-    <ClCompile Include="network\src\Socket.cpp" />
-    <ClCompile Include="physics\src\PhysicsEntity.cpp" />
-    <ClCompile Include="physics\src\Gravity.cpp" />
-    <ClCompile Include="updater\src\Updater.cpp" />
-    <ClCompile Include="utilities\src\Exception.cpp" />
-    <ClCompile Include="utilities\src\Utilities.cpp" />
-    <ClCompile Include="utilities\src\3DVec.cpp" />
-    <ClCompile Include="window\src\Window.cpp" />
+    <ClCompile Include="3DVec.cpp" />
+    <ClCompile Include="Connection.cpp" />
+    <ClCompile Include="Exception.cpp" />
+    <ClCompile Include="Gravity.cpp" />
+    <ClCompile Include="Math.cpp" />
+    <ClCompile Include="Networking.cpp" />
+    <ClCompile Include="PhysicsEntity.cpp" />
+    <ClCompile Include="Socket.cpp" />
+    <ClCompile Include="Updater.cpp" />
+    <ClCompile Include="Utilities.cpp" />
+    <ClCompile Include="VBO.cpp" />
+    <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="graphics\src\PhysicsObject.h" />
-    <ClInclude Include="graphics\src\VBO.h" />
-    <ClInclude Include="math\src\Math.h" />
-    <ClInclude Include="network\src\Networking.h" />
-    <ClInclude Include="network\src\Connection.h" />
-    <ClInclude Include="network\src\Socket.h" />
-    <ClInclude Include="physics\src\PhysicsEntity.h" />
-    <ClInclude Include="physics\src\Gravity.h" />
-    <ClInclude Include="updater\src\Updater.h" />
-    <ClInclude Include="utilities\src\Exception.h" />
-    <ClInclude Include="utilities\src\Utilities.h" />
-    <ClInclude Include="utilities\src\Vector.h" />
-    <ClInclude Include="window\src\Window.h" />
+    <ClInclude Include="Connection.h" />
+    <ClInclude Include="Exception.h" />
+    <ClInclude Include="GraphicsObject.h" />
+    <ClInclude Include="Gravity.h" />
+    <ClInclude Include="Math.h" />
+    <ClInclude Include="Networking.h" />
+    <ClInclude Include="PhysicsEntity.h" />
+    <ClInclude Include="Socket.h" />
+    <ClInclude Include="Updater.h" />
+    <ClInclude Include="Utilities.h" />
+    <ClInclude Include="VBO.h" />
+    <ClInclude Include="Vector.h" />
+    <ClInclude Include="Window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

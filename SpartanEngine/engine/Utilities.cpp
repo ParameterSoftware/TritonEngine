@@ -1,5 +1,7 @@
 #include "Utilities.h"
 
+using namespace seu;
+
 int seuConvertToInt(char obj)
 {
 	int result = obj - '0';

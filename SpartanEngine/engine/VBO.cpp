@@ -1,4 +1,5 @@
 #include "VBO.h"
+#include <GLFW\glfw3.h>
 
 VBO::VBO(TriangleVector holder)
 {

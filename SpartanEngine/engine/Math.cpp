@@ -1,8 +1,10 @@
 #include "Math.h"
-#include "../../utilities/src/Vector.h"
+#include "Vector.h"
 
 #include <stdlib.h>
 #include <time.h>  
+
+using namespace sem;
 
 //The most perfected method example (method 14) at http://www.codeproject.com/Articles/69941/Best-Square-Root-Method-Algorithm-Function-Precisi 
 //According to the examples there, its better then std::sqrt(n)
@@ -11,79 +13,79 @@ double inline __declspec (naked) __fastcall InternalSqrt(double n)
 	_asm fld qword ptr [esp+4]
 	_asm fsqrt
 	_asm ret 8
-} 
+}
 
-double semRandom(double lowerRange, double higherRange)
+double random(double lowerRange, double higherRange)
 {
 	srand(time(NULL));
 	return (lowerRange + rand()) % higherRange;
 }
 
-double semPI()
+double PI()
 {
 	return M_PI;
 }
 
-Vector semDistance(Vector point1, Vector point2)
+Vector distance(Vector point1, Vector point2)
 {
 	return point1 - point2;
 }
 
-double semToDegrees(double radian)
+double toDegrees(double radian)
 {
-	return radian*180/semPI();
+	return radian*180/PI();
 }
 
-double semToRadians(double degree)
+double toRadians(double degree)
 {
-	return degree*semPI()/180;
+	return degree*PI()/180;
 }
 
-double semFractionTime(double start, double end, double current)
+double fractionTime(double start, double end, double current)
 {
 	return ( current - start ) / ( end - start );
 }
 
-double semSqrt(double square)
+double sqrt(double square)
 {
 	return InternalSqrt(square);
 }
 
 //The C library already handles functions like sin, cos, tan, ect. perfectly enough
-double semSin(double x, bool convert)
+double sin(double x, bool convert)
 {
 	if(convert)
-		x = semToDegrees(x);
+		x = ToDegrees(x);
 	return std::sin(x);
 }
 
-double semCos(double x, bool convert)
+double cos(double x, bool convert)
 {
 	if(convert)
-		x = semToDegrees(x);
+		x = toDegrees(x);
 	return std::cos(x);
 }
 
-double semTan(double x, bool convert)
+double tan(double x, bool convert)
 {
 	if(convert)
-		x = semToDegrees(x);
+		x = toDegrees(x);
 	return std::tan(x);
 }
 
-double semAtan(double x, bool convert)
+double atan(double x, bool convert)
 {
 	if(convert)
-		x = semToDegrees(x);
+		x = toDegrees(x);
 	return std::atan(x);
 }
 
-double semAtan2(double x, double y, bool convert)
+double atan2(double x, double y, bool convert)
 {
 	if(convert)
 	{
-		x = semToDegrees(x);
-		y = semToDegrees(y);
+		x = toDegrees(x);
+		y = toDegrees(y);
 	}
 	return std::atan2(x,y);
 }

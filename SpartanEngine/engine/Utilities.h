@@ -3,7 +3,10 @@
 #ifndef __SEU__
 #define __SEU__
 
-int seuConvertToInt(char obj);
-char seuConvertToChar(int obj);
+namespace seu
+{
+	int convertToInt(char obj);
+	char convertToChar(int obj);
+}
 
 #endif /* define(__SEU__) */

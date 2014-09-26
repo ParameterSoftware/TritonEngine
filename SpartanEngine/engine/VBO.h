@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include "../../utilities/src/Vector.h"
+#include "Vector.h"
 
 #ifndef __VBO__
 #define __VBO__

@@ -1,5 +1,7 @@
 #include "Vector.h"
 
+using namespace seu;
+
 template<typedef T>
 Vector::Vector( T xyz )
 {
