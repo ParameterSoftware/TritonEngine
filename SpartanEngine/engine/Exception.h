@@ -4,43 +4,46 @@
 #include <sstream>
 #include <string>
 
-#ifndef __Exception__
-#define __Exception__
+#ifndef __EXCEPTION__
+#define __EXCEPTION__
 
-template<typedef T>
+using namespace std;
 
-class Exception: public std::exception
+namespace seu
 {
-public:
-    /**
-     *  The constructor of Exception
-     *
-     *  @param msg The message the Exception is returning
-     */
-	virtual Exception(const std::string msg);
+	class Exception: public exception
+	{
+	public:
+		/**
+		 *  The constructor of Exception
+		 *
+		 *  @param msg The message the Exception is returning
+		 */
+		Exception(const string msg);
 
-	/**
-     *  The deconstructor of Exception
-     */
-	virtual ~Excpetion();
+		/**
+		 *  The deconstructor of Exception
+		 */
+		~Exception();
 
-	/**
-     *  Gets the message the Exception is holding
-     *
-     *  @return The message the exception is holding
-     */
-	virtual string what() const;
+		/**
+		 *  Gets the message the Exception is holding
+		 *
+		 *  @return The message the exception is holding
+		 */
+		virtual const char* what() const;
 
-	/**
-     *  Gets the message the Exception is holding
-     *
-     *  @return The message the exception is holding
-     */
-	virtual string getMessage() const;
-	string operator <<(T& all);
-	string << operator(T& all);
-private:
-	string msg_;
-};
+		/**
+		 *  Gets the message the Exception is holding
+		 *
+		 *  @return The message the exception is holding
+		 */
+		virtual string getMessage() const;
+		string operator <<(string all);
+		string operator <<(const char* all);
+	private:
+		string msg_;
+	};
+}
 
-#endif /* define(__Exception__) */
+#endif /* define(__EXCEPTION__) */

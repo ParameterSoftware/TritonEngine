@@ -1,7 +1,10 @@
-#include "../../utilities/src/Exception.h"
+#include "Exception.h"
 #include "Socket.h"
 
-//SENSocket
+using namespace seu;
+using namespace sen;
+
+//Socket
 
 Socket::Socket( unsigned short port, bool blocking_mode)
 {
@@ -23,14 +26,14 @@ bool Socket::Open(unsigned short port, bool bm)
 
 	if ( socket <= 0 )
 	{
-		throw Exception( "Socket Creation Failed\nsocket function failed" );
+		throw Exception( "Socket Creation Failed\nStandard Socket function failed" );
 		socket = 0;
 		return false;
 	}
 	
 	Address* alt_address = new Address(INADDR_ANY, port);
 	
-	sockaddr_in address = alt_address.to_sai();
+	sockaddr_in address = alt_address->to_sai();
 	
 	delete alt_address;
 
@@ -99,7 +102,7 @@ bool Socket::Send( const Address &destination, const void * data, int size )
 	return sent_bytes == size;
 }
 
-int Socket::Recieve( SENAddress &sender, void * data, int size )
+int Socket::Receive( Address & sender, void * data, int size )
 {
 	if(!(data))
 		return 0;
@@ -128,7 +131,7 @@ int Socket::Recieve( SENAddress &sender, void * data, int size )
 	return received_bytes;	
 }
 
-//SENAddress
+//Address
 
 Address::Address()
 {
@@ -178,12 +181,12 @@ unsigned short Address::GetPort()
 	return port;
 }
 
-bool Address::operator==( const Address & other )
+template<typedef<T> bool Address::operator==( const T other )
 {
 	return this->address == other.address && this->port == other.port;
 }
 
-bool Address::operator!=( const Address & other )
+template<typedef<T> bool Address::operator!=( const T other )
 {
 	return ! ( *this == other );
 }

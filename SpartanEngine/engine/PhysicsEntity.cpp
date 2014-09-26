@@ -1,68 +1,48 @@
-#include "SEPEntity.h"
+#include "PhysicsEntity.h"
 
-using PhysicsState;
-using SEPEntity;
+using namespace seu;
 
-EntityState(SEVector position, SEVector rotation, SEVector velocity, SEVector acceleration)
+PhysicsState::PhysicsState(Vector position, Vector rotation, Vector velocity, Vector acceleration)
 {
 	this->position = position;
 	this->rotation = rotation;
 	this->velocity = velocity;
 	this->acceleration = acceleration;
 	this->hasPhysics = true;
-	this->usesGravity = true;
-}
-EntityState(SEVector position, SEVector rotation)
-{
-	this->position = position;
-	this->rotation = rotation;
-	this->velocity = 0;
-	this->acceleration = 0;
-	this->hasPhysics = true;
-	this->usesGravity = true;
+	this->useGravity = true;
 }
 
-EntityState()
-{
-	this->position = 0;
-	this->rotation = 0;
-	this->velocity = 0;
-	this->acceleration = 0;
-	this->hasPhysics = true;
-	this->usesGravity = true;
-}
-
-~EntityState()
+PhysicsState::~PhysicsState()
 {}
 
-void ToggleGravity()
+void PhysicsState::ToggleGravity()
 {
-	usesGravity = !usesGravity;
+	useGravity = !useGravity;
 }
 
-void TogglePhysics(bool toggleGravity)
+void PhysicsState::TogglePhysics(bool toggleGravity)
 {
 	if(toggleGravity)
 		ToggleGravity();
 	hasPhysics = !hasPhysics;
 }
 
-bool UsesGravity()
+bool PhysicsState::UsesGravity()
 {
-	return usesGravity;
+	return useGravity;
 }
 
-bool HasPhysics()
+bool PhysicsState::HasPhysics()
 {
 	return hasPhysics;
 }
 
-SEPEntity(PhysicsState state)
+PhysicsEntity::PhysicsEntity(PhysicsState state)
 {
 	this->pState = state;
 }
 
-~SEPEntity()
+PhysicsEntity::~PhysicsEntity()
 {
-	~PhysicsState();
+	this->pState.~PhysicsState();
 }

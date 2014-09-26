@@ -1,27 +1,27 @@
 #include "Connection.h"
+#include "Exception.h"
 
-Connection::SENConnection( unsigned int protocolId, float timeout )
+using namespace seu;
+using namespace sen;
+
+Connection::Connection( unsigned int protocolId, float timeout, int port )
 {
 	this->protocolId = protocolId;
 	this->timeout = timeout;
 	mode = None;
 	running = false;
 	this->ClearData();
+	if(port != NULL)
+		this->Start(port);
 }
 
-SENConnection::SENConnection( unsigned int protocolId, float timeout, int port)
-{
-	this(protocolId, timeout);
-	this->Start(port);
-}
-
-SENConnection::~SENConnection()
+Connection::~Connection()
 {
 	if( this->IsRunning() )
 		this->Stop();
 }
 
-bool SENConnection::Start( int port )
+bool Connection::Start( int port )
 {
 	if(running)
 		this->Stop();
@@ -32,7 +32,7 @@ bool SENConnection::Start( int port )
 	return true;
 }
 
-void SENConnection::Stop()
+void Connection::Stop()
 {
 	if(!(running))
 	{
@@ -48,12 +48,12 @@ void SENConnection::Stop()
 	this->OnStop();
 }
 
-bool SENConnection::IsRunning() 
+bool Connection::IsRunning() 
 {
 	return running;
 }
 
-void SENConnection::Listen()
+void Connection::Listen()
 {
 	bool connected = this->IsConnected();
 	this->ClearData();
@@ -63,7 +63,7 @@ void SENConnection::Listen()
 	state = Listening;
 }
 
-void SENConnection::Connect( const SENAddress & address )
+void Connection::Connect( const Address & address )
 {
 	bool connected = this->IsConnected();
 	ClearData();
@@ -75,32 +75,32 @@ void SENConnection::Connect( const SENAddress & address )
 
 }
 
-bool SENConnection::IsConnection()
+bool Connection::IsConnecting()
 {
 	return state == Connecting;
 }
 
-bool SENConnection::ConnectFailed()
+bool Connection::ConnectFailed()
 {
 	return state == ConnectFailed;
 }
 
-bool SENConnection::IsConnected()
+bool Connection::IsConnected()
 {
 	return state == Connected;
 }
 
-bool SENConnection::IsListening()
+bool Connection::IsListening()
 {
 	return state == Listening;
 }
 
-bool SENConnection::GetMode()
+Connection::Mode Connection::GetMode()
 {
 	return mode;
 }
 
-void SENConnection::Update( float deltaTime )
+void Connection::Update( float deltaTime )
 {
 	if(!running)
 	{
@@ -127,13 +127,19 @@ void SENConnection::Update( float deltaTime )
 
 }
 
-bool SENConnection::SendPacket( const unsigned char data[], int size )
+bool Connection::SendPacket( const unsigned char data[], int size, Address laddress )
 {
+	if ( laddress.address != NULL)
+	{
+		address = laddress;
+	}
+
 	if ( address.GetAddress() == 0 )
 	{
 		throw Exception("No Address to Send to");
 		return false;
 	}
+
 	unsigned char* packet = new unsigned char[size+4];
 	packet[0] = (unsigned char) ( protocolId >> 24 );
 	packet[1] = (unsigned char) ( ( protocolId >> 16 ) & 0xFF );
@@ -145,13 +151,7 @@ bool SENConnection::SendPacket( const unsigned char data[], int size )
 	return res;
 }
 
-bool SENConnection::SendPacket( const unsigned char data[], int size, SENAddress & address)
-{
-	this->Connect(address);
-	this->SendPacket(data, size);
-}
-
-int SENConnection::ReceivePacket( unsigned char data[], int size )
+int Connection::ReceivePacket( unsigned char data[], int size )
 {
 	unsigned char* packet = new unsigned char[size+4];
 	Address sender;
@@ -194,14 +194,44 @@ int SENConnection::ReceivePacket( unsigned char data[], int size )
 
 }
 
-int SENConnection::GetHeaderSize()
+int Connection::GetHeaderSize()
 {
 	return 4;
 }
 
-void SENConnection::ClearData()
+void Connection::ClearData()
 {
 	state = Disconnected;
 	timeoutAccumulator = 0.0f;
 	address = Address();
+}
+
+template<typedef<T> bool Connection::operator!=(T object)
+{
+	if(typedef(T) != Connection)
+	{
+		return true;
+	}
+
+	if(object.address != this->address || object.socket != this->socket)
+	{
+		return true;
+	}
+
+	return false;
+}
+
+template<typedef<T> bool operator==(T object)
+{
+	if(typedef(T) != Connection)
+	{
+		return false;
+	}
+
+	if(object.address != this->address || object.socket != this->socket)
+	{
+		return false;
+	}
+
+	return true;
 }

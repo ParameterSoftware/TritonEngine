@@ -71,33 +71,33 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="3DVec.cpp" />
-    <ClCompile Include="Connection.cpp" />
-    <ClCompile Include="Exception.cpp" />
-    <ClCompile Include="Gravity.cpp" />
-    <ClCompile Include="Math.cpp" />
-    <ClCompile Include="Networking.cpp" />
-    <ClCompile Include="PhysicsEntity.cpp" />
-    <ClCompile Include="Socket.cpp" />
-    <ClCompile Include="Updater.cpp" />
-    <ClCompile Include="Utilities.cpp" />
-    <ClCompile Include="VBO.cpp" />
-    <ClCompile Include="Window.cpp" />
+    <ClCompile Include="..\..\SpartanEngine\engine\3DVec.cpp" />
+    <ClCompile Include="..\..\SpartanEngine\engine\Connection.cpp" />
+    <ClCompile Include="..\..\SpartanEngine\engine\Exception.cpp" />
+    <ClCompile Include="..\..\SpartanEngine\engine\Gravity.cpp" />
+    <ClCompile Include="..\..\SpartanEngine\engine\Math.cpp" />
+    <ClCompile Include="..\..\SpartanEngine\engine\Networking.cpp" />
+    <ClCompile Include="..\..\SpartanEngine\engine\PhysicsEntity.cpp" />
+    <ClCompile Include="..\..\SpartanEngine\engine\Socket.cpp" />
+    <ClCompile Include="..\..\SpartanEngine\engine\Updater.cpp" />
+    <ClCompile Include="..\..\SpartanEngine\engine\Utilities.cpp" />
+    <ClCompile Include="..\..\SpartanEngine\engine\VBO.cpp" />
+    <ClCompile Include="..\..\SpartanEngine\engine\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Connection.h" />
-    <ClInclude Include="Exception.h" />
-    <ClInclude Include="GraphicsObject.h" />
-    <ClInclude Include="Gravity.h" />
-    <ClInclude Include="Math.h" />
-    <ClInclude Include="Networking.h" />
-    <ClInclude Include="PhysicsEntity.h" />
-    <ClInclude Include="Socket.h" />
-    <ClInclude Include="Updater.h" />
-    <ClInclude Include="Utilities.h" />
-    <ClInclude Include="VBO.h" />
-    <ClInclude Include="Vector.h" />
-    <ClInclude Include="Window.h" />
+    <ClInclude Include="..\..\SpartanEngine\engine\Connection.h" />
+    <ClInclude Include="..\..\SpartanEngine\engine\Exception.h" />
+    <ClInclude Include="..\..\SpartanEngine\engine\GraphicsObject.h" />
+    <ClInclude Include="..\..\SpartanEngine\engine\Gravity.h" />
+    <ClInclude Include="..\..\SpartanEngine\engine\Math.h" />
+    <ClInclude Include="..\..\SpartanEngine\engine\Networking.h" />
+    <ClInclude Include="..\..\SpartanEngine\engine\PhysicsEntity.h" />
+    <ClInclude Include="..\..\SpartanEngine\engine\Socket.h" />
+    <ClInclude Include="..\..\SpartanEngine\engine\Updater.h" />
+    <ClInclude Include="..\..\SpartanEngine\engine\Utilities.h" />
+    <ClInclude Include="..\..\SpartanEngine\engine\VBO.h" />
+    <ClInclude Include="..\..\SpartanEngine\engine\Vector.h" />
+    <ClInclude Include="..\..\SpartanEngine\engine\Window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
