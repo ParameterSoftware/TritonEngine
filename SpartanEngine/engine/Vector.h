@@ -8,21 +8,21 @@ namespace seu
 	class Vector
 	{
 	public:
-		T x, y, z;
-		Vector(T xyz);
-		Vector(T xy, T z);
-		Vector(T x, T y, T z);
-		bool checkFor(T check);
+		double x;
+		double y;
+		double z;
+		Vector(double x = 0, double y = x, double z = y);
+		bool checkFor(double check);
 		Vector operator+(Vector other);
 		Vector operator-(Vector other);
 		Vector operator*(Vector other);
 		Vector operator/(Vector other);
 		Vector operator=(Vector other);
-		Vector operator+(T other);
-		Vector operator-(T other);
-		Vector operator*(T other);
-		Vector operator/(T other);
-		Vector operator=(T other);
+		Vector operator+(double other);
+		Vector operator-(double other);
+		Vector operator*(double other);
+		Vector operator/(double other);
+		Vector operator=(double other);
 		int size();
 	};
 
