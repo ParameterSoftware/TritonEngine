@@ -34,7 +34,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\17galbany\Desktop\SpartanEngine\SpartanEngine\includes;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\17galbany\Desktop\SpartanEngine\SpartanEngine\deps\includes;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Users\17galbany\Desktop\SpartanEngine\SpartanEngine\deps;$(LibraryPath)</LibraryPath>
     <ReferencePath>C:\Users\17galbany\Desktop\SpartanEngine\SpartanEngine\deps;$(ReferencePath)</ReferencePath>
     <ExecutablePath>C:\Users\17galbany\Desktop\SpartanEngine\SpartanEngine\deps;$(ExecutablePath)</ExecutablePath>
