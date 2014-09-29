@@ -111,6 +111,7 @@ namespace sep
 		 *  @param rotation The rotation(recommended in degrees) this state holds for its object
 		 *  @param velocity The velocity this state holds for its object (increases the position according to its states)
 		 *  @param acceleration The acceleration this state holds for it object (increases the velocity according to it state)
+		 *	@param pProps The PhysicsState current physical properties to apply to thos object
 		 */
 		PhysicsState(seu::Vector position = seu::Vector(), seu::Vector rotation = seu::Vector(), seu::Vector velocity = seu::Vector(), seu::Vector acceleration = seu::Vector(), PhysicsProperties pProps = PhysicsProperties());
 
@@ -119,19 +120,11 @@ namespace sep
 		 */
 		~PhysicsState();
 
-		/**
-		 *  Gets the current PhysicsProperties for this PhysicState
-		 *
-		 *  @return PhysicsProperties of this object
-		 */
-		PhysicsProperties GetPhysicsProperties();
-
 		seu::Vector position; ///< The States' current position
 		seu::Vector rotation; ///< The States' current rotation
 		seu::Vector velocity; ///< The States' current velocity
 		seu::Vector acceleration; ///< The States' current acceleration
-	private:
-		PhysicsProperties physicsProps ///< The properties for this physics state
+		PhysicsProperties physicsProps; ///< The properties for this physics state
 	};
 
 	class PhysicsEntity

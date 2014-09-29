@@ -18,7 +18,8 @@ double inline __declspec (naked) __fastcall InternalSqrt(double n)
 double random(double lowerRange, double higherRange)
 {
 	srand(time(NULL));
-	return (lowerRange + rand()) % higherRange;
+	double result = ((int)lowerRange + rand()) % (int)higherRange;
+	return result;
 }
 
 double PI()

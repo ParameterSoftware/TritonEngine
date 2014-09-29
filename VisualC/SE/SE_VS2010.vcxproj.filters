@@ -15,81 +15,87 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="3DVec.cpp">
+    <ClCompile Include="..\..\SpartanEngine\engine\3DVec.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Connection.cpp">
+    <ClCompile Include="..\..\SpartanEngine\engine\Connection.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Exception.cpp">
+    <ClCompile Include="..\..\SpartanEngine\engine\Exception.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Gravity.cpp">
+    <ClCompile Include="..\..\SpartanEngine\engine\Gravity.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Math.cpp">
+    <ClCompile Include="..\..\SpartanEngine\engine\Math.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Networking.cpp">
+    <ClCompile Include="..\..\SpartanEngine\engine\Networking.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PhysicsEntity.cpp">
+    <ClCompile Include="..\..\SpartanEngine\engine\PhysicsEntity.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Socket.cpp">
+    <ClCompile Include="..\..\SpartanEngine\engine\Socket.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Updater.cpp">
+    <ClCompile Include="..\..\SpartanEngine\engine\Updater.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Utilities.cpp">
+    <ClCompile Include="..\..\SpartanEngine\engine\Utilities.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="VBO.cpp">
+    <ClCompile Include="..\..\SpartanEngine\engine\VBO.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Window.cpp">
+    <ClCompile Include="..\..\SpartanEngine\engine\Window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Connection.h">
+    <ClInclude Include="..\..\SpartanEngine\engine\Connection.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Exception.h">
+    <ClInclude Include="..\..\SpartanEngine\engine\Exception.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GraphicsObject.h">
+    <ClInclude Include="..\..\SpartanEngine\engine\GraphicsObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Gravity.h">
+    <ClInclude Include="..\..\SpartanEngine\engine\Gravity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Math.h">
+    <ClInclude Include="..\..\SpartanEngine\engine\Math.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Networking.h">
+    <ClInclude Include="..\..\SpartanEngine\engine\Networking.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="PhysicsEntity.h">
+    <ClInclude Include="..\..\SpartanEngine\engine\PhysicsEntity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Socket.h">
+    <ClInclude Include="..\..\SpartanEngine\engine\Socket.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Updater.h">
+    <ClInclude Include="..\..\SpartanEngine\engine\Updater.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Utilities.h">
+    <ClInclude Include="..\..\SpartanEngine\engine\Utilities.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="VBO.h">
+    <ClInclude Include="..\..\SpartanEngine\engine\VBO.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Vector.h">
+    <ClInclude Include="..\..\SpartanEngine\engine\Vector.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Window.h">
+    <ClInclude Include="..\..\SpartanEngine\engine\Window.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SpartanEngine\engine\SEML.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SpartanEngine\engine\SEML\Billboard.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

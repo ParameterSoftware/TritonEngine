@@ -1,5 +1,13 @@
 #include "VBO.h"
 #include <GLFW\glfw3.h>
+#include <GL\glew.h>
+
+#pragma comment(lib, "glfw3")
+#pragma comment(lib, "glfw3dll")
+#pragma comment(lib, "glew32")
+#pragma comment(lib, "glew32s")
+
+using namespace seg;
 
 VBO::VBO(TriangleVector holder)
 {
@@ -7,7 +15,7 @@ VBO::VBO(TriangleVector holder)
 	glBindVertexArray(vaoID[0]);
 	glGenBuffers(1, vboID);
 	glBindBuffer(GL_ARRAY_BUFFER, vboID[0]);
-	float vertices[holder.triangles.size()*3];
+	float *vertices = new float[holder.triangles.size()*3];
 	for(int i = 0; i < holder.triangles.size(), i++)
 	{
 		vertices[i] = holder.triangles.at(i).a.vertex.x;

@@ -36,6 +36,8 @@
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>C:\Users\17galbany\Desktop\SpartanEngine\SpartanEngine\includes;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Users\17galbany\Desktop\SpartanEngine\SpartanEngine\deps;$(LibraryPath)</LibraryPath>
+    <ReferencePath>C:\Users\17galbany\Desktop\SpartanEngine\SpartanEngine\deps;$(ReferencePath)</ReferencePath>
+    <ExecutablePath>C:\Users\17galbany\Desktop\SpartanEngine\SpartanEngine\deps;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>true</LinkIncremental>
@@ -52,7 +54,7 @@
       <TargetMachine>MachineX86</TargetMachine>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>glfw3.lib;glfw3dll.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -92,6 +94,8 @@
     <ClInclude Include="..\..\SpartanEngine\engine\Math.h" />
     <ClInclude Include="..\..\SpartanEngine\engine\Networking.h" />
     <ClInclude Include="..\..\SpartanEngine\engine\PhysicsEntity.h" />
+    <ClInclude Include="..\..\SpartanEngine\engine\SEML.h" />
+    <ClInclude Include="..\..\SpartanEngine\engine\SEML\Billboard.h" />
     <ClInclude Include="..\..\SpartanEngine\engine\Socket.h" />
     <ClInclude Include="..\..\SpartanEngine\engine\Updater.h" />
     <ClInclude Include="..\..\SpartanEngine\engine\Utilities.h" />
