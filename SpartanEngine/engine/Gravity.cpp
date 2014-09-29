@@ -1,5 +1,8 @@
 #include "Gravity.h"
-#include "../../utilities/src/Vector.h"
+#include "Vector.h"
+
+using namespace seu;
+using namespace sep;
 
 Gravity::Gravity(Vector gravity)
 {
@@ -13,15 +16,15 @@ Vector Gravity::GetGravity()
 	return gravity;
 }
 
-Gravity3D::Gravity3D(Vector gravity, Vector pull_location)
+Gravity3D::Gravity3D(Vector gravity, Vector grav_location)
 {
 	this->gravity = gravity;
-	this->pull_location = pull_location;
+	this->grav_location = grav_location;
 }
 
 Gravity3D::~Gravity3D() {}
 
 Vector Gravity3D::GetLocation()
 {
-	return pull_location;
+	return grav_location;
 }

@@ -5,9 +5,8 @@
 
 namespace seu
 {
-	class Vector
+	struct Vector
 	{
-	public:
 		double x;
 		double y;
 		double z;
@@ -23,6 +22,24 @@ namespace seu
 		Vector operator*(double other);
 		Vector operator/(double other);
 		Vector operator=(double other);
+		int size();
+	};
+
+	struct DDVector
+	{
+		double x, y;
+		DDVector(double x = 0, double y = 0);
+		bool checkFor(double check);
+		DDVector operator+(DDVector other);
+		DDVector operator-(DDVector other);
+		DDVector operator*(DDVector other);
+		DDVector operator/(DDVector other);
+		DDVector operator=(DDVector other);
+		DDVector operator+(double other);
+		DDVector operator-(double other);
+		DDVector operator*(double other);
+		DDVector operator/(double other);
+		DDVector operator=(double other);
 		int size();
 	};
 

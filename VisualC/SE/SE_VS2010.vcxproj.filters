@@ -51,6 +51,9 @@
     <ClCompile Include="..\..\SpartanEngine\engine\Window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\SpartanEngine\engine\2DVec.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\SpartanEngine\engine\Connection.h">
@@ -90,12 +93,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\SpartanEngine\engine\Window.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\SpartanEngine\engine\SEML.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\SpartanEngine\engine\SEML\Billboard.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

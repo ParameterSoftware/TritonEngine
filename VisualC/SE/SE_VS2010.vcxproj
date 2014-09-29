@@ -73,6 +73,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\SpartanEngine\engine\2DVec.cpp" />
     <ClCompile Include="..\..\SpartanEngine\engine\3DVec.cpp" />
     <ClCompile Include="..\..\SpartanEngine\engine\Connection.cpp" />
     <ClCompile Include="..\..\SpartanEngine\engine\Exception.cpp" />
@@ -94,8 +95,6 @@
     <ClInclude Include="..\..\SpartanEngine\engine\Math.h" />
     <ClInclude Include="..\..\SpartanEngine\engine\Networking.h" />
     <ClInclude Include="..\..\SpartanEngine\engine\PhysicsEntity.h" />
-    <ClInclude Include="..\..\SpartanEngine\engine\SEML.h" />
-    <ClInclude Include="..\..\SpartanEngine\engine\SEML\Billboard.h" />
     <ClInclude Include="..\..\SpartanEngine\engine\Socket.h" />
     <ClInclude Include="..\..\SpartanEngine\engine\Updater.h" />
     <ClInclude Include="..\..\SpartanEngine\engine\Utilities.h" />
