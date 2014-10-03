@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -72,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -83,7 +84,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>seg</b></li><li class="navelem"><a class="el" href="structseg_1_1_vertex.html">Vertex</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespaceseg.html">seg</a></li><li class="navelem"><a class="el" href="structseg_1_1_vertex.html">Vertex</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -94,29 +95,86 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">seg::Vertex Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="sge_8h_source.html">sge.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a60b89590c056bf69f114219ef260771f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a60b89590c056bf69f114219ef260771f"></a>
-<a class="el" href="structseu_1_1_vector.html">seu::Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><b>vertex</b></td></tr>
+<tr class="memitem:a60b89590c056bf69f114219ef260771f"><td class="memItemLeft" align="right" valign="top">seu::Vector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structseg_1_1_vertex.html#a60b89590c056bf69f114219ef260771f">vertex</a></td></tr>
+<tr class="memdesc:a60b89590c056bf69f114219ef260771f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structseg_1_1_vertex.html">Vertex</a> Location.  <a href="#a60b89590c056bf69f114219ef260771f">More...</a><br /></td></tr>
 <tr class="separator:a60b89590c056bf69f114219ef260771f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2f9f7931a4b14800948b35510cc50f2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af2f9f7931a4b14800948b35510cc50f2"></a>
-<a class="el" href="structseu_1_1_vector.html">seu::Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><b>normal</b></td></tr>
+<tr class="memitem:af2f9f7931a4b14800948b35510cc50f2"><td class="memItemLeft" align="right" valign="top">seu::Vector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structseg_1_1_vertex.html#af2f9f7931a4b14800948b35510cc50f2">normal</a></td></tr>
 <tr class="separator:af2f9f7931a4b14800948b35510cc50f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e5db7f0b7a5117b2ddfbf5b944e2214"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7e5db7f0b7a5117b2ddfbf5b944e2214"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>s0</b></td></tr>
-<tr class="separator:a7e5db7f0b7a5117b2ddfbf5b944e2214"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c739c828dbad87879d27d91cc0b82a7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c739c828dbad87879d27d91cc0b82a7"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>t0</b></td></tr>
-<tr class="separator:a1c739c828dbad87879d27d91cc0b82a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbba1f1c5d82e2fbe4fb1f67b40b31d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceseu.html#a28867ec000133d9ae765b5f96a26e7bb">seu::SEfloat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structseg_1_1_vertex.html#abbba1f1c5d82e2fbe4fb1f67b40b31d4">s0</a></td></tr>
+<tr class="memdesc:abbba1f1c5d82e2fbe4fb1f67b40b31d4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structseg_1_1_vertex.html">Vertex</a> Texturing.  <a href="#abbba1f1c5d82e2fbe4fb1f67b40b31d4">More...</a><br /></td></tr>
+<tr class="separator:abbba1f1c5d82e2fbe4fb1f67b40b31d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bc5eb029b2595874890f2697ab53247"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceseu.html#a28867ec000133d9ae765b5f96a26e7bb">seu::SEfloat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structseg_1_1_vertex.html#a4bc5eb029b2595874890f2697ab53247">t0</a></td></tr>
+<tr class="memdesc:a4bc5eb029b2595874890f2697ab53247"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structseg_1_1_vertex.html">Vertex</a> Texturing.  <a href="#a4bc5eb029b2595874890f2697ab53247">More...</a><br /></td></tr>
+<tr class="separator:a4bc5eb029b2595874890f2697ab53247"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="af2f9f7931a4b14800948b35510cc50f2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">seu::Vector seg::Vertex::normal</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="structseg_1_1_vertex.html">Vertex</a> Normal </p>
+
+</div>
+</div>
+<a class="anchor" id="abbba1f1c5d82e2fbe4fb1f67b40b31d4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceseu.html#a28867ec000133d9ae765b5f96a26e7bb">seu::SEfloat</a> seg::Vertex::s0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="structseg_1_1_vertex.html">Vertex</a> Texturing. </p>
+
+</div>
+</div>
+<a class="anchor" id="a4bc5eb029b2595874890f2697ab53247"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceseu.html#a28867ec000133d9ae765b5f96a26e7bb">seu::SEfloat</a> seg::Vertex::t0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="structseg_1_1_vertex.html">Vertex</a> Texturing. </p>
+
+</div>
+</div>
+<a class="anchor" id="a60b89590c056bf69f114219ef260771f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">seu::Vector seg::Vertex::vertex</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="structseg_1_1_vertex.html">Vertex</a> Location. </p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>C:/Users/17galbany/Desktop/SpartanEngine/SpartanEngine/engine/<a class="el" href="_v_b_o_8h_source.html">VBO.h</a></li>
+<li>C:/Users/17galbany/Desktop/Google/SpartanEngine/include/SGE/<a class="el" href="sge_8h_source.html">sge.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 29 2014 16:02:54 for SpartanEngine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Oct 2 2014 20:36:38 for SpartanEngine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ddvector',['DDVector',['../structseu_1_1_d_d_vector.html',1,'seu']]]
+  ['b',['b',['../structseg_1_1_triangle.html#a8181c1d75bb077ea104bea6509e24878',1,'seg::Triangle']]]
 ];

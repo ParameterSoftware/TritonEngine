@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -72,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -83,74 +84,90 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>sep</b></li><li class="navelem"><a class="el" href="classsep_1_1_physics_properties.html">PhysicsProperties</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespacesep.html">sep</a></li><li class="navelem"><a class="el" href="classsep_1_1_physics_properties.html">PhysicsProperties</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classsep_1_1_physics_properties-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">sep::PhysicsProperties Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="_physics_entity_8h_source.html">PhysicsEntity.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="sge_8h_source.html">sge.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad9e4814819174ba0a7a720e5b0f33f93"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_physics_properties.html#ad9e4814819174ba0a7a720e5b0f33f93">PhysicsProperties</a> (bool gravity=true, bool collision=true, bool rigidBody=true, bool otherPhysics=true)</td></tr>
-<tr class="separator:ad9e4814819174ba0a7a720e5b0f33f93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f6ada17870b0af5939e8654420cfe86"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_physics_properties.html#a7f6ada17870b0af5939e8654420cfe86">~PhysicsProperties</a> ()</td></tr>
-<tr class="separator:a7f6ada17870b0af5939e8654420cfe86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a712f5b6f9524ea212e4060d5861f8fe6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_physics_properties.html#a712f5b6f9524ea212e4060d5861f8fe6">ToggleGravity</a> ()</td></tr>
-<tr class="separator:a712f5b6f9524ea212e4060d5861f8fe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0a37ab998777d8d2bc2e40634252359"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_physics_properties.html#ac0a37ab998777d8d2bc2e40634252359">ToggleCollision</a> ()</td></tr>
-<tr class="separator:ac0a37ab998777d8d2bc2e40634252359"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2f7962724be162733d97a7c864cc1e0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_physics_properties.html#af2f7962724be162733d97a7c864cc1e0">ToggleRigidBody</a> ()</td></tr>
-<tr class="separator:af2f7962724be162733d97a7c864cc1e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad3ac752b39bcd687f9a6d29820df567"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_physics_properties.html#aad3ac752b39bcd687f9a6d29820df567">TogglePhysics</a> ()</td></tr>
-<tr class="separator:aad3ac752b39bcd687f9a6d29820df567"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbc8fdbd6e55981ec8893c19313aef8b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_physics_properties.html#acbc8fdbd6e55981ec8893c19313aef8b">ToggleAlternatePhysics</a> ()</td></tr>
-<tr class="separator:acbc8fdbd6e55981ec8893c19313aef8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33538c22f240bd3e5e452fe6e6462b18"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_physics_properties.html#a33538c22f240bd3e5e452fe6e6462b18">HasGravity</a> ()</td></tr>
-<tr class="separator:a33538c22f240bd3e5e452fe6e6462b18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a604ea1dcfe7f0300590fb650b9c705a6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_physics_properties.html#a604ea1dcfe7f0300590fb650b9c705a6">HasCollision</a> ()</td></tr>
-<tr class="separator:a604ea1dcfe7f0300590fb650b9c705a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a298b21abe6a9cf71717961b5098c8f71"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_physics_properties.html#a298b21abe6a9cf71717961b5098c8f71">HasRigidBody</a> ()</td></tr>
-<tr class="separator:a298b21abe6a9cf71717961b5098c8f71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2fcc3b7ccac479453a490e3abff9fd58"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_physics_properties.html#a2fcc3b7ccac479453a490e3abff9fd58">UsesAlternatePhysics</a> ()</td></tr>
-<tr class="separator:a2fcc3b7ccac479453a490e3abff9fd58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b142dcc99c0c23f3d666ebffc3338a6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_physics_properties.html#a3b142dcc99c0c23f3d666ebffc3338a6">PhysicsProperties</a> (<a class="el" href="namespaceseu.html#a2351eff794bfee559fe0dff8317a8094">seu::SEbool</a> <a class="el" href="classsep_1_1_physics_properties.html#ac0eb3a25631b4fbaf835cd4363651ba3">gravity</a>=true, <a class="el" href="namespaceseu.html#a2351eff794bfee559fe0dff8317a8094">seu::SEbool</a> <a class="el" href="classsep_1_1_physics_properties.html#a3ea4dac436e20cdc4a8c5ed4f0e918fd">collision</a>=true, <a class="el" href="namespaceseu.html#a2351eff794bfee559fe0dff8317a8094">seu::SEbool</a> <a class="el" href="classsep_1_1_physics_properties.html#a9ff7bb1069e167ad01c6ddba72bf0ec2">rigidBody</a>=true, <a class="el" href="namespaceseu.html#a2351eff794bfee559fe0dff8317a8094">seu::SEbool</a> <a class="el" href="classsep_1_1_physics_properties.html#a6f0db5e4ec6c1837b70130dafc309ef9">otherPhysics</a>=true)</td></tr>
+<tr class="separator:a3b142dcc99c0c23f3d666ebffc3338a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac87f56aba01a9f445ae8505439debbe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_physics_properties.html#aac87f56aba01a9f445ae8505439debbe">~PhysicsProperties</a> ()</td></tr>
+<tr class="separator:aac87f56aba01a9f445ae8505439debbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02628a8987ac539a5bfa0813308a2172"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceseu.html#a2351eff794bfee559fe0dff8317a8094">seu::SEbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_physics_properties.html#a02628a8987ac539a5bfa0813308a2172">ToggleGravity</a> ()</td></tr>
+<tr class="separator:a02628a8987ac539a5bfa0813308a2172"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a064b4fb09b9353a2f48676de35a1415a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceseu.html#a2351eff794bfee559fe0dff8317a8094">seu::SEbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_physics_properties.html#a064b4fb09b9353a2f48676de35a1415a">ToggleCollision</a> ()</td></tr>
+<tr class="separator:a064b4fb09b9353a2f48676de35a1415a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe2ac499a9cbc7d16da3372e1f03579b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceseu.html#a2351eff794bfee559fe0dff8317a8094">seu::SEbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_physics_properties.html#abe2ac499a9cbc7d16da3372e1f03579b">ToggleRigidBody</a> ()</td></tr>
+<tr class="separator:abe2ac499a9cbc7d16da3372e1f03579b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac84061ae229eaf5bbd53722fe346a68"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceseu.html#a2351eff794bfee559fe0dff8317a8094">seu::SEbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_physics_properties.html#aac84061ae229eaf5bbd53722fe346a68">TogglePhysics</a> ()</td></tr>
+<tr class="separator:aac84061ae229eaf5bbd53722fe346a68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7d0adb0a90a5c4675c49281c1008b5b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceseu.html#a2351eff794bfee559fe0dff8317a8094">seu::SEbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_physics_properties.html#ae7d0adb0a90a5c4675c49281c1008b5b">ToggleAlternatePhysics</a> ()</td></tr>
+<tr class="separator:ae7d0adb0a90a5c4675c49281c1008b5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf761a9864dd193703cd0829b23e6a09"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceseu.html#a2351eff794bfee559fe0dff8317a8094">seu::SEbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_physics_properties.html#aaf761a9864dd193703cd0829b23e6a09">HasGravity</a> ()</td></tr>
+<tr class="separator:aaf761a9864dd193703cd0829b23e6a09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5fb2bdbf0f421101b444be907cd5f8f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceseu.html#a2351eff794bfee559fe0dff8317a8094">seu::SEbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_physics_properties.html#ab5fb2bdbf0f421101b444be907cd5f8f">HasCollision</a> ()</td></tr>
+<tr class="separator:ab5fb2bdbf0f421101b444be907cd5f8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab56be12b5e6fdbc3756c65729328f55a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceseu.html#a2351eff794bfee559fe0dff8317a8094">seu::SEbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_physics_properties.html#ab56be12b5e6fdbc3756c65729328f55a">HasRigidBody</a> ()</td></tr>
+<tr class="separator:ab56be12b5e6fdbc3756c65729328f55a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1afb09d035a5bb0f3772b4cdef05973"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceseu.html#a2351eff794bfee559fe0dff8317a8094">seu::SEbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_physics_properties.html#aa1afb09d035a5bb0f3772b4cdef05973">UsesAlternatePhysics</a> ()</td></tr>
+<tr class="separator:aa1afb09d035a5bb0f3772b4cdef05973"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ac0eb3a25631b4fbaf835cd4363651ba3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceseu.html#a2351eff794bfee559fe0dff8317a8094">seu::SEbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_physics_properties.html#ac0eb3a25631b4fbaf835cd4363651ba3">gravity</a></td></tr>
+<tr class="memdesc:ac0eb3a25631b4fbaf835cd4363651ba3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boolean of enabled gravity.  <a href="#ac0eb3a25631b4fbaf835cd4363651ba3">More...</a><br /></td></tr>
+<tr class="separator:ac0eb3a25631b4fbaf835cd4363651ba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ea4dac436e20cdc4a8c5ed4f0e918fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceseu.html#a2351eff794bfee559fe0dff8317a8094">seu::SEbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_physics_properties.html#a3ea4dac436e20cdc4a8c5ed4f0e918fd">collision</a></td></tr>
+<tr class="memdesc:a3ea4dac436e20cdc4a8c5ed4f0e918fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boolean of enabled collision.  <a href="#a3ea4dac436e20cdc4a8c5ed4f0e918fd">More...</a><br /></td></tr>
+<tr class="separator:a3ea4dac436e20cdc4a8c5ed4f0e918fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ff7bb1069e167ad01c6ddba72bf0ec2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceseu.html#a2351eff794bfee559fe0dff8317a8094">seu::SEbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_physics_properties.html#a9ff7bb1069e167ad01c6ddba72bf0ec2">rigidBody</a></td></tr>
+<tr class="memdesc:a9ff7bb1069e167ad01c6ddba72bf0ec2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boolean of enabled rigid body physics.  <a href="#a9ff7bb1069e167ad01c6ddba72bf0ec2">More...</a><br /></td></tr>
+<tr class="separator:a9ff7bb1069e167ad01c6ddba72bf0ec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f0db5e4ec6c1837b70130dafc309ef9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceseu.html#a2351eff794bfee559fe0dff8317a8094">seu::SEbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_physics_properties.html#a6f0db5e4ec6c1837b70130dafc309ef9">otherPhysics</a></td></tr>
+<tr class="memdesc:a6f0db5e4ec6c1837b70130dafc309ef9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boolean of alternate enabled physics.  <a href="#a6f0db5e4ec6c1837b70130dafc309ef9">More...</a><br /></td></tr>
+<tr class="separator:a6f0db5e4ec6c1837b70130dafc309ef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The active Physics Properties that an object can have </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ad9e4814819174ba0a7a720e5b0f33f93"></a>
+<a class="anchor" id="a3b142dcc99c0c23f3d666ebffc3338a6"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">PhysicsProperties::PhysicsProperties </td>
+          <td class="memname">sep::PhysicsProperties::PhysicsProperties </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
+          <td class="paramtype"><a class="el" href="namespaceseu.html#a2351eff794bfee559fe0dff8317a8094">seu::SEbool</a>&#160;</td>
           <td class="paramname"><em>gravity</em> = <code>true</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
+          <td class="paramtype"><a class="el" href="namespaceseu.html#a2351eff794bfee559fe0dff8317a8094">seu::SEbool</a>&#160;</td>
           <td class="paramname"><em>collision</em> = <code>true</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
+          <td class="paramtype"><a class="el" href="namespaceseu.html#a2351eff794bfee559fe0dff8317a8094">seu::SEbool</a>&#160;</td>
           <td class="paramname"><em>rigidBody</em> = <code>true</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
+          <td class="paramtype"><a class="el" href="namespaceseu.html#a2351eff794bfee559fe0dff8317a8094">seu::SEbool</a>&#160;</td>
           <td class="paramname"><em>otherPhysics</em> = <code>true</code>&#160;</td>
         </tr>
         <tr>
@@ -173,12 +190,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a7f6ada17870b0af5939e8654420cfe86"></a>
+<a class="anchor" id="aac87f56aba01a9f445ae8505439debbe"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">PhysicsProperties::~PhysicsProperties </td>
+          <td class="memname">sep::PhysicsProperties::~PhysicsProperties </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -190,12 +207,12 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a604ea1dcfe7f0300590fb650b9c705a6"></a>
+<a class="anchor" id="ab5fb2bdbf0f421101b444be907cd5f8f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool PhysicsProperties::HasCollision </td>
+          <td class="memname"><a class="el" href="namespaceseu.html#a2351eff794bfee559fe0dff8317a8094">seu::SEbool</a> sep::PhysicsProperties::HasCollision </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -207,12 +224,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a33538c22f240bd3e5e452fe6e6462b18"></a>
+<a class="anchor" id="aaf761a9864dd193703cd0829b23e6a09"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool PhysicsProperties::HasGravity </td>
+          <td class="memname"><a class="el" href="namespaceseu.html#a2351eff794bfee559fe0dff8317a8094">seu::SEbool</a> sep::PhysicsProperties::HasGravity </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -224,12 +241,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a298b21abe6a9cf71717961b5098c8f71"></a>
+<a class="anchor" id="ab56be12b5e6fdbc3756c65729328f55a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool PhysicsProperties::HasRigidBody </td>
+          <td class="memname"><a class="el" href="namespaceseu.html#a2351eff794bfee559fe0dff8317a8094">seu::SEbool</a> sep::PhysicsProperties::HasRigidBody </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -241,29 +258,29 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="acbc8fdbd6e55981ec8893c19313aef8b"></a>
+<a class="anchor" id="ae7d0adb0a90a5c4675c49281c1008b5b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool PhysicsProperties::ToggleAlternatePhysics </td>
+          <td class="memname"><a class="el" href="namespaceseu.html#a2351eff794bfee559fe0dff8317a8094">seu::SEbool</a> sep::PhysicsProperties::ToggleAlternatePhysics </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Toggles whether alternate nondescribe physics are possible</p>
-<dl class="section return"><dt>Returns</dt><dd>Whether alternate nondescribe physics for this object are active </dd></dl>
+<p>Toggles whether alternate non-describe physics are possible</p>
+<dl class="section return"><dt>Returns</dt><dd>Whether alternate non-describe physics for this object are active </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ac0a37ab998777d8d2bc2e40634252359"></a>
+<a class="anchor" id="a064b4fb09b9353a2f48676de35a1415a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool PhysicsProperties::ToggleCollision </td>
+          <td class="memname"><a class="el" href="namespaceseu.html#a2351eff794bfee559fe0dff8317a8094">seu::SEbool</a> sep::PhysicsProperties::ToggleCollision </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -275,12 +292,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a712f5b6f9524ea212e4060d5861f8fe6"></a>
+<a class="anchor" id="a02628a8987ac539a5bfa0813308a2172"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool PhysicsProperties::ToggleGravity </td>
+          <td class="memname"><a class="el" href="namespaceseu.html#a2351eff794bfee559fe0dff8317a8094">seu::SEbool</a> sep::PhysicsProperties::ToggleGravity </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -292,12 +309,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aad3ac752b39bcd687f9a6d29820df567"></a>
+<a class="anchor" id="aac84061ae229eaf5bbd53722fe346a68"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool PhysicsProperties::TogglePhysics </td>
+          <td class="memname"><a class="el" href="namespaceseu.html#a2351eff794bfee559fe0dff8317a8094">seu::SEbool</a> sep::PhysicsProperties::TogglePhysics </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -309,12 +326,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="af2f7962724be162733d97a7c864cc1e0"></a>
+<a class="anchor" id="abe2ac499a9cbc7d16da3372e1f03579b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool PhysicsProperties::ToggleRigidBody </td>
+          <td class="memname"><a class="el" href="namespaceseu.html#a2351eff794bfee559fe0dff8317a8094">seu::SEbool</a> sep::PhysicsProperties::ToggleRigidBody </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -326,12 +343,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a2fcc3b7ccac479453a490e3abff9fd58"></a>
+<a class="anchor" id="aa1afb09d035a5bb0f3772b4cdef05973"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool PhysicsProperties::UsesAlternatePhysics </td>
+          <td class="memname"><a class="el" href="namespaceseu.html#a2351eff794bfee559fe0dff8317a8094">seu::SEbool</a> sep::PhysicsProperties::UsesAlternatePhysics </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -343,14 +360,102 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li>C:/Users/17galbany/Desktop/SpartanEngine/SpartanEngine/engine/<a class="el" href="_physics_entity_8h_source.html">PhysicsEntity.h</a></li>
-<li>C:/Users/17galbany/Desktop/SpartanEngine/SpartanEngine/engine/PhysicsEntity.cpp</li>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a3ea4dac436e20cdc4a8c5ed4f0e918fd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceseu.html#a2351eff794bfee559fe0dff8317a8094">seu::SEbool</a> sep::PhysicsProperties::collision</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Boolean of enabled collision. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac0eb3a25631b4fbaf835cd4363651ba3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceseu.html#a2351eff794bfee559fe0dff8317a8094">seu::SEbool</a> sep::PhysicsProperties::gravity</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Boolean of enabled gravity. </p>
+
+</div>
+</div>
+<a class="anchor" id="a6f0db5e4ec6c1837b70130dafc309ef9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceseu.html#a2351eff794bfee559fe0dff8317a8094">seu::SEbool</a> sep::PhysicsProperties::otherPhysics</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Boolean of alternate enabled physics. </p>
+
+</div>
+</div>
+<a class="anchor" id="a9ff7bb1069e167ad01c6ddba72bf0ec2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceseu.html#a2351eff794bfee559fe0dff8317a8094">seu::SEbool</a> sep::PhysicsProperties::rigidBody</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Boolean of enabled rigid body physics. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>C:/Users/17galbany/Desktop/Google/SpartanEngine/include/SGE/<a class="el" href="sge_8h_source.html">sge.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 29 2014 16:02:54 for SpartanEngine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Oct 2 2014 20:36:39 for SpartanEngine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

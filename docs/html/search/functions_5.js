@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['update',['Update',['../classsep_1_1_physics_entity.html#a119723e421c1e12e77244e894c00c7b2',1,'sep::PhysicsEntity']]],
-  ['usesalternatephysics',['UsesAlternatePhysics',['../classsep_1_1_physics_properties.html#a2fcc3b7ccac479453a490e3abff9fd58',1,'sep::PhysicsProperties']]]
+  ['hascollision',['HasCollision',['../classsep_1_1_physics_properties.html#ab5fb2bdbf0f421101b444be907cd5f8f',1,'sep::PhysicsProperties']]],
+  ['hasgravity',['HasGravity',['../classsep_1_1_physics_properties.html#aaf761a9864dd193703cd0829b23e6a09',1,'sep::PhysicsProperties']]],
+  ['hasrigidbody',['HasRigidBody',['../classsep_1_1_physics_properties.html#ab56be12b5e6fdbc3756c65729328f55a',1,'sep::PhysicsProperties']]]
 ];

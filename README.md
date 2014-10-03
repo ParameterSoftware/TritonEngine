@@ -14,6 +14,11 @@ The main goal of this project is to create a game engine that is open source, bo
 - Utilities
 - Window Management
 
+###Graphics
+- VBOs (mostly finished)
+- Graphic Entities
+- 
+
 ##Contrbution Guidelines
 
 You are asked to use camelCase for variables in type declarations

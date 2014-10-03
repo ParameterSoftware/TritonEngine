@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['togglealternatephysics',['ToggleAlternatePhysics',['../classsep_1_1_physics_properties.html#acbc8fdbd6e55981ec8893c19313aef8b',1,'sep::PhysicsProperties']]],
-  ['togglecollision',['ToggleCollision',['../classsep_1_1_physics_properties.html#ac0a37ab998777d8d2bc2e40634252359',1,'sep::PhysicsProperties']]],
-  ['togglegravity',['ToggleGravity',['../classsep_1_1_physics_properties.html#a712f5b6f9524ea212e4060d5861f8fe6',1,'sep::PhysicsProperties']]],
-  ['togglephysics',['TogglePhysics',['../classsep_1_1_physics_properties.html#aad3ac752b39bcd687f9a6d29820df567',1,'sep::PhysicsProperties']]],
-  ['togglerigidbody',['ToggleRigidBody',['../classsep_1_1_physics_properties.html#af2f7962724be162733d97a7c864cc1e0',1,'sep::PhysicsProperties']]]
+  ['getgravity',['GetGravity',['../classsep_1_1_gravity.html#ad9a1a4d2488d6f34eedadd747d3144c5',1,'sep::Gravity::GetGravity()'],['../classsep_1_1_gravity3_d.html#a900abddd899d1bfd8c589dc6503414fa',1,'sep::Gravity3D::GetGravity()']]],
+  ['getlocation',['GetLocation',['../classsep_1_1_gravity3_d.html#a2e30fa5a1a763c9b4e9a724ee387958d',1,'sep::Gravity3D']]],
+  ['getmessage',['getMessage',['../classseu_1_1_exception.html#acae0b0a41c99db96d6cdf45fc97ac27c',1,'seu::Exception']]],
+  ['getposition',['GetPosition',['../classseg_1_1_object.html#a8156f348bb41d0902f22237e295e12b8',1,'seg::Object::GetPosition()'],['../classseg_1_1_flat_object.html#ab25204619ca31fd7dc57ee89caa853e1',1,'seg::FlatObject::GetPosition()']]],
+  ['getscale',['GetScale',['../classseg_1_1_flat_object.html#a7c35c1bdcb77d9d9e88e3f1eba72468b',1,'seg::FlatObject']]],
+  ['gravity',['Gravity',['../classsep_1_1_gravity.html#a5140f7302961dc2bbcad09a9a4798c8f',1,'sep::Gravity']]],
+  ['gravity3d',['Gravity3D',['../classsep_1_1_gravity3_d.html#a0650106f7d9f64222f59deab9f7cea24',1,'sep::Gravity3D']]]
 ];

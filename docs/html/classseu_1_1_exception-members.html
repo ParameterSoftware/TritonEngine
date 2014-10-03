@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -72,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -83,7 +84,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>seu</b></li><li class="navelem"><a class="el" href="classseu_1_1_exception.html">Exception</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespaceseu.html">seu</a></li><li class="navelem"><a class="el" href="classseu_1_1_exception.html">Exception</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -94,16 +95,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p>This is the complete list of members for <a class="el" href="classseu_1_1_exception.html">seu::Exception</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classseu_1_1_exception.html#a77d72092d51c549933cd265e31cdd3dd">Exception</a>(const string msg)</td><td class="entry"><a class="el" href="classseu_1_1_exception.html">seu::Exception</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classseu_1_1_exception.html#aa64b605915312aeb355945fe4871466e">getMessage</a>() const </td><td class="entry"><a class="el" href="classseu_1_1_exception.html">seu::Exception</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>operator&lt;&lt;</b>(string all) (defined in <a class="el" href="classseu_1_1_exception.html">seu::Exception</a>)</td><td class="entry"><a class="el" href="classseu_1_1_exception.html">seu::Exception</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>operator&lt;&lt;</b>(const char *all) (defined in <a class="el" href="classseu_1_1_exception.html">seu::Exception</a>)</td><td class="entry"><a class="el" href="classseu_1_1_exception.html">seu::Exception</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classseu_1_1_exception.html#a5a725e27e4a88237e53d32d49cc8ea0e">what</a>() const </td><td class="entry"><a class="el" href="classseu_1_1_exception.html">seu::Exception</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classseu_1_1_exception.html#a131dbe71369884e009dfb28cea3a27fa">~Exception</a>()</td><td class="entry"><a class="el" href="classseu_1_1_exception.html">seu::Exception</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classseu_1_1_exception.html#a85a37b3530fe3c97f9b27fb521cda058">Exception</a>(const char *msg)</td><td class="entry"><a class="el" href="classseu_1_1_exception.html">seu::Exception</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classseu_1_1_exception.html#acae0b0a41c99db96d6cdf45fc97ac27c">getMessage</a>() const </td><td class="entry"><a class="el" href="classseu_1_1_exception.html">seu::Exception</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classseu_1_1_exception.html#afdd5de60928c3bf9dfe7c40a27d05f0e">msg_</a></td><td class="entry"><a class="el" href="classseu_1_1_exception.html">seu::Exception</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classseu_1_1_exception.html#a394ef7c65192b4b4a29e1aadfab7e688">operator&lt;&lt;</a>(std::string all)</td><td class="entry"><a class="el" href="classseu_1_1_exception.html">seu::Exception</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classseu_1_1_exception.html#a55084f3452e9d578be3a1ab6fb566b1b">operator&lt;&lt;</a>(const char *all)</td><td class="entry"><a class="el" href="classseu_1_1_exception.html">seu::Exception</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classseu_1_1_exception.html#aa616f06157d5e244587de0ebc7b7f0d6">what</a>() const </td><td class="entry"><a class="el" href="classseu_1_1_exception.html">seu::Exception</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classseu_1_1_exception.html#a131dbe71369884e009dfb28cea3a27fa">~Exception</a>()</td><td class="entry"><a class="el" href="classseu_1_1_exception.html">seu::Exception</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 29 2014 16:02:55 for SpartanEngine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Oct 2 2014 20:36:39 for SpartanEngine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -72,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -83,17 +84,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>seu</b></li><li class="navelem"><a class="el" href="classseu_1_1_exception.html">Exception</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespaceseu.html">seu</a></li><li class="navelem"><a class="el" href="classseu_1_1_exception.html">Exception</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classseu_1_1_exception-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">seu::Exception Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>An exception class for the SpartanEngine.  
+ <a href="classseu_1_1_exception.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="sge_8h_source.html">sge.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for seu::Exception:</div>
 <div class="dyncontent">
@@ -105,39 +112,45 @@ Inheritance diagram for seu::Exception:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a77d72092d51c549933cd265e31cdd3dd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classseu_1_1_exception.html#a77d72092d51c549933cd265e31cdd3dd">Exception</a> (const string msg)</td></tr>
-<tr class="separator:a77d72092d51c549933cd265e31cdd3dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85a37b3530fe3c97f9b27fb521cda058"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classseu_1_1_exception.html#a85a37b3530fe3c97f9b27fb521cda058">Exception</a> (const char *msg)</td></tr>
+<tr class="separator:a85a37b3530fe3c97f9b27fb521cda058"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a131dbe71369884e009dfb28cea3a27fa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classseu_1_1_exception.html#a131dbe71369884e009dfb28cea3a27fa">~Exception</a> ()</td></tr>
 <tr class="separator:a131dbe71369884e009dfb28cea3a27fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a725e27e4a88237e53d32d49cc8ea0e"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classseu_1_1_exception.html#a5a725e27e4a88237e53d32d49cc8ea0e">what</a> () const </td></tr>
-<tr class="separator:a5a725e27e4a88237e53d32d49cc8ea0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa64b605915312aeb355945fe4871466e"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classseu_1_1_exception.html#aa64b605915312aeb355945fe4871466e">getMessage</a> () const </td></tr>
-<tr class="separator:aa64b605915312aeb355945fe4871466e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92573eaa2a94a606b7b1a5a7879e80e9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a92573eaa2a94a606b7b1a5a7879e80e9"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (string all)</td></tr>
-<tr class="separator:a92573eaa2a94a606b7b1a5a7879e80e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed56a782042b94158d14a8c2dbd10aeb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aed56a782042b94158d14a8c2dbd10aeb"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (const char *all)</td></tr>
-<tr class="separator:aed56a782042b94158d14a8c2dbd10aeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa616f06157d5e244587de0ebc7b7f0d6"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classseu_1_1_exception.html#aa616f06157d5e244587de0ebc7b7f0d6">what</a> () const </td></tr>
+<tr class="separator:aa616f06157d5e244587de0ebc7b7f0d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acae0b0a41c99db96d6cdf45fc97ac27c"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classseu_1_1_exception.html#acae0b0a41c99db96d6cdf45fc97ac27c">getMessage</a> () const </td></tr>
+<tr class="separator:acae0b0a41c99db96d6cdf45fc97ac27c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a394ef7c65192b4b4a29e1aadfab7e688"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classseu_1_1_exception.html#a394ef7c65192b4b4a29e1aadfab7e688">operator&lt;&lt;</a> (std::string all)</td></tr>
+<tr class="separator:a394ef7c65192b4b4a29e1aadfab7e688"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55084f3452e9d578be3a1ab6fb566b1b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classseu_1_1_exception.html#a55084f3452e9d578be3a1ab6fb566b1b">operator&lt;&lt;</a> (const char *all)</td></tr>
+<tr class="separator:a55084f3452e9d578be3a1ab6fb566b1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:afdd5de60928c3bf9dfe7c40a27d05f0e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classseu_1_1_exception.html#afdd5de60928c3bf9dfe7c40a27d05f0e">msg_</a></td></tr>
+<tr class="memdesc:afdd5de60928c3bf9dfe7c40a27d05f0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Message this <a class="el" href="classseu_1_1_exception.html" title="An exception class for the SpartanEngine. ">Exception</a> is holding.  <a href="#afdd5de60928c3bf9dfe7c40a27d05f0e">More...</a><br /></td></tr>
+<tr class="separator:afdd5de60928c3bf9dfe7c40a27d05f0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a77d72092d51c549933cd265e31cdd3dd"></a>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>An exception class for the SpartanEngine. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a85a37b3530fe3c97f9b27fb521cda058"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Exception::Exception </td>
+          <td class="memname">seu::Exception::Exception </td>
           <td>(</td>
-          <td class="paramtype">const string&#160;</td>
+          <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>msg</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>The constructor of <a class="el" href="classseu_1_1_exception.html">Exception</a></p>
+<p>The constructor of <a class="el" href="classseu_1_1_exception.html" title="An exception class for the SpartanEngine. ">Exception</a></p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">msg</td><td>The message the <a class="el" href="classseu_1_1_exception.html">Exception</a> is returning </td></tr>
+    <tr><td class="paramname">msg</td><td>The message the <a class="el" href="classseu_1_1_exception.html" title="An exception class for the SpartanEngine. ">Exception</a> is returning </td></tr>
   </table>
   </dd>
 </dl>
@@ -156,12 +169,12 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b
         </tr>
       </table>
 </div><div class="memdoc">
-<p>The deconstructor of <a class="el" href="classseu_1_1_exception.html">Exception</a> </p>
+<p>The deconstructor of <a class="el" href="classseu_1_1_exception.html" title="An exception class for the SpartanEngine. ">Exception</a> </p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="aa64b605915312aeb355945fe4871466e"></a>
+<a class="anchor" id="acae0b0a41c99db96d6cdf45fc97ac27c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -169,7 +182,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">string Exception::getMessage </td>
+          <td class="memname">virtual std::string seu::Exception::getMessage </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -181,12 +194,44 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Gets the message the <a class="el" href="classseu_1_1_exception.html">Exception</a> is holding</p>
+<p>Gets the message the <a class="el" href="classseu_1_1_exception.html" title="An exception class for the SpartanEngine. ">Exception</a> is holding</p>
 <dl class="section return"><dt>Returns</dt><dd>The message the exception is holding </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a5a725e27e4a88237e53d32d49cc8ea0e"></a>
+<a class="anchor" id="a394ef7c65192b4b4a29e1aadfab7e688"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string seu::Exception::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>all</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a55084f3452e9d578be3a1ab6fb566b1b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string seu::Exception::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>all</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa616f06157d5e244587de0ebc7b7f0d6"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -194,7 +239,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">string Exception::what </td>
+          <td class="memname">virtual const char* seu::Exception::what </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -206,19 +251,41 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Gets the message the <a class="el" href="classseu_1_1_exception.html">Exception</a> is holding</p>
+<p>Gets the message the <a class="el" href="classseu_1_1_exception.html" title="An exception class for the SpartanEngine. ">Exception</a> is holding</p>
 <dl class="section return"><dt>Returns</dt><dd>The message the exception is holding </dd></dl>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li>C:/Users/17galbany/Desktop/SpartanEngine/SpartanEngine/engine/<a class="el" href="_exception_8h_source.html">Exception.h</a></li>
-<li>C:/Users/17galbany/Desktop/SpartanEngine/SpartanEngine/engine/Exception.cpp</li>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="afdd5de60928c3bf9dfe7c40a27d05f0e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string seu::Exception::msg_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Message this <a class="el" href="classseu_1_1_exception.html" title="An exception class for the SpartanEngine. ">Exception</a> is holding. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>C:/Users/17galbany/Desktop/Google/SpartanEngine/include/SGE/<a class="el" href="sge_8h_source.html">sge.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 29 2014 16:02:55 for SpartanEngine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Oct 2 2014 20:36:39 for SpartanEngine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

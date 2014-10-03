@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['flatobject',['FlatObject',['../classseg_1_1_flat_object.html',1,'seg']]]
+  ['distance',['distance',['../namespacesem.html#a45839d27506e31218ea07fca43346cf2',1,'sem']]]
 ];

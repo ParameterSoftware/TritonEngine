@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -72,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -83,46 +84,216 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>seg</b></li><li class="navelem"><a class="el" href="classseg_1_1_object.html">Object</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespaceseg.html">seg</a></li><li class="navelem"><a class="el" href="classseg_1_1_object.html">Object</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classseg_1_1_object-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">seg::Object Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="sge_8h_source.html">sge.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3fcc33b2d79994d2f885ee305fabf076"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3fcc33b2d79994d2f885ee305fabf076"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Object</b> (<a class="el" href="structseu_1_1_vector.html">seu::Vector</a> position)</td></tr>
+<tr class="memitem:a3fcc33b2d79994d2f885ee305fabf076"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classseg_1_1_object.html#a3fcc33b2d79994d2f885ee305fabf076">Object</a> (seu::Vector <a class="el" href="classseg_1_1_object.html#a2ebf3ecfcf7e199896c09dde945b898e">position</a>)</td></tr>
 <tr class="separator:a3fcc33b2d79994d2f885ee305fabf076"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0231abea3c79d56751ff588819719ba4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0231abea3c79d56751ff588819719ba4"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>Start</b> ()</td></tr>
-<tr class="separator:a0231abea3c79d56751ff588819719ba4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2216f5f9b1997d44dcfe1a50a10d726"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab2216f5f9b1997d44dcfe1a50a10d726"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Update</b> ()</td></tr>
+<tr class="memitem:a3f89ab7083482d8b9c1d7b63de02397d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespaceseu.html#a2351eff794bfee559fe0dff8317a8094">seu::SEbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classseg_1_1_object.html#a3f89ab7083482d8b9c1d7b63de02397d">Start</a> ()</td></tr>
+<tr class="separator:a3f89ab7083482d8b9c1d7b63de02397d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2216f5f9b1997d44dcfe1a50a10d726"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classseg_1_1_object.html#ab2216f5f9b1997d44dcfe1a50a10d726">Update</a> ()</td></tr>
 <tr class="separator:ab2216f5f9b1997d44dcfe1a50a10d726"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15099a21d7328669f5ed777a13d3c034"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a15099a21d7328669f5ed777a13d3c034"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Stop</b> ()</td></tr>
+<tr class="memitem:a15099a21d7328669f5ed777a13d3c034"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classseg_1_1_object.html#a15099a21d7328669f5ed777a13d3c034">Stop</a> ()</td></tr>
 <tr class="separator:a15099a21d7328669f5ed777a13d3c034"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58409d2f34c94eaa22500aeaea7964bd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a58409d2f34c94eaa22500aeaea7964bd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPosition</b> (<a class="el" href="structseu_1_1_vector.html">seu::Vector</a> pos)</td></tr>
+<tr class="memitem:a58409d2f34c94eaa22500aeaea7964bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classseg_1_1_object.html#a58409d2f34c94eaa22500aeaea7964bd">SetPosition</a> (seu::Vector pos)</td></tr>
 <tr class="separator:a58409d2f34c94eaa22500aeaea7964bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8156f348bb41d0902f22237e295e12b8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8156f348bb41d0902f22237e295e12b8"></a>
-<a class="el" href="structseu_1_1_vector.html">seu::Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetPosition</b> ()</td></tr>
+<tr class="memitem:a8156f348bb41d0902f22237e295e12b8"><td class="memItemLeft" align="right" valign="top">seu::Vector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classseg_1_1_object.html#a8156f348bb41d0902f22237e295e12b8">GetPosition</a> ()</td></tr>
 <tr class="separator:a8156f348bb41d0902f22237e295e12b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a4e12d9c54ae3f823c3ad8992afc67b21"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classseg_1_1_object.html#a4e12d9c54ae3f823c3ad8992afc67b21">UpdateGraphics</a> ()</td></tr>
+<tr class="separator:a4e12d9c54ae3f823c3ad8992afc67b21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a2ebf3ecfcf7e199896c09dde945b898e"><td class="memItemLeft" align="right" valign="top">seu::Vector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classseg_1_1_object.html#a2ebf3ecfcf7e199896c09dde945b898e">position</a></td></tr>
+<tr class="separator:a2ebf3ecfcf7e199896c09dde945b898e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a3fcc33b2d79994d2f885ee305fabf076"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">seg::Object::Object </td>
+          <td>(</td>
+          <td class="paramtype">seu::Vector&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a8156f348bb41d0902f22237e295e12b8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">seu::Vector seg::Object::GetPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a58409d2f34c94eaa22500aeaea7964bd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void seg::Object::SetPosition </td>
+          <td>(</td>
+          <td class="paramtype">seu::Vector&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3f89ab7083482d8b9c1d7b63de02397d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespaceseu.html#a2351eff794bfee559fe0dff8317a8094">seu::SEbool</a> seg::Object::Start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a15099a21d7328669f5ed777a13d3c034"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void seg::Object::Stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab2216f5f9b1997d44dcfe1a50a10d726"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void seg::Object::Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4e12d9c54ae3f823c3ad8992afc67b21"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void seg::Object::UpdateGraphics </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a2ebf3ecfcf7e199896c09dde945b898e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">seu::Vector seg::Object::position</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/17galbany/Desktop/SpartanEngine/SpartanEngine/engine/<a class="el" href="_graphics_object_8h_source.html">GraphicsObject.h</a></li>
+<li>C:/Users/17galbany/Desktop/Google/SpartanEngine/include/SGE/<a class="el" href="sge_8h_source.html">sge.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 29 2014 16:02:54 for SpartanEngine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Oct 2 2014 20:36:38 for SpartanEngine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

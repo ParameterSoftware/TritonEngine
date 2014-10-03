@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['connection',['Connection',['../classsen_1_1_connection.html',1,'sen']]]
+  ['flatobject',['FlatObject',['../classseg_1_1_flat_object.html',1,'seg']]]
 ];

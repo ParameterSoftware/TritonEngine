@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -72,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -83,38 +84,50 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>sep</b></li><li class="navelem"><a class="el" href="classsep_1_1_gravity3_d.html">Gravity3D</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespacesep.html">sep</a></li><li class="navelem"><a class="el" href="classsep_1_1_gravity3_d.html">Gravity3D</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classsep_1_1_gravity3_d-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">sep::Gravity3D Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="sge_8h_source.html">sge.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0f97044bdb888d5f53c5e4be82d7cd65"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_gravity3_d.html#a0f97044bdb888d5f53c5e4be82d7cd65">Gravity3D</a> (<a class="el" href="structseu_1_1_vector.html">seu::Vector</a> grav_location)</td></tr>
-<tr class="separator:a0f97044bdb888d5f53c5e4be82d7cd65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0da4b25624d60e3bda959bcf2d22c403"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_gravity3_d.html#a0da4b25624d60e3bda959bcf2d22c403">~Gravity3D</a> ()</td></tr>
-<tr class="separator:a0da4b25624d60e3bda959bcf2d22c403"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77de32edff8307222c33e13f2f4f10f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structseu_1_1_vector.html">seu::Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_gravity3_d.html#a77de32edff8307222c33e13f2f4f10f7">GetLocation</a> ()</td></tr>
-<tr class="separator:a77de32edff8307222c33e13f2f4f10f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a900abddd899d1bfd8c589dc6503414fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structseu_1_1_vector.html">seu::Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_gravity3_d.html#a900abddd899d1bfd8c589dc6503414fa">GetGravity</a> ()</td></tr>
+<tr class="memitem:a0650106f7d9f64222f59deab9f7cea24"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_gravity3_d.html#a0650106f7d9f64222f59deab9f7cea24">Gravity3D</a> (seu::Vector <a class="el" href="classsep_1_1_gravity3_d.html#a8e3b138940e610b1c2bc8764ff20c602">grav_location</a>)</td></tr>
+<tr class="separator:a0650106f7d9f64222f59deab9f7cea24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22a08d2c67594693fd4d8a7c71c29038"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_gravity3_d.html#a22a08d2c67594693fd4d8a7c71c29038">~Gravity3D</a> ()</td></tr>
+<tr class="separator:a22a08d2c67594693fd4d8a7c71c29038"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e30fa5a1a763c9b4e9a724ee387958d"><td class="memItemLeft" align="right" valign="top">seu::Vector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_gravity3_d.html#a2e30fa5a1a763c9b4e9a724ee387958d">GetLocation</a> ()</td></tr>
+<tr class="separator:a2e30fa5a1a763c9b4e9a724ee387958d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a900abddd899d1bfd8c589dc6503414fa"><td class="memItemLeft" align="right" valign="top">seu::Vector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_gravity3_d.html#a900abddd899d1bfd8c589dc6503414fa">GetGravity</a> ()</td></tr>
 <tr class="separator:a900abddd899d1bfd8c589dc6503414fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a8e3b138940e610b1c2bc8764ff20c602"><td class="memItemLeft" align="right" valign="top">seu::Vector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_gravity3_d.html#a8e3b138940e610b1c2bc8764ff20c602">grav_location</a></td></tr>
+<tr class="memdesc:a8e3b138940e610b1c2bc8764ff20c602"><td class="mdescLeft">&#160;</td><td class="mdescRight">Location of this <a class="el" href="classsep_1_1_gravity.html">Gravity</a>.  <a href="#a8e3b138940e610b1c2bc8764ff20c602">More...</a><br /></td></tr>
+<tr class="separator:a8e3b138940e610b1c2bc8764ff20c602"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac59e590d784084f9aac08faf3ac1fe5c"><td class="memItemLeft" align="right" valign="top">seu::Vector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_gravity3_d.html#ac59e590d784084f9aac08faf3ac1fe5c">grav_strength</a></td></tr>
+<tr class="memdesc:ac59e590d784084f9aac08faf3ac1fe5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Strength of this <a class="el" href="classsep_1_1_gravity.html">Gravity</a>.  <a href="#ac59e590d784084f9aac08faf3ac1fe5c">More...</a><br /></td></tr>
+<tr class="separator:ac59e590d784084f9aac08faf3ac1fe5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a0f97044bdb888d5f53c5e4be82d7cd65"></a>
+<a class="anchor" id="a0650106f7d9f64222f59deab9f7cea24"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Gravity3D::Gravity3D </td>
+          <td class="memname">sep::Gravity3D::Gravity3D </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structseu_1_1_vector.html">seu::Vector</a>&#160;</td>
+          <td class="paramtype">seu::Vector&#160;</td>
           <td class="paramname"><em>grav_location</em></td><td>)</td>
           <td></td>
         </tr>
@@ -131,12 +144,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a0da4b25624d60e3bda959bcf2d22c403"></a>
+<a class="anchor" id="a22a08d2c67594693fd4d8a7c71c29038"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Gravity3D::~Gravity3D </td>
+          <td class="memname">sep::Gravity3D::~Gravity3D </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -153,7 +166,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structseu_1_1_vector.html">seu::Vector</a> sep::Gravity3D::GetGravity </td>
+          <td class="memname">seu::Vector sep::Gravity3D::GetGravity </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -165,12 +178,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a77de32edff8307222c33e13f2f4f10f7"></a>
+<a class="anchor" id="a2e30fa5a1a763c9b4e9a724ee387958d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structseu_1_1_vector.html">Vector</a> Gravity3D::GetLocation </td>
+          <td class="memname">seu::Vector sep::Gravity3D::GetLocation </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -182,14 +195,58 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li>C:/Users/17galbany/Desktop/SpartanEngine/SpartanEngine/engine/<a class="el" href="_gravity_8h_source.html">Gravity.h</a></li>
-<li>C:/Users/17galbany/Desktop/SpartanEngine/SpartanEngine/engine/Gravity.cpp</li>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a8e3b138940e610b1c2bc8764ff20c602"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">seu::Vector sep::Gravity3D::grav_location</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Location of this <a class="el" href="classsep_1_1_gravity.html">Gravity</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac59e590d784084f9aac08faf3ac1fe5c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">seu::Vector sep::Gravity3D::grav_strength</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Strength of this <a class="el" href="classsep_1_1_gravity.html">Gravity</a>. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>C:/Users/17galbany/Desktop/Google/SpartanEngine/include/SGE/<a class="el" href="sge_8h_source.html">sge.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 29 2014 16:02:54 for SpartanEngine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Oct 2 2014 20:36:39 for SpartanEngine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

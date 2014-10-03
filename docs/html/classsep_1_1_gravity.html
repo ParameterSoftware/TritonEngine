@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -72,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -83,36 +84,45 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>sep</b></li><li class="navelem"><a class="el" href="classsep_1_1_gravity.html">Gravity</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespacesep.html">sep</a></li><li class="navelem"><a class="el" href="classsep_1_1_gravity.html">Gravity</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classsep_1_1_gravity-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">sep::Gravity Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="sge_8h_source.html">sge.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aaa08f646d7e14bbd45a352be591707ec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_gravity.html#aaa08f646d7e14bbd45a352be591707ec">Gravity</a> (<a class="el" href="structseu_1_1_vector.html">seu::Vector</a> gravity)</td></tr>
-<tr class="separator:aaa08f646d7e14bbd45a352be591707ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6fcaf5f5f0d4672c4a1d97a3102e053a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_gravity.html#a6fcaf5f5f0d4672c4a1d97a3102e053a">~Gravity</a> ()</td></tr>
-<tr class="separator:a6fcaf5f5f0d4672c4a1d97a3102e053a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57ff6f22b12a246df537747b2b838579"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structseu_1_1_vector.html">seu::Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_gravity.html#a57ff6f22b12a246df537747b2b838579">GetGravity</a> ()</td></tr>
-<tr class="separator:a57ff6f22b12a246df537747b2b838579"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5140f7302961dc2bbcad09a9a4798c8f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_gravity.html#a5140f7302961dc2bbcad09a9a4798c8f">Gravity</a> (seu::Vector <a class="el" href="classsep_1_1_gravity.html#a27977ff1128fda4e6768675fbd320316">gravity</a>)</td></tr>
+<tr class="separator:a5140f7302961dc2bbcad09a9a4798c8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabb0a60df675867e1e667ffd18273e70"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_gravity.html#aabb0a60df675867e1e667ffd18273e70">~Gravity</a> ()</td></tr>
+<tr class="separator:aabb0a60df675867e1e667ffd18273e70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9a1a4d2488d6f34eedadd747d3144c5"><td class="memItemLeft" align="right" valign="top">virtual seu::Vector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_gravity.html#ad9a1a4d2488d6f34eedadd747d3144c5">GetGravity</a> ()</td></tr>
+<tr class="separator:ad9a1a4d2488d6f34eedadd747d3144c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a27977ff1128fda4e6768675fbd320316"><td class="memItemLeft" align="right" valign="top">seu::Vector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsep_1_1_gravity.html#a27977ff1128fda4e6768675fbd320316">gravity</a></td></tr>
+<tr class="memdesc:a27977ff1128fda4e6768675fbd320316"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gravities Directions.  <a href="#a27977ff1128fda4e6768675fbd320316">More...</a><br /></td></tr>
+<tr class="separator:a27977ff1128fda4e6768675fbd320316"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="aaa08f646d7e14bbd45a352be591707ec"></a>
+<a class="anchor" id="a5140f7302961dc2bbcad09a9a4798c8f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Gravity::Gravity </td>
+          <td class="memname">sep::Gravity::Gravity </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structseu_1_1_vector.html">seu::Vector</a>&#160;</td>
+          <td class="paramtype">seu::Vector&#160;</td>
           <td class="paramname"><em>gravity</em></td><td>)</td>
           <td></td>
         </tr>
@@ -128,12 +138,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6fcaf5f5f0d4672c4a1d97a3102e053a"></a>
+<a class="anchor" id="aabb0a60df675867e1e667ffd18273e70"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Gravity::~Gravity </td>
+          <td class="memname">sep::Gravity::~Gravity </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -145,7 +155,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a57ff6f22b12a246df537747b2b838579"></a>
+<a class="anchor" id="ad9a1a4d2488d6f34eedadd747d3144c5"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -153,7 +163,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structseu_1_1_vector.html">Vector</a> Gravity::GetGravity </td>
+          <td class="memname">virtual seu::Vector sep::Gravity::GetGravity </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -170,14 +180,36 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li>C:/Users/17galbany/Desktop/SpartanEngine/SpartanEngine/engine/<a class="el" href="_gravity_8h_source.html">Gravity.h</a></li>
-<li>C:/Users/17galbany/Desktop/SpartanEngine/SpartanEngine/engine/Gravity.cpp</li>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a27977ff1128fda4e6768675fbd320316"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">seu::Vector sep::Gravity::gravity</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gravities Directions. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>C:/Users/17galbany/Desktop/Google/SpartanEngine/include/SGE/<a class="el" href="sge_8h_source.html">sge.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 29 2014 16:02:54 for SpartanEngine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Oct 2 2014 20:36:38 for SpartanEngine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['ddvector',['DDVector',['../structseu_1_1_d_d_vector.html',1,'seu']]]
+  ['gravity',['Gravity',['../classsep_1_1_gravity.html',1,'sep']]],
+  ['gravity3d',['Gravity3D',['../classsep_1_1_gravity3_d.html',1,'sep']]]
 ];

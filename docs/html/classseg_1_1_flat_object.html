@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -72,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -83,59 +84,288 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>seg</b></li><li class="navelem"><a class="el" href="classseg_1_1_flat_object.html">FlatObject</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespaceseg.html">seg</a></li><li class="navelem"><a class="el" href="classseg_1_1_flat_object.html">FlatObject</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classseg_1_1_flat_object-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">seg::FlatObject Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Simple Billborad <a class="el" href="classseg_1_1_object.html">Object</a>.  
+<p>Simple Flatly Rendered <a class="el" href="classseg_1_1_object.html">Object</a>.  
  <a href="classseg_1_1_flat_object.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="_graphics_object_8h_source.html">GraphicsObject.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="sge_8h_source.html">sge.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8f4f7a99a9822f511cbf1a4d74ed7e0f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8f4f7a99a9822f511cbf1a4d74ed7e0f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>FlatObject</b> (<a class="el" href="structseu_1_1_d_d_vector.html">seu::DDVector</a> position, float scale=1.0)</td></tr>
-<tr class="separator:a8f4f7a99a9822f511cbf1a4d74ed7e0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6abdcdac6792adda937255c2869e5276"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6abdcdac6792adda937255c2869e5276"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>Start</b> ()</td></tr>
-<tr class="separator:a6abdcdac6792adda937255c2869e5276"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4d707996b748f09228b37b6daba1f39"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae4d707996b748f09228b37b6daba1f39"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Update</b> ()</td></tr>
+<tr class="memitem:a2151d07901eefc65cf7eaea5127cbda9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classseg_1_1_flat_object.html#a2151d07901eefc65cf7eaea5127cbda9">FlatObject</a> (seu::DDVector <a class="el" href="classseg_1_1_flat_object.html#a6114b62194968d4889333844a5003f27">position</a>, <a class="el" href="namespaceseu.html#a28867ec000133d9ae765b5f96a26e7bb">seu::SEfloat</a> <a class="el" href="classseg_1_1_flat_object.html#a8e187f8fd380791001598940f0d82ad3">scale</a>=1.0)</td></tr>
+<tr class="separator:a2151d07901eefc65cf7eaea5127cbda9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e8ef278490ee2d1bac904e548665893"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespaceseu.html#a2351eff794bfee559fe0dff8317a8094">seu::SEbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classseg_1_1_flat_object.html#a4e8ef278490ee2d1bac904e548665893">Start</a> ()</td></tr>
+<tr class="separator:a4e8ef278490ee2d1bac904e548665893"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4d707996b748f09228b37b6daba1f39"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classseg_1_1_flat_object.html#ae4d707996b748f09228b37b6daba1f39">Update</a> ()</td></tr>
 <tr class="separator:ae4d707996b748f09228b37b6daba1f39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0de70dfb605435f9eab0e3c4778a067f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0de70dfb605435f9eab0e3c4778a067f"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Stop</b> ()</td></tr>
+<tr class="memitem:a0de70dfb605435f9eab0e3c4778a067f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classseg_1_1_flat_object.html#a0de70dfb605435f9eab0e3c4778a067f">Stop</a> ()</td></tr>
 <tr class="separator:a0de70dfb605435f9eab0e3c4778a067f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c3b85dc0b4c9c96b9a06b9cd503e44f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6c3b85dc0b4c9c96b9a06b9cd503e44f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPosition</b> (<a class="el" href="structseu_1_1_d_d_vector.html">seu::DDVector</a> pos)</td></tr>
+<tr class="memitem:a6c3b85dc0b4c9c96b9a06b9cd503e44f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classseg_1_1_flat_object.html#a6c3b85dc0b4c9c96b9a06b9cd503e44f">SetPosition</a> (seu::DDVector pos)</td></tr>
 <tr class="separator:a6c3b85dc0b4c9c96b9a06b9cd503e44f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab25204619ca31fd7dc57ee89caa853e1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab25204619ca31fd7dc57ee89caa853e1"></a>
-<a class="el" href="structseu_1_1_d_d_vector.html">seu::DDVector</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetPosition</b> ()</td></tr>
+<tr class="memitem:ab25204619ca31fd7dc57ee89caa853e1"><td class="memItemLeft" align="right" valign="top">seu::DDVector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classseg_1_1_flat_object.html#ab25204619ca31fd7dc57ee89caa853e1">GetPosition</a> ()</td></tr>
 <tr class="separator:ab25204619ca31fd7dc57ee89caa853e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33d26a32b7c3d43ef87d1aaa96cc6827"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a33d26a32b7c3d43ef87d1aaa96cc6827"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetScale</b> (float scale=1.0)</td></tr>
-<tr class="separator:a33d26a32b7c3d43ef87d1aaa96cc6827"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c35c1bdcb77d9d9e88e3f1eba72468b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c35c1bdcb77d9d9e88e3f1eba72468b"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>GetScale</b> ()</td></tr>
+<tr class="memitem:a8119928d87feb24f245e26362b6ae3a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classseg_1_1_flat_object.html#a8119928d87feb24f245e26362b6ae3a5">SetScale</a> (<a class="el" href="namespaceseu.html#a28867ec000133d9ae765b5f96a26e7bb">seu::SEfloat</a> <a class="el" href="classseg_1_1_flat_object.html#a8e187f8fd380791001598940f0d82ad3">scale</a>=1.0)</td></tr>
+<tr class="separator:a8119928d87feb24f245e26362b6ae3a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c35c1bdcb77d9d9e88e3f1eba72468b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classseg_1_1_flat_object.html#a7c35c1bdcb77d9d9e88e3f1eba72468b">GetScale</a> ()</td></tr>
 <tr class="separator:a7c35c1bdcb77d9d9e88e3f1eba72468b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:aa954037018bd26fb39a94d50222e4b5f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classseg_1_1_flat_object.html#aa954037018bd26fb39a94d50222e4b5f">UpdateGraphics</a> ()</td></tr>
+<tr class="separator:aa954037018bd26fb39a94d50222e4b5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a6114b62194968d4889333844a5003f27"><td class="memItemLeft" align="right" valign="top">seu::DDVector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classseg_1_1_flat_object.html#a6114b62194968d4889333844a5003f27">position</a></td></tr>
+<tr class="separator:a6114b62194968d4889333844a5003f27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e187f8fd380791001598940f0d82ad3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceseu.html#a28867ec000133d9ae765b5f96a26e7bb">seu::SEfloat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classseg_1_1_flat_object.html#a8e187f8fd380791001598940f0d82ad3">scale</a></td></tr>
+<tr class="separator:a8e187f8fd380791001598940f0d82ad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Simple Billborad <a class="el" href="classseg_1_1_object.html">Object</a>. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/17galbany/Desktop/SpartanEngine/SpartanEngine/engine/<a class="el" href="_graphics_object_8h_source.html">GraphicsObject.h</a></li>
+<div class="textblock"><p>Simple Flatly Rendered <a class="el" href="classseg_1_1_object.html">Object</a>. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a2151d07901eefc65cf7eaea5127cbda9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">seg::FlatObject::FlatObject </td>
+          <td>(</td>
+          <td class="paramtype">seu::DDVector&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceseu.html#a28867ec000133d9ae765b5f96a26e7bb">seu::SEfloat</a>&#160;</td>
+          <td class="paramname"><em>scale</em> = <code>1.0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ab25204619ca31fd7dc57ee89caa853e1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">seu::DDVector seg::FlatObject::GetPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7c35c1bdcb77d9d9e88e3f1eba72468b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float seg::FlatObject::GetScale </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6c3b85dc0b4c9c96b9a06b9cd503e44f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void seg::FlatObject::SetPosition </td>
+          <td>(</td>
+          <td class="paramtype">seu::DDVector&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8119928d87feb24f245e26362b6ae3a5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void seg::FlatObject::SetScale </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceseu.html#a28867ec000133d9ae765b5f96a26e7bb">seu::SEfloat</a>&#160;</td>
+          <td class="paramname"><em>scale</em> = <code>1.0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4e8ef278490ee2d1bac904e548665893"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespaceseu.html#a2351eff794bfee559fe0dff8317a8094">seu::SEbool</a> seg::FlatObject::Start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0de70dfb605435f9eab0e3c4778a067f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void seg::FlatObject::Stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae4d707996b748f09228b37b6daba1f39"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void seg::FlatObject::Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa954037018bd26fb39a94d50222e4b5f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void seg::FlatObject::UpdateGraphics </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a6114b62194968d4889333844a5003f27"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">seu::DDVector seg::FlatObject::position</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8e187f8fd380791001598940f0d82ad3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceseu.html#a28867ec000133d9ae765b5f96a26e7bb">seu::SEfloat</a> seg::FlatObject::scale</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>C:/Users/17galbany/Desktop/Google/SpartanEngine/include/SGE/<a class="el" href="sge_8h_source.html">sge.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 29 2014 16:02:53 for SpartanEngine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Oct 2 2014 20:36:38 for SpartanEngine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

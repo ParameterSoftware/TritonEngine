@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -72,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -83,7 +84,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>sep</b></li><li class="navelem"><a class="el" href="classsep_1_1_gravity3_d.html">Gravity3D</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespacesep.html">sep</a></li><li class="navelem"><a class="el" href="classsep_1_1_gravity3_d.html">Gravity3D</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -95,13 +96,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>This is the complete list of members for <a class="el" href="classsep_1_1_gravity3_d.html">sep::Gravity3D</a>, including all inherited members.</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="classsep_1_1_gravity3_d.html#a900abddd899d1bfd8c589dc6503414fa">GetGravity</a>()</td><td class="entry"><a class="el" href="classsep_1_1_gravity3_d.html">sep::Gravity3D</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classsep_1_1_gravity3_d.html#a77de32edff8307222c33e13f2f4f10f7">GetLocation</a>()</td><td class="entry"><a class="el" href="classsep_1_1_gravity3_d.html">sep::Gravity3D</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classsep_1_1_gravity3_d.html#a0f97044bdb888d5f53c5e4be82d7cd65">Gravity3D</a>(seu::Vector grav_location)</td><td class="entry"><a class="el" href="classsep_1_1_gravity3_d.html">sep::Gravity3D</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classsep_1_1_gravity3_d.html#a0da4b25624d60e3bda959bcf2d22c403">~Gravity3D</a>()</td><td class="entry"><a class="el" href="classsep_1_1_gravity3_d.html">sep::Gravity3D</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classsep_1_1_gravity3_d.html#a2e30fa5a1a763c9b4e9a724ee387958d">GetLocation</a>()</td><td class="entry"><a class="el" href="classsep_1_1_gravity3_d.html">sep::Gravity3D</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classsep_1_1_gravity3_d.html#a8e3b138940e610b1c2bc8764ff20c602">grav_location</a></td><td class="entry"><a class="el" href="classsep_1_1_gravity3_d.html">sep::Gravity3D</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classsep_1_1_gravity3_d.html#ac59e590d784084f9aac08faf3ac1fe5c">grav_strength</a></td><td class="entry"><a class="el" href="classsep_1_1_gravity3_d.html">sep::Gravity3D</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classsep_1_1_gravity3_d.html#a0650106f7d9f64222f59deab9f7cea24">Gravity3D</a>(seu::Vector grav_location)</td><td class="entry"><a class="el" href="classsep_1_1_gravity3_d.html">sep::Gravity3D</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classsep_1_1_gravity3_d.html#a22a08d2c67594693fd4d8a7c71c29038">~Gravity3D</a>()</td><td class="entry"><a class="el" href="classsep_1_1_gravity3_d.html">sep::Gravity3D</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 29 2014 16:02:54 for SpartanEngine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Oct 2 2014 20:36:39 for SpartanEngine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
