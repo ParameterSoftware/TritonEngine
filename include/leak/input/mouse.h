@@ -26,10 +26,23 @@ namespace Leak
 				MIDDLE_BUTTON = BUTTON_3
 			};
 			
-			System::Action* GetButtonAction(MouseButton button);
+			/** @brief The function signature for mouse callbacks
+			 *  
+			 *  The function signature for mouse callbacks
+			 *  
+			 *  @param[in] mouseButton The current checked [Mouse Button](@ref MouseButton)
+			 *  @param[in] action The action the button is currently expressing
+			 *  @param[in] mods The current bit field modifier describing what modifier keys were held
+			 */
+			typedef void (* mousecallfun)(MouseButton, System::Action, int);
+			
+			System::Action GetButtonAction(MouseButton button);
+			void 					SetMouseCallback(mousecallfun callback);
 		protected:
 			Mouse(InputID id);
-			System::Action	mButtonAction[LAST_BUTTON+1]
+			System::Action	m_ButtonAction[LAST_BUTTON+1]
+		private:
+			mousecallfun m_Callback;
 		};
 	}
 }

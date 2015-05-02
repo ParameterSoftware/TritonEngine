@@ -6,7 +6,7 @@
 namespace Leak
 {
 	namespace Input
-	{
+	{	
 		struct Key: public InputObject
 		{		
 			enum KeyIndex
@@ -48,21 +48,38 @@ namespace Leak
 				MENU,																						/* Menu Key */
 				LAST = MENU																			/* Last Key (Size) */
 			};
-		private:
-			KeyIndex 				mKey;
-		protected:
-			System::Action* 	mAction;
 			
-			void	ChangeKey(KeyIndex key);
+			System::Action 	GetAction();
+			KeyIndex				GetKey();
+			bool						IsPressed();
+			bool						IsKey(KeyIndex index);
+		private:
+			KeyIndex 				m_Key;
+		protected:
+			System::Action* 	m_Action;
+			
+			Key(KeyIndex index): m_Key(index) {}
 		};
 		
 		class Keybind: public Key
 		{
 		public:
-			KeyBind(KeyIndex index): key(index) {}
+			/** @brief The function signature for key callbacks
+			 *  
+			 *  The function signature for key callbacks for use with keybinds
+			 *  
+			 *  @param[in] scancode The scancode that is currently representing the key
+			 *  @param[in] action The action the key is currently expressing
+			 *  @param[in] mods The current bit field modifier describing what modifier keys were held
+			 */
+			typedef void (* keycallfun)(int, System::Action, int);
+		
+			KeyBind(KeyIndex index): Key(index) {}
 			
-			System::Action 	GetAction();
-			bool						IsPressed();
+			void						SetKey(KeyIndex index);
+			void						SetKeyCallback(keycallfun callback);
+		private:
+			keycallfun 			m_Callback;
 		};
 	}
 }

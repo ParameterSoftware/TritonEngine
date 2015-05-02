@@ -9,7 +9,7 @@ namespace Leak
 	{
 		class Joystick: public InputObject
 		{
-			Util::String mName;
+			Util::String m_Name;
 		public:
 			enum JoystickIndex
 			{
@@ -32,13 +32,32 @@ namespace Leak
 				JOYSTICK_LAST = JOYSTICK_16
 			};	
 			
-			float*						GetJoystickPosition(int index);
-			System::Action*	GetJoystickAction(int index);
+			/** @brief The function signature for key callbacks
+			 *  
+			 *  The function signature for key callbacks for use with keybinds
+			 *  
+			 *  @param[in] axeCount The axe count for the array axes
+			 *  @param[in] axes The array of axes with a length of axeCount
+			 *  @param[in] buttonCount The button count for array buttons
+			 *  @param[in] buttons The array of buttons with a length of buttonCount
+			 *  @param[in] mods The current bit field modifier describing what modifier keys were held
+			 */
+			typedef void (* joystickcallfun)(int, float*, int, System::Action*, int);
+			
+			float						GetJoystickPosition(int index);
+			System::Action		GetJoystickAction(int index);
+			Util::String				GetName();
+			JoystickIndex		GetJoystickIndex();
+			void						SetJoystickCallback(joystickcallfun callback);
+			bool						IsJoystickIndex(JoystickIndex index);
+			bool						IsPresent();
 		protected:
-			float*						mJoystickPosition;
-			System::Action*	mJoystickAction;
+			float*						m_JoystickPosition;
+			System::Action*	m_JoystickAction;
 		
 			Joystick(JoystickIndex index);
+		private:
+			joystickcallfun m_Callback;
 		};
 	}
 }

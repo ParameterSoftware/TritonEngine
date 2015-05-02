@@ -5,6 +5,28 @@ namespace Leak
 {
 	namespace Util
 	{
+	
+		/** An Exception-Safe Basic String
+		 *  
+		 *  Please use only (and only use) ExceptionBasicString for exception handling
+		 */
+		template<class charT>
+		class ExceptionBasicString
+		{
+			charT* 	m_str;
+			size_t	m_size
+		public:
+			ExceptionBasicString (const charT* str);
+			
+			void	SetString(const charT* str)
+			{
+				m_size = strlen(str);
+				m_str = str;
+			}
+		};
+		
+		typedef ExceptionBasicString<char> ExceptionString;
+	
 		/**
 		 *  @addtogroup lus_exception
 		 *  @{
@@ -14,15 +36,15 @@ namespace Leak
 		class Exception: public std::exception
 		{
 		protected:
-			String msg; ///<
+			ExceptionString m_Msg; ///< The @ref ExceptionString Message this @ref Exception gives
 		public:
 			/** The constructor for @ref Exception
 			 *
 			 *  @param msg The message to be stored
 			 */
-			Exception(String msg): msg("Exception: "+msg+"\n") {}
+			Exception(ExceptionString msg): m_Msg("Exception: "+msg+"\n") {}
 
-			virtual String		what() { return msg; } ///< Returns the @ref String of this exception based on @ref msg
+			virtual ExceptionString what() { return m_Msg; } ///< Returns the @ref ExceptionString of this exception based on @ref msg
 		};
 
 		/// An error based off @ref Exception for better clarification
@@ -34,10 +56,10 @@ namespace Leak
 			 *  @param errorCode The error code to be applied to this exception
 			 *  @param error The error message of @ref Error
 			 */
-			Error(int errorCode, String error): msg("Error Code: "+errorCode+"\nError Exception: "+error) {}
+			Error(int errorCode, ExceptionString error): m_Msg("Error Code: "+errorCode+"\nError Message: "+error) {}
 
-			int 			getErrorCode(); ///< Returns the error's code via stringstreams
-			String		getError(); ///< Returns the error's readable statement
+			int 						GetErrorCode(); 				///< Returns the error's code via stringstreams
+			ExceptionString		GetErrorMessage(); 			///< Returns the error's readable statement
 		};
 		/** @} */
 	}

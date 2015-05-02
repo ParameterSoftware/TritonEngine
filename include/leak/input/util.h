@@ -14,29 +14,27 @@ namespace Leak
 		
 		class InputManager
 		{
-			LUS::DList<Keybind> 	mKeybinds;
-			Key								mKeys[Key::KeyIndex::LAST+1];
-			Mouse*							mpMouse;
+			Util::DList<Keybind*> 		m_KeybindsPList;
+			Key									m_Keys[Key::LAST+1];
+			Mouse*								m_pMouse;
+			Joystick							m_Joysticks[Joystick::JOYSTICK_LAST+1]
 			
-			InputInterface* 				mInterface;
+			InputInterface* 					m_pInterface;
 		public:
-			InputManager(InputInterface* interface): mInterface(interface) {}
+			InputManager(InputInterface* pInterface): m_pInterface(pInterface) {}
 			
-			void 			Update();
-			
-			/** @brief Allows creation of keybinds
+			/** @brief Creates keybinds
 			 *  
 			 *  @param key The KeyIndex for the keybind to check
-			 *  @param pAction [out] Pointer to the action the keybind is representing @ref Leak::Input::System::Action (output)
 			 */
-			void		 	CreateKeybind(Key::KeyIndex key, System::Action* pAction);
-			Mouse*		FindMouse(InputID id);
-			Joystick	GetJoystick(Enum::JoystickAdapter id);
+			const KeyBind	CreateKeybind(Key::KeyIndex key);
+			Mouse*				FindMouse(InputID id);
+			Joystick*			GetJoystick(Joystick::JoystickIndex id);
 			
 			~InputManager()
 			{
-				delete mouse;
-				for(LUS::DList<Keybind*>::iterator it = keybinds.begin(); it != keybinds.end(); ++it) delete *it;
+				delete m_pMouse;
+				for(Util::DList<Keybind*>::iterator it = m_KeybindsPList.begin(); it != m_KeybindsPList.end(); ++it) delete *it;
 			}
 		};
 		
@@ -49,7 +47,7 @@ namespace Leak
 		
 			virtual Key* 		GetKeyFromID(InputID id) = 0;
 			virtual Mouse*	GetMouse(InputID id)  = 0;
-			virtual Joystick	GetJoystick(InputID id) {}
+			virtual Joystick*	GetJoystick(InputID id) { return NULL; }
 		};
 	}
 }
