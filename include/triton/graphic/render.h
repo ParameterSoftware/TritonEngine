@@ -5,7 +5,7 @@
 #include <leak/util/angle.h>
 #include <leak/util/vector.h>
 
-namespace Leak
+namespace Tri
 {
 	namespace Graphic
 	{
@@ -127,7 +127,7 @@ namespace Leak
 		///
 		/// Example of use:
 		/// @code
-		/// Leak::Graphic::Render::Text txt(fontImage, "Foo");
+		/// Tri::Graphic::Render::Text txt(fontImage, "Foo");
 		/// txt.text = "Bar" // txt now displays Bar instead of Foo
 		/// @endcode
 		class Text: public Draw2D

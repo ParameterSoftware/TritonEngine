@@ -1,7 +1,7 @@
 #ifndef _LUS_EXCEPTION_H_
 #define _LUS_EXCEPTION_H_
 
-namespace Leak
+namespace Tri
 {
 	namespace Util
 	{

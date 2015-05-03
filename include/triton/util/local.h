@@ -3,7 +3,7 @@
 
 #include "util.h"
 
-namespace Leak
+namespace Tri
 {
 	namespace Util
 	{

@@ -3,7 +3,7 @@
 
 #include <leak/util/util.h>
 
-namespace Leak
+namespace Tri
 {
 	namespace Input
 	{

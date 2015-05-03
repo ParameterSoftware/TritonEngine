@@ -5,7 +5,7 @@
 #include "mouse.h"
 #include "joystick.h"
 
-namespace Leak
+namespace Tri
 {
 	namespace Input
 	{		

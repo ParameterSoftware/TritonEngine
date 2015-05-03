@@ -4,14 +4,14 @@
 #include <leak/util/exception.h>
 #include <leak/graphic/render.h>
 
-namespace Leak
+namespace Tri
 {
 	namespace Graphic
 	{
 		typedef glm::mat3 Mat3;
 		typedef glm::mat4 Mat4;
 
-		class GraphicalException: public Leak::Util::Exception
+		class GraphicalException: public Tri::Util::Exception
 		{
 		public:
 			GraphicalException(LUS::String msg): msg("GraphicalException: "+msg+"\n") {}

@@ -4,7 +4,7 @@
 #include <leak/util/util.h>
 #include <leak/util/vector.h>
 
-namespace Leak
+namespace Tri
 {
 	namespace Graphic
 	{

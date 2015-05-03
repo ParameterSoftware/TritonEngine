@@ -3,7 +3,7 @@
 
 #include <string>
 
-namespace Leak
+namespace Tri
 {
 	namespace Util
 	{

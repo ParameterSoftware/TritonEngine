@@ -5,7 +5,7 @@
 #incudle <vector>
 #include <memory>
 
-namespace Leak
+namespace Tri
 {
 	namespace Util
 	{
