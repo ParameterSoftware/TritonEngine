@@ -1,9 +1,9 @@
-The LEAK Game Engine
+The Triton Engine
 =============
 
 ##Description
 
-The main goal of this project is to create a game engine that is open source, both advanced and easy to use and free. If you would like to help, please follow the guidelines below.
+The goal is to create an open-source cross-platform game engine which is written in modules, most of which only require the util module.
 
 ##Plans
 
@@ -23,7 +23,6 @@ The main goal of this project is to create a game engine that is open source, bo
 	- GLEW: extending OpenGL Functions further
 	- Lua: script support for easy game and mod creation - planned for later
 	- Asio: basic cross-platform networking - planned for later
-	- (possibly) CrystalHD: Windows and Linux Video
 
 ##Contrbution Guidelines
 
@@ -45,7 +44,3 @@ Do not name items longer then 25 alphanumeric characters (abbreviate if you must
 ##Warning
 
 This is not complete, do not expect to work yet. When version 0.1.0 is said finished in the issues then it will be ready for basic use. Expect things like tests and examples. Do not expect optimization until at least version 0.3.0.
-
-##Planned Projects
-
-After Inheritance - An RPG based on the Inheritance Cycle 
