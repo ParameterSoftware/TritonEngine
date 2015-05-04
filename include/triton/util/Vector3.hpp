@@ -10,10 +10,10 @@ namespace Util
 
 ////////////////////////////////////////////////////////////
 /// \brief Utility template class to store and manipulate 
-///		2-dimensional vector positions
+///		3-dimensional vector positions
 ///
 ////////////////////////////////////////////////////////////
-template <typename T>
+template <typename T = int>
 class Vector3: public Vector2
 {
 public:
@@ -30,34 +30,7 @@ public:
 	Vector3(T X = 0, T Y = 0, T Z = 0);
 	
 	////////////////////////////////////////////////////////////
-	/// \brief Construct the vector from another type of vector
-	///
-	/// This constructor doesn't replace the copy constructor,
-	/// it's called only when U != T.
-	///
-	///	\exception ExceptionCastFail thrown when U can't be casted to T
-	///
-	/// \param vector Vector to convert
-	///
-	////////////////////////////////////////////////////////////
-	template <typename U>
-	explicit Vector3(const Vector3<U>& vector);
-	
-	////////////////////////////////////////////////////////////
-	/// \brief Construct the vector from a \ref Vector2 and a Z 
-	/// 	coordinate
-	///
-	///	\exception ExceptionCastFail thrown when U can't be casted to T
-	///
-	/// \param vector Vector to convert
-	/// \param Z the new Z coordinate
-	///
-	////////////////////////////////////////////////////////////
-	template<typename U>
-	Vector3(const Vector2<U>& vec, T Z = 0);
-	
-	////////////////////////////////////////////////////////////
-	/// \brief Construct the vector from a \ref Vector1, a Y 
+	/// \brief Construct the vector from a \ref Triton::Util::Vector1, a Y 
 	/// 	coordinate, and Z coordinate
 	///
 	///	\exception ExceptionCastFail thrown when U can't be casted to T
@@ -68,13 +41,30 @@ public:
 	///
 	////////////////////////////////////////////////////////////
 	template<typename U>
-	Vector3(const Vector1<U>& vec, T Y = 0, T Z = 0);
+	Vector3(const Vector1<U>& vector, T Y = 0, T Z = 0);
 	
 	////////////////////////////////////////////////////////////
-	/// \brief An operator for evaluating \ref Vector1 to a 
-	/// 	\ref Vector3 using Y and Z coordinate parameters
+	/// \brief Construct the vector from a 
+	/// 	\ref Triton::Util::Vector2 and a Z coordinate
 	///
-	///	\exception ExceptionCastFail thrown when U can't be casted to T
+	///	\exception ExceptionCastFail thrown when U can't be 
+	/// 	casted to T
+	///
+	/// \param vector Vector to convert
+	/// \param Z the new Z coordinate
+	///
+	////////////////////////////////////////////////////////////
+	template<typename U>
+	Vector3(const Vector2<U>& vector, T Z = 0);
+	
+	////////////////////////////////////////////////////////////
+	/// \brief An operator for evaluating 
+	/// 	\ref Triton::Util::Vector1 to a 
+	/// 	\ref Triton::Util::Vector3 using Y and Z coordinate 
+	/// 	parameters
+	///
+	///	\exception ExceptionCastFail thrown when U can't be 
+	/// 	casted to T
 	///
 	/// \param vector Vector to convert
 	/// \param Y the new Y coordinate
@@ -85,10 +75,13 @@ public:
 	Vector3<T>& operator=(const Vector1<U>& vector, T Y = 0, T Z = 0);
 	
 	////////////////////////////////////////////////////////////
-	/// \brief An operator for evaluating \ref Vector1 to a 
-	/// 	\ref Vector3 using a Z coordinate parameter
+	/// \brief An operator for evaluating 
+	/// 	\ref Triton::Util::Vector2 to a 
+	/// 	\ref Triton::Util::Vector3 using a Z coordinate 
+	/// 	parameter
 	///
-	///	\exception ExceptionCastFail thrown when U can't be casted to T
+	///	\exception ExceptionCastFail thrown when U can't be 
+	/// 	casted to T
 	///
 	/// \param vector Vector to convert
 	/// \param Z the new Z coordinate
@@ -103,7 +96,8 @@ public:
 	///
 	///	\note The distance is an absolute value
 	///
-	///	\exception ExceptionCastFail thrown when U can't be casted to T
+	///	\exception ExceptionCastFail thrown when U can't be 
+	/// 	casted to T
 	///
 	/// \param vector Vector to other vector
 	///
@@ -112,18 +106,11 @@ public:
 	Vector3<T> distance(Vector3<U> vector);
 	
 	////////////////////////////////////////////////////////////
-	/// \brief Constructs a vector with an absolute value of 
-	/// 	this vector
+	/// \brief Constructs a \ref Triton::Util::Vector3 with an 
+	///		absolute value of this vector
 	///
 	////////////////////////////////////////////////////////////
 	Vector3<T> absV3();
-	
-	////////////////////////////////////////////////////////////
-	/// \brief A safe and cross-object way of calling the 
-	///		variables
-	///
-	////////////////////////////////////////////////////////////
-	virtual T operator[](int index);
 	
 	////////////////////////////////////////////////////////////
 	// Member data

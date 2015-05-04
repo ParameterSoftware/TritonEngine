@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['b',['b',['../structseg_1_1_triangle.html#a8181c1d75bb077ea104bea6509e24878',1,'seg::Triangle']]]
+  ['b',['b',['../group__lus__color.html#gadac238b0db4b4534cfa592331234b403',1,'Triton::Util::RGB']]]
 ];

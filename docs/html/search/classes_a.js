@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['vbo',['VBO',['../classseg_1_1_v_b_o.html',1,'seg']]],
-  ['vector',['Vector',['../structseu_1_1_vector.html',1,'seu']]],
-  ['vertex',['Vertex',['../structseg_1_1_vertex.html',1,'seg']]]
+  ['model',['Model',['../class_tri_1_1_graphic_1_1_model.html',1,'Tri::Graphic']]],
+  ['mouse',['Mouse',['../class_tri_1_1_input_1_1_mouse.html',1,'Tri::Input']]]
 ];

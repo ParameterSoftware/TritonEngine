@@ -1,0 +1,203 @@
+\hypertarget{class_tri_1_1_graphic_1_1_camera}{}\section{Tri\+:\+:Graphic\+:\+:Camera Class Reference}
+\label{class_tri_1_1_graphic_1_1_camera}\index{Tri\+::\+Graphic\+::\+Camera@{Tri\+::\+Graphic\+::\+Camera}}
+
+
+{\ttfamily \#include $<$render.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tri_1_1_graphic_1_1_camera_aa2ba829b31e486b2028d6b517017e8cd}{Camera} (Util\+::\+Vec3$<$ double $>$ position, Util\+::\+Vec3$<$ Util\+::\+Radian $>$ rotation, Util\+::\+Degree fov=Util\+::\+Degree(60))
+\item 
+virtual void \hyperlink{class_tri_1_1_graphic_1_1_camera_aa68fd9c51d56bb999364a13c774998f4}{Update} (int tick)
+\item 
+\hyperlink{namespace_tri_1_1_graphic_a7b3538cdaff9bf96489c56a4f48a5f9a}{Mat4} \hyperlink{class_tri_1_1_graphic_1_1_camera_a0aa6799cf1a3541c3e17c010a4f65f99}{Get\+View\+Matrix} ()
+\item 
+void \hyperlink{class_tri_1_1_graphic_1_1_camera_a1b3bd9b5923e6d72db9521212fb8855d}{Rotate} (Util\+::\+Vec2$<$ Angle $>$ rotation)
+\item 
+void \hyperlink{class_tri_1_1_graphic_1_1_camera_a589dd8cde32e62172946f532c816d3c5}{Move\+To} (Util\+::\+Vec2$<$ double $>$ position)
+\item 
+void \hyperlink{class_tri_1_1_graphic_1_1_camera_abc66a18ab619979fc57858c0ec8262ed}{Set\+Fov} (Util\+::\+Degree fov)
+\item 
+void \hyperlink{class_tri_1_1_graphic_1_1_camera_afd94099a3837504a1a26c82687e1a1ae}{Set\+Is\+Upside\+Down} (bool face\+Up)
+\item 
+Util\+::\+Vec3$<$ double $>$ \hyperlink{class_tri_1_1_graphic_1_1_camera_ab65dc5d24d096e2b3da164d677c80412}{Get\+Position} ()
+\item 
+Util\+::\+Vec3$<$ Util\+::\+Radian $>$ \hyperlink{class_tri_1_1_graphic_1_1_camera_a9c212c2c5adc0ac98066801c2f88754c}{Get\+Rotation} ()
+\item 
+float \hyperlink{class_tri_1_1_graphic_1_1_camera_af300bae226e0213af31e97eaf2c13068}{Get\+Fov} ()
+\item 
+bool \hyperlink{class_tri_1_1_graphic_1_1_camera_a92e5b27f0204116e1fa75e37ade5e181}{Is\+Upside\+Down} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_tri_1_1_graphic_1_1_camera_a37b6d6a2a0cd8c353d73f4c9a3e6c6dc}{on\+Rotate} (Util\+::\+Vec2$<$ Angle $>$ \&r\+Rotation)
+\item 
+virtual void \hyperlink{class_tri_1_1_graphic_1_1_camera_a310dd53bc8771676bbe9cfc29c28db6a}{on\+Move} (Util\+::\+Vec2$<$ double $>$ \&r\+Position)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Util\+::\+Vec3$<$ double $>$ \hyperlink{class_tri_1_1_graphic_1_1_camera_ad813eaa168e21644d89f69cd255f0643}{m\+Position}
+\item 
+Util\+::\+Vec3$<$ Util\+::\+Radian $>$ \hyperlink{class_tri_1_1_graphic_1_1_camera_a81ca7e49b98bfc6517200ccd2ff89098}{m\+Rotation}
+\item 
+Util\+::\+Degree \hyperlink{class_tri_1_1_graphic_1_1_camera_a03fa8565fd7780168daba8acecf3a632}{m\+Fov}
+\item 
+bool \hyperlink{class_tri_1_1_graphic_1_1_camera_a2488f8451d905297a6085529f1777de9}{m\+Is\+Upside\+Down} = false
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 12 of file render.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_tri_1_1_graphic_1_1_camera_aa2ba829b31e486b2028d6b517017e8cd}{}\index{Tri\+::\+Graphic\+::\+Camera@{Tri\+::\+Graphic\+::\+Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!Tri\+::\+Graphic\+::\+Camera@{Tri\+::\+Graphic\+::\+Camera}}
+\subsubsection[{Camera}]{\setlength{\rightskip}{0pt plus 5cm}Tri\+::\+Graphic\+::\+Camera\+::\+Camera (
+\begin{DoxyParamCaption}
+\item[{Util\+::\+Vec3$<$ double $>$}]{position, }
+\item[{Util\+::\+Vec3$<$ Util\+::\+Radian $>$}]{rotation, }
+\item[{Util\+::\+Degree}]{fov = {\ttfamily Util\+:\+:Degree(60)}}
+\end{DoxyParamCaption}
+)}\label{class_tri_1_1_graphic_1_1_camera_aa2ba829b31e486b2028d6b517017e8cd}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_tri_1_1_graphic_1_1_camera_af300bae226e0213af31e97eaf2c13068}{}\index{Tri\+::\+Graphic\+::\+Camera@{Tri\+::\+Graphic\+::\+Camera}!Get\+Fov@{Get\+Fov}}
+\index{Get\+Fov@{Get\+Fov}!Tri\+::\+Graphic\+::\+Camera@{Tri\+::\+Graphic\+::\+Camera}}
+\subsubsection[{Get\+Fov}]{\setlength{\rightskip}{0pt plus 5cm}float Tri\+::\+Graphic\+::\+Camera\+::\+Get\+Fov (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_tri_1_1_graphic_1_1_camera_af300bae226e0213af31e97eaf2c13068}
+\hypertarget{class_tri_1_1_graphic_1_1_camera_ab65dc5d24d096e2b3da164d677c80412}{}\index{Tri\+::\+Graphic\+::\+Camera@{Tri\+::\+Graphic\+::\+Camera}!Get\+Position@{Get\+Position}}
+\index{Get\+Position@{Get\+Position}!Tri\+::\+Graphic\+::\+Camera@{Tri\+::\+Graphic\+::\+Camera}}
+\subsubsection[{Get\+Position}]{\setlength{\rightskip}{0pt plus 5cm}Util\+::\+Vec3$<$double$>$ Tri\+::\+Graphic\+::\+Camera\+::\+Get\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_tri_1_1_graphic_1_1_camera_ab65dc5d24d096e2b3da164d677c80412}
+\hypertarget{class_tri_1_1_graphic_1_1_camera_a9c212c2c5adc0ac98066801c2f88754c}{}\index{Tri\+::\+Graphic\+::\+Camera@{Tri\+::\+Graphic\+::\+Camera}!Get\+Rotation@{Get\+Rotation}}
+\index{Get\+Rotation@{Get\+Rotation}!Tri\+::\+Graphic\+::\+Camera@{Tri\+::\+Graphic\+::\+Camera}}
+\subsubsection[{Get\+Rotation}]{\setlength{\rightskip}{0pt plus 5cm}Util\+::\+Vec3$<$Util\+::\+Radian$>$ Tri\+::\+Graphic\+::\+Camera\+::\+Get\+Rotation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_tri_1_1_graphic_1_1_camera_a9c212c2c5adc0ac98066801c2f88754c}
+\hypertarget{class_tri_1_1_graphic_1_1_camera_a0aa6799cf1a3541c3e17c010a4f65f99}{}\index{Tri\+::\+Graphic\+::\+Camera@{Tri\+::\+Graphic\+::\+Camera}!Get\+View\+Matrix@{Get\+View\+Matrix}}
+\index{Get\+View\+Matrix@{Get\+View\+Matrix}!Tri\+::\+Graphic\+::\+Camera@{Tri\+::\+Graphic\+::\+Camera}}
+\subsubsection[{Get\+View\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Mat4} Tri\+::\+Graphic\+::\+Camera\+::\+Get\+View\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_tri_1_1_graphic_1_1_camera_a0aa6799cf1a3541c3e17c010a4f65f99}
+\hypertarget{class_tri_1_1_graphic_1_1_camera_a92e5b27f0204116e1fa75e37ade5e181}{}\index{Tri\+::\+Graphic\+::\+Camera@{Tri\+::\+Graphic\+::\+Camera}!Is\+Upside\+Down@{Is\+Upside\+Down}}
+\index{Is\+Upside\+Down@{Is\+Upside\+Down}!Tri\+::\+Graphic\+::\+Camera@{Tri\+::\+Graphic\+::\+Camera}}
+\subsubsection[{Is\+Upside\+Down}]{\setlength{\rightskip}{0pt plus 5cm}bool Tri\+::\+Graphic\+::\+Camera\+::\+Is\+Upside\+Down (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_tri_1_1_graphic_1_1_camera_a92e5b27f0204116e1fa75e37ade5e181}
+\hypertarget{class_tri_1_1_graphic_1_1_camera_a589dd8cde32e62172946f532c816d3c5}{}\index{Tri\+::\+Graphic\+::\+Camera@{Tri\+::\+Graphic\+::\+Camera}!Move\+To@{Move\+To}}
+\index{Move\+To@{Move\+To}!Tri\+::\+Graphic\+::\+Camera@{Tri\+::\+Graphic\+::\+Camera}}
+\subsubsection[{Move\+To}]{\setlength{\rightskip}{0pt plus 5cm}void Tri\+::\+Graphic\+::\+Camera\+::\+Move\+To (
+\begin{DoxyParamCaption}
+\item[{Util\+::\+Vec2$<$ double $>$}]{position}
+\end{DoxyParamCaption}
+)}\label{class_tri_1_1_graphic_1_1_camera_a589dd8cde32e62172946f532c816d3c5}
+\hypertarget{class_tri_1_1_graphic_1_1_camera_a310dd53bc8771676bbe9cfc29c28db6a}{}\index{Tri\+::\+Graphic\+::\+Camera@{Tri\+::\+Graphic\+::\+Camera}!on\+Move@{on\+Move}}
+\index{on\+Move@{on\+Move}!Tri\+::\+Graphic\+::\+Camera@{Tri\+::\+Graphic\+::\+Camera}}
+\subsubsection[{on\+Move}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Tri\+::\+Graphic\+::\+Camera\+::on\+Move (
+\begin{DoxyParamCaption}
+\item[{Util\+::\+Vec2$<$ double $>$ \&}]{r\+Position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_tri_1_1_graphic_1_1_camera_a310dd53bc8771676bbe9cfc29c28db6a}
+
+
+Definition at line 21 of file render.\+h.
+
+\hypertarget{class_tri_1_1_graphic_1_1_camera_a37b6d6a2a0cd8c353d73f4c9a3e6c6dc}{}\index{Tri\+::\+Graphic\+::\+Camera@{Tri\+::\+Graphic\+::\+Camera}!on\+Rotate@{on\+Rotate}}
+\index{on\+Rotate@{on\+Rotate}!Tri\+::\+Graphic\+::\+Camera@{Tri\+::\+Graphic\+::\+Camera}}
+\subsubsection[{on\+Rotate}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Tri\+::\+Graphic\+::\+Camera\+::on\+Rotate (
+\begin{DoxyParamCaption}
+\item[{Util\+::\+Vec2$<$ Angle $>$ \&}]{r\+Rotation}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_tri_1_1_graphic_1_1_camera_a37b6d6a2a0cd8c353d73f4c9a3e6c6dc}
+
+
+Definition at line 20 of file render.\+h.
+
+\hypertarget{class_tri_1_1_graphic_1_1_camera_a1b3bd9b5923e6d72db9521212fb8855d}{}\index{Tri\+::\+Graphic\+::\+Camera@{Tri\+::\+Graphic\+::\+Camera}!Rotate@{Rotate}}
+\index{Rotate@{Rotate}!Tri\+::\+Graphic\+::\+Camera@{Tri\+::\+Graphic\+::\+Camera}}
+\subsubsection[{Rotate}]{\setlength{\rightskip}{0pt plus 5cm}void Tri\+::\+Graphic\+::\+Camera\+::\+Rotate (
+\begin{DoxyParamCaption}
+\item[{Util\+::\+Vec2$<$ Angle $>$}]{rotation}
+\end{DoxyParamCaption}
+)}\label{class_tri_1_1_graphic_1_1_camera_a1b3bd9b5923e6d72db9521212fb8855d}
+\hypertarget{class_tri_1_1_graphic_1_1_camera_abc66a18ab619979fc57858c0ec8262ed}{}\index{Tri\+::\+Graphic\+::\+Camera@{Tri\+::\+Graphic\+::\+Camera}!Set\+Fov@{Set\+Fov}}
+\index{Set\+Fov@{Set\+Fov}!Tri\+::\+Graphic\+::\+Camera@{Tri\+::\+Graphic\+::\+Camera}}
+\subsubsection[{Set\+Fov}]{\setlength{\rightskip}{0pt plus 5cm}void Tri\+::\+Graphic\+::\+Camera\+::\+Set\+Fov (
+\begin{DoxyParamCaption}
+\item[{Util\+::\+Degree}]{fov}
+\end{DoxyParamCaption}
+)}\label{class_tri_1_1_graphic_1_1_camera_abc66a18ab619979fc57858c0ec8262ed}
+\hypertarget{class_tri_1_1_graphic_1_1_camera_afd94099a3837504a1a26c82687e1a1ae}{}\index{Tri\+::\+Graphic\+::\+Camera@{Tri\+::\+Graphic\+::\+Camera}!Set\+Is\+Upside\+Down@{Set\+Is\+Upside\+Down}}
+\index{Set\+Is\+Upside\+Down@{Set\+Is\+Upside\+Down}!Tri\+::\+Graphic\+::\+Camera@{Tri\+::\+Graphic\+::\+Camera}}
+\subsubsection[{Set\+Is\+Upside\+Down}]{\setlength{\rightskip}{0pt plus 5cm}void Tri\+::\+Graphic\+::\+Camera\+::\+Set\+Is\+Upside\+Down (
+\begin{DoxyParamCaption}
+\item[{bool}]{face\+Up}
+\end{DoxyParamCaption}
+)}\label{class_tri_1_1_graphic_1_1_camera_afd94099a3837504a1a26c82687e1a1ae}
+\hypertarget{class_tri_1_1_graphic_1_1_camera_aa68fd9c51d56bb999364a13c774998f4}{}\index{Tri\+::\+Graphic\+::\+Camera@{Tri\+::\+Graphic\+::\+Camera}!Update@{Update}}
+\index{Update@{Update}!Tri\+::\+Graphic\+::\+Camera@{Tri\+::\+Graphic\+::\+Camera}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Tri\+::\+Graphic\+::\+Camera\+::\+Update (
+\begin{DoxyParamCaption}
+\item[{int}]{tick}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_tri_1_1_graphic_1_1_camera_aa68fd9c51d56bb999364a13c774998f4}
+
+
+Definition at line 29 of file render.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_tri_1_1_graphic_1_1_camera_a03fa8565fd7780168daba8acecf3a632}{}\index{Tri\+::\+Graphic\+::\+Camera@{Tri\+::\+Graphic\+::\+Camera}!m\+Fov@{m\+Fov}}
+\index{m\+Fov@{m\+Fov}!Tri\+::\+Graphic\+::\+Camera@{Tri\+::\+Graphic\+::\+Camera}}
+\subsubsection[{m\+Fov}]{\setlength{\rightskip}{0pt plus 5cm}Util\+::\+Degree Tri\+::\+Graphic\+::\+Camera\+::m\+Fov\hspace{0.3cm}{\ttfamily [protected]}}\label{class_tri_1_1_graphic_1_1_camera_a03fa8565fd7780168daba8acecf3a632}
+
+
+Definition at line 17 of file render.\+h.
+
+\hypertarget{class_tri_1_1_graphic_1_1_camera_a2488f8451d905297a6085529f1777de9}{}\index{Tri\+::\+Graphic\+::\+Camera@{Tri\+::\+Graphic\+::\+Camera}!m\+Is\+Upside\+Down@{m\+Is\+Upside\+Down}}
+\index{m\+Is\+Upside\+Down@{m\+Is\+Upside\+Down}!Tri\+::\+Graphic\+::\+Camera@{Tri\+::\+Graphic\+::\+Camera}}
+\subsubsection[{m\+Is\+Upside\+Down}]{\setlength{\rightskip}{0pt plus 5cm}bool Tri\+::\+Graphic\+::\+Camera\+::m\+Is\+Upside\+Down = false\hspace{0.3cm}{\ttfamily [protected]}}\label{class_tri_1_1_graphic_1_1_camera_a2488f8451d905297a6085529f1777de9}
+
+
+Definition at line 18 of file render.\+h.
+
+\hypertarget{class_tri_1_1_graphic_1_1_camera_ad813eaa168e21644d89f69cd255f0643}{}\index{Tri\+::\+Graphic\+::\+Camera@{Tri\+::\+Graphic\+::\+Camera}!m\+Position@{m\+Position}}
+\index{m\+Position@{m\+Position}!Tri\+::\+Graphic\+::\+Camera@{Tri\+::\+Graphic\+::\+Camera}}
+\subsubsection[{m\+Position}]{\setlength{\rightskip}{0pt plus 5cm}Util\+::\+Vec3$<$double$>$ Tri\+::\+Graphic\+::\+Camera\+::m\+Position\hspace{0.3cm}{\ttfamily [protected]}}\label{class_tri_1_1_graphic_1_1_camera_ad813eaa168e21644d89f69cd255f0643}
+
+
+Definition at line 15 of file render.\+h.
+
+\hypertarget{class_tri_1_1_graphic_1_1_camera_a81ca7e49b98bfc6517200ccd2ff89098}{}\index{Tri\+::\+Graphic\+::\+Camera@{Tri\+::\+Graphic\+::\+Camera}!m\+Rotation@{m\+Rotation}}
+\index{m\+Rotation@{m\+Rotation}!Tri\+::\+Graphic\+::\+Camera@{Tri\+::\+Graphic\+::\+Camera}}
+\subsubsection[{m\+Rotation}]{\setlength{\rightskip}{0pt plus 5cm}Util\+::\+Vec3$<$Util\+::\+Radian$>$ Tri\+::\+Graphic\+::\+Camera\+::m\+Rotation\hspace{0.3cm}{\ttfamily [protected]}}\label{class_tri_1_1_graphic_1_1_camera_a81ca7e49b98bfc6517200ccd2ff89098}
+
+
+Definition at line 16 of file render.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+graphic/\hyperlink{render_8h}{render.\+h}\end{DoxyCompactItemize}

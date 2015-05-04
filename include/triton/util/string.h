@@ -3,7 +3,7 @@
 
 #include <string>
 
-namespace Tri
+namespace Triton
 {
 	namespace Util
 	{

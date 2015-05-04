@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['flatobject',['FlatObject',['../classseg_1_1_flat_object.html',1,'seg']]]
+  ['basiccstring',['BasicCString',['../class_triton_1_1_util_1_1_basic_c_string.html',1,'Triton::Util']]]
 ];

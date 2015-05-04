@@ -1,6 +1,6 @@
 #ifndef _LUS_COLOR_H_
 #define _LUS_COLOR_H_
-namespace Tri
+namespace Triton
 {
 	namespace Util
 	{

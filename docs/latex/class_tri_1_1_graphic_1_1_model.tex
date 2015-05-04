@@ -1,0 +1,87 @@
+\hypertarget{class_tri_1_1_graphic_1_1_model}{}\section{Tri\+:\+:Graphic\+:\+:Model Class Reference}
+\label{class_tri_1_1_graphic_1_1_model}\index{Tri\+::\+Graphic\+::\+Model@{Tri\+::\+Graphic\+::\+Model}}
+
+
+{\ttfamily \#include $<$resource.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tri_1_1_graphic_1_1_model_a57f8abc051d104b925e6a2cbb253b56c}{Model} (Util\+::\+D\+List$<$ Util\+::\+Vec3 $>$ vertices, Util\+::\+D\+List$<$ Util\+::\+Vec2 $>$ uvs, Util\+::\+D\+List$<$ Util\+::\+Vec3 $>$ normals)
+\item 
+Util\+::\+Vec3 \hyperlink{class_tri_1_1_graphic_1_1_model_af64f04fc0559ceb51061f8dfed0eb4e6}{Get\+Vertex} (int index)
+\item 
+Util\+::\+Vec2 \hyperlink{class_tri_1_1_graphic_1_1_model_a64da67596d9650b41ce0dd60f90eb7bb}{Get\+U\+V} (int index)
+\item 
+Util\+::\+Vec3 \hyperlink{class_tri_1_1_graphic_1_1_model_a086a31e07b32371a5d7d6c4629853cb9}{Get\+Normal} (int index)
+\item 
+void \hyperlink{class_tri_1_1_graphic_1_1_model_aa190ca9e2258a28ea12a36d7fb25b0de}{Render} (\hyperlink{class_tri_1_1_graphic_1_1_image}{Image} image)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_tri_1_1_graphic_1_1_model}{Model} \hyperlink{class_tri_1_1_graphic_1_1_model_a779169e267e557ef11f86d561eecd8b2}{Get\+Obj} (Util\+::\+String filepath, bool invert\+Uv=false)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 28 of file resource.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_tri_1_1_graphic_1_1_model_a57f8abc051d104b925e6a2cbb253b56c}{}\index{Tri\+::\+Graphic\+::\+Model@{Tri\+::\+Graphic\+::\+Model}!Model@{Model}}
+\index{Model@{Model}!Tri\+::\+Graphic\+::\+Model@{Tri\+::\+Graphic\+::\+Model}}
+\subsubsection[{Model}]{\setlength{\rightskip}{0pt plus 5cm}Tri\+::\+Graphic\+::\+Model\+::\+Model (
+\begin{DoxyParamCaption}
+\item[{Util\+::\+D\+List$<$ Util\+::\+Vec3 $>$}]{vertices, }
+\item[{Util\+::\+D\+List$<$ Util\+::\+Vec2 $>$}]{uvs, }
+\item[{Util\+::\+D\+List$<$ Util\+::\+Vec3 $>$}]{normals}
+\end{DoxyParamCaption}
+)}\label{class_tri_1_1_graphic_1_1_model_a57f8abc051d104b925e6a2cbb253b56c}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_tri_1_1_graphic_1_1_model_a086a31e07b32371a5d7d6c4629853cb9}{}\index{Tri\+::\+Graphic\+::\+Model@{Tri\+::\+Graphic\+::\+Model}!Get\+Normal@{Get\+Normal}}
+\index{Get\+Normal@{Get\+Normal}!Tri\+::\+Graphic\+::\+Model@{Tri\+::\+Graphic\+::\+Model}}
+\subsubsection[{Get\+Normal}]{\setlength{\rightskip}{0pt plus 5cm}Util\+::\+Vec3 Tri\+::\+Graphic\+::\+Model\+::\+Get\+Normal (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\label{class_tri_1_1_graphic_1_1_model_a086a31e07b32371a5d7d6c4629853cb9}
+\hypertarget{class_tri_1_1_graphic_1_1_model_a779169e267e557ef11f86d561eecd8b2}{}\index{Tri\+::\+Graphic\+::\+Model@{Tri\+::\+Graphic\+::\+Model}!Get\+Obj@{Get\+Obj}}
+\index{Get\+Obj@{Get\+Obj}!Tri\+::\+Graphic\+::\+Model@{Tri\+::\+Graphic\+::\+Model}}
+\subsubsection[{Get\+Obj}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Model} Tri\+::\+Graphic\+::\+Model\+::\+Get\+Obj (
+\begin{DoxyParamCaption}
+\item[{Util\+::\+String}]{filepath, }
+\item[{bool}]{invert\+Uv = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_tri_1_1_graphic_1_1_model_a779169e267e557ef11f86d561eecd8b2}
+\hypertarget{class_tri_1_1_graphic_1_1_model_a64da67596d9650b41ce0dd60f90eb7bb}{}\index{Tri\+::\+Graphic\+::\+Model@{Tri\+::\+Graphic\+::\+Model}!Get\+U\+V@{Get\+U\+V}}
+\index{Get\+U\+V@{Get\+U\+V}!Tri\+::\+Graphic\+::\+Model@{Tri\+::\+Graphic\+::\+Model}}
+\subsubsection[{Get\+U\+V}]{\setlength{\rightskip}{0pt plus 5cm}Util\+::\+Vec2 Tri\+::\+Graphic\+::\+Model\+::\+Get\+U\+V (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\label{class_tri_1_1_graphic_1_1_model_a64da67596d9650b41ce0dd60f90eb7bb}
+\hypertarget{class_tri_1_1_graphic_1_1_model_af64f04fc0559ceb51061f8dfed0eb4e6}{}\index{Tri\+::\+Graphic\+::\+Model@{Tri\+::\+Graphic\+::\+Model}!Get\+Vertex@{Get\+Vertex}}
+\index{Get\+Vertex@{Get\+Vertex}!Tri\+::\+Graphic\+::\+Model@{Tri\+::\+Graphic\+::\+Model}}
+\subsubsection[{Get\+Vertex}]{\setlength{\rightskip}{0pt plus 5cm}Util\+::\+Vec3 Tri\+::\+Graphic\+::\+Model\+::\+Get\+Vertex (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\label{class_tri_1_1_graphic_1_1_model_af64f04fc0559ceb51061f8dfed0eb4e6}
+\hypertarget{class_tri_1_1_graphic_1_1_model_aa190ca9e2258a28ea12a36d7fb25b0de}{}\index{Tri\+::\+Graphic\+::\+Model@{Tri\+::\+Graphic\+::\+Model}!Render@{Render}}
+\index{Render@{Render}!Tri\+::\+Graphic\+::\+Model@{Tri\+::\+Graphic\+::\+Model}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}void Tri\+::\+Graphic\+::\+Model\+::\+Render (
+\begin{DoxyParamCaption}
+\item[{{\bf Image}}]{image}
+\end{DoxyParamCaption}
+)}\label{class_tri_1_1_graphic_1_1_model_aa190ca9e2258a28ea12a36d7fb25b0de}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+graphic/\hyperlink{resource_8h}{resource.\+h}\end{DoxyCompactItemize}

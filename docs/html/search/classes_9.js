@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['triangle',['Triangle',['../structseg_1_1_triangle.html',1,'seg']]],
-  ['trianglevector',['TriangleVector',['../structseg_1_1_triangle_vector.html',1,'seg']]]
+  ['language',['Language',['../class_triton_1_1_util_1_1_language.html',1,'Triton::Util']]],
+  ['localmanager',['LocalManager',['../class_triton_1_1_util_1_1_local_manager.html',1,'Triton::Util']]]
 ];

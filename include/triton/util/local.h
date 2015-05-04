@@ -3,7 +3,7 @@
 
 #include "util.h"
 
-namespace Tri
+namespace Triton
 {
 	namespace Util
 	{

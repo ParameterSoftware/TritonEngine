@@ -1,0 +1,156 @@
+\hypertarget{class_tri_1_1_graphic_1_1_text}{}\section{Tri\+:\+:Graphic\+:\+:Text Class Reference}
+\label{class_tri_1_1_graphic_1_1_text}\index{Tri\+::\+Graphic\+::\+Text@{Tri\+::\+Graphic\+::\+Text}}
+
+
+{\ttfamily \#include $<$render.\+h$>$}
+
+Inheritance diagram for Tri\+:\+:Graphic\+:\+:Text\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_tri_1_1_graphic_1_1_text}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tri_1_1_graphic_1_1_text_a9854bdf2b097ae80215a8bfb1091bc9f}{Text} (Resource\+::\+Image texture)
+\item 
+\hyperlink{class_tri_1_1_graphic_1_1_text_a6e1854c52245f12ed44b65a8e27522c6}{Text} (const Util\+::\+String \&s, Resource\+::\+Image texture)
+\item 
+\hyperlink{class_tri_1_1_graphic_1_1_text_ae722b27dcdbdb07de73b218334b7c8a4}{Text} (const Util\+::\+String \&s, std\+::size\+\_\+t n, Resource\+::\+Image texture)
+\item 
+\hyperlink{class_tri_1_1_graphic_1_1_text_a6e01d3380be722b59da66a056c448671}{Text} (const char $\ast$s, std\+::size\+\_\+t n, Resource\+::\+Image texture)
+\item 
+\hyperlink{class_tri_1_1_graphic_1_1_text_a9a8d37cc5cc578d322aecf1a50b7f207}{Text} (const char $\ast$s, Resource\+::\+Image texture)
+\item 
+\hyperlink{class_tri_1_1_graphic_1_1_text_ab453c7ed9348c3f3d0f86e10c2fa8652}{Text} (std\+::size\+\_\+t n, char c, Resource\+::\+Image texture)
+\item 
+{\footnotesize template$<$class Input\+Iterator $>$ }\\\hyperlink{class_tri_1_1_graphic_1_1_text_a33c5dd1e43a3356b2f973e7f28362a87}{Text} (Input\+Iterator first, Input\+Iterator last, Resource\+::\+Image texture)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Util\+::\+String \hyperlink{class_tri_1_1_graphic_1_1_text_ab9700e2f9b6592ffcab3453c95c06152}{text}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A small class for rendering text from Util\+::\+String and a Resource\+::\+Image font
+
+All input is updated on-\/the-\/fly
+
+Example of use\+: 
+\begin{DoxyCode}
+Tri::Graphic::Render::Text txt(fontImage, \textcolor{stringliteral}{"Foo"});
+txt.text = \textcolor{stringliteral}{"Bar"} \textcolor{comment}{// txt now displays Bar instead of Foo}
+\end{DoxyCode}
+ 
+
+Definition at line 133 of file render.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_tri_1_1_graphic_1_1_text_a9854bdf2b097ae80215a8bfb1091bc9f}{}\index{Tri\+::\+Graphic\+::\+Text@{Tri\+::\+Graphic\+::\+Text}!Text@{Text}}
+\index{Text@{Text}!Tri\+::\+Graphic\+::\+Text@{Tri\+::\+Graphic\+::\+Text}}
+\subsubsection[{Text}]{\setlength{\rightskip}{0pt plus 5cm}Tri\+::\+Graphic\+::\+Text\+::\+Text (
+\begin{DoxyParamCaption}
+\item[{Resource\+::\+Image}]{texture}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_tri_1_1_graphic_1_1_text_a9854bdf2b097ae80215a8bfb1091bc9f}
+
+
+Definition at line 137 of file render.\+h.
+
+\hypertarget{class_tri_1_1_graphic_1_1_text_a6e1854c52245f12ed44b65a8e27522c6}{}\index{Tri\+::\+Graphic\+::\+Text@{Tri\+::\+Graphic\+::\+Text}!Text@{Text}}
+\index{Text@{Text}!Tri\+::\+Graphic\+::\+Text@{Tri\+::\+Graphic\+::\+Text}}
+\subsubsection[{Text}]{\setlength{\rightskip}{0pt plus 5cm}Tri\+::\+Graphic\+::\+Text\+::\+Text (
+\begin{DoxyParamCaption}
+\item[{const Util\+::\+String \&}]{s, }
+\item[{Resource\+::\+Image}]{texture}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_tri_1_1_graphic_1_1_text_a6e1854c52245f12ed44b65a8e27522c6}
+
+
+Definition at line 138 of file render.\+h.
+
+\hypertarget{class_tri_1_1_graphic_1_1_text_ae722b27dcdbdb07de73b218334b7c8a4}{}\index{Tri\+::\+Graphic\+::\+Text@{Tri\+::\+Graphic\+::\+Text}!Text@{Text}}
+\index{Text@{Text}!Tri\+::\+Graphic\+::\+Text@{Tri\+::\+Graphic\+::\+Text}}
+\subsubsection[{Text}]{\setlength{\rightskip}{0pt plus 5cm}Tri\+::\+Graphic\+::\+Text\+::\+Text (
+\begin{DoxyParamCaption}
+\item[{const Util\+::\+String \&}]{s, }
+\item[{std\+::size\+\_\+t}]{n, }
+\item[{Resource\+::\+Image}]{texture}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_tri_1_1_graphic_1_1_text_ae722b27dcdbdb07de73b218334b7c8a4}
+
+
+Definition at line 139 of file render.\+h.
+
+\hypertarget{class_tri_1_1_graphic_1_1_text_a6e01d3380be722b59da66a056c448671}{}\index{Tri\+::\+Graphic\+::\+Text@{Tri\+::\+Graphic\+::\+Text}!Text@{Text}}
+\index{Text@{Text}!Tri\+::\+Graphic\+::\+Text@{Tri\+::\+Graphic\+::\+Text}}
+\subsubsection[{Text}]{\setlength{\rightskip}{0pt plus 5cm}Tri\+::\+Graphic\+::\+Text\+::\+Text (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s, }
+\item[{std\+::size\+\_\+t}]{n, }
+\item[{Resource\+::\+Image}]{texture}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_tri_1_1_graphic_1_1_text_a6e01d3380be722b59da66a056c448671}
+
+
+Definition at line 140 of file render.\+h.
+
+\hypertarget{class_tri_1_1_graphic_1_1_text_a9a8d37cc5cc578d322aecf1a50b7f207}{}\index{Tri\+::\+Graphic\+::\+Text@{Tri\+::\+Graphic\+::\+Text}!Text@{Text}}
+\index{Text@{Text}!Tri\+::\+Graphic\+::\+Text@{Tri\+::\+Graphic\+::\+Text}}
+\subsubsection[{Text}]{\setlength{\rightskip}{0pt plus 5cm}Tri\+::\+Graphic\+::\+Text\+::\+Text (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s, }
+\item[{Resource\+::\+Image}]{texture}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_tri_1_1_graphic_1_1_text_a9a8d37cc5cc578d322aecf1a50b7f207}
+
+
+Definition at line 141 of file render.\+h.
+
+\hypertarget{class_tri_1_1_graphic_1_1_text_ab453c7ed9348c3f3d0f86e10c2fa8652}{}\index{Tri\+::\+Graphic\+::\+Text@{Tri\+::\+Graphic\+::\+Text}!Text@{Text}}
+\index{Text@{Text}!Tri\+::\+Graphic\+::\+Text@{Tri\+::\+Graphic\+::\+Text}}
+\subsubsection[{Text}]{\setlength{\rightskip}{0pt plus 5cm}Tri\+::\+Graphic\+::\+Text\+::\+Text (
+\begin{DoxyParamCaption}
+\item[{std\+::size\+\_\+t}]{n, }
+\item[{char}]{c, }
+\item[{Resource\+::\+Image}]{texture}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_tri_1_1_graphic_1_1_text_ab453c7ed9348c3f3d0f86e10c2fa8652}
+
+
+Definition at line 142 of file render.\+h.
+
+\hypertarget{class_tri_1_1_graphic_1_1_text_a33c5dd1e43a3356b2f973e7f28362a87}{}\index{Tri\+::\+Graphic\+::\+Text@{Tri\+::\+Graphic\+::\+Text}!Text@{Text}}
+\index{Text@{Text}!Tri\+::\+Graphic\+::\+Text@{Tri\+::\+Graphic\+::\+Text}}
+\subsubsection[{Text}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Input\+Iterator $>$ Tri\+::\+Graphic\+::\+Text\+::\+Text (
+\begin{DoxyParamCaption}
+\item[{Input\+Iterator}]{first, }
+\item[{Input\+Iterator}]{last, }
+\item[{Resource\+::\+Image}]{texture}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_tri_1_1_graphic_1_1_text_a33c5dd1e43a3356b2f973e7f28362a87}
+
+
+Definition at line 144 of file render.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_tri_1_1_graphic_1_1_text_ab9700e2f9b6592ffcab3453c95c06152}{}\index{Tri\+::\+Graphic\+::\+Text@{Tri\+::\+Graphic\+::\+Text}!text@{text}}
+\index{text@{text}!Tri\+::\+Graphic\+::\+Text@{Tri\+::\+Graphic\+::\+Text}}
+\subsubsection[{text}]{\setlength{\rightskip}{0pt plus 5cm}Util\+::\+String Tri\+::\+Graphic\+::\+Text\+::text}\label{class_tri_1_1_graphic_1_1_text_ab9700e2f9b6592ffcab3453c95c06152}
+
+
+Definition at line 136 of file render.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+graphic/\hyperlink{render_8h}{render.\+h}\end{DoxyCompactItemize}

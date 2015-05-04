@@ -1,0 +1,809 @@
+\hypertarget{class_triton_1_1_util_1_1_exe_string}{}\section{Triton\+:\+:Util\+:\+:Exe\+String Class Reference}
+\label{class_triton_1_1_util_1_1_exe_string}\index{Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}}
+
+
+Utility string class which is made to use in exceptions.  
+
+
+
+
+{\ttfamily \#include $<$Exception\+String.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename str\+\_\+t $>$ }\\\hyperlink{class_triton_1_1_util_1_1_exe_string_aa1e51c0f3eeb4e76940c5169c88cae0f}{Exe\+String} (str\+\_\+t string= \textquotesingle{}\textquotesingle{})
+\begin{DoxyCompactList}\small\item\em The template constructor that works with all standard strings, can be used as default constructor. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{class_triton_1_1_util_1_1_exe_string_aafca5e0900fa1ed18b87125eaa11055b}{c\+\_\+str} () const 
+\begin{DoxyCompactList}\small\item\em Returns the cstring pointer, based on std\+::string\+::c\+\_\+str() \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{class_triton_1_1_util_1_1_exe_string_a5c54fb86aab92b08f1e62c05aa9335a4}{size} ()
+\begin{DoxyCompactList}\small\item\em Returns the length, based on std\+::string\+::c\+\_\+str() \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{class_triton_1_1_util_1_1_exe_string_ad5530545d9ed9179bc66d0192f201eff}{length} ()
+\begin{DoxyCompactList}\small\item\em Returns the length, based on std\+::string\+::c\+\_\+str() \end{DoxyCompactList}\item 
+void \hyperlink{class_triton_1_1_util_1_1_exe_string_aee04e2282a4e43fa520235d6fc83c43f}{clear} ()
+\begin{DoxyCompactList}\small\item\em Clears the string, based on std\+::string\+::c\+\_\+str() \end{DoxyCompactList}\item 
+bool \hyperlink{class_triton_1_1_util_1_1_exe_string_a25d440c02f9fb26551d083ac8703eb04}{empty} () const 
+\begin{DoxyCompactList}\small\item\em Returns whether this string is empty, based on std\+::string\+::c\+\_\+str() \end{DoxyCompactList}\item 
+char \& \hyperlink{class_triton_1_1_util_1_1_exe_string_a4268c0f089139eb0dd328ccf95bfaef0}{operator\mbox{[}$\,$\mbox{]}} (int index)
+\begin{DoxyCompactList}\small\item\em The bracket operator that returns the character reference at index, based on std\+::string\+::c\+\_\+str() \end{DoxyCompactList}\item 
+const char \& \hyperlink{class_triton_1_1_util_1_1_exe_string_aa3aca8d6b0adb98c73041f79b124072b}{operator\mbox{[}$\,$\mbox{]}} (int index) const 
+\begin{DoxyCompactList}\small\item\em The bracket operator that returns the constant character reference at index, based on std\+::string\+::c\+\_\+str() \end{DoxyCompactList}\item 
+char \& \hyperlink{class_triton_1_1_util_1_1_exe_string_ac0cab9d04e014ba6367467e0fadf1727}{at} (int index)
+\begin{DoxyCompactList}\small\item\em Returns the character reference at index, based on std\+::string\+::c\+\_\+str() \end{DoxyCompactList}\item 
+const char \& \hyperlink{class_triton_1_1_util_1_1_exe_string_acb2c38034d6d1938418bfebf7c59eb01}{at} (int index) const 
+\begin{DoxyCompactList}\small\item\em Returns the constant character reference at index, based on std\+::string\+::c\+\_\+str() \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename str\+\_\+t $>$ }\\\hyperlink{class_triton_1_1_util_1_1_exe_string}{Exe\+String} \& \hyperlink{class_triton_1_1_util_1_1_exe_string_a6dad27a5608a29f386d684dbd00882bd}{operator=} (str\+\_\+t str)
+\begin{DoxyCompactList}\small\item\em The equal operator that returns the modified \hyperlink{class_triton_1_1_util_1_1_exe_string}{Triton\+::\+Util\+::\+Exe\+String} reference, based on std\+::string\+::c\+\_\+str() \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename str\+\_\+t $>$ }\\\hyperlink{class_triton_1_1_util_1_1_exe_string}{Exe\+String} \& \hyperlink{class_triton_1_1_util_1_1_exe_string_a48acb0a114a0ad132c3e8cd3a2f7af68}{operator+=} (str\+\_\+t str)
+\begin{DoxyCompactList}\small\item\em The plus-\/equal operator that returns the modified \hyperlink{class_triton_1_1_util_1_1_exe_string}{Triton\+::\+Util\+::\+Exe\+String} reference, based on std\+::string\+::c\+\_\+str() \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_triton_1_1_util_1_1_exe_string_a8c683476d22ac8dc336d07548826a758}{Set\+String} (const char string)
+\begin{DoxyCompactList}\small\item\em Sets this string as string. \end{DoxyCompactList}\item 
+void \hyperlink{class_triton_1_1_util_1_1_exe_string_ae687b9b2a0dddc0a59d6605c1486cab3}{Set\+String} (const char $\ast$string)
+\begin{DoxyCompactList}\small\item\em Sets this string as string. \end{DoxyCompactList}\item 
+void \hyperlink{class_triton_1_1_util_1_1_exe_string_a4faf549d8eb962d6f3568248c3573443}{Set\+String} (const char \&string)
+\begin{DoxyCompactList}\small\item\em Sets this string as string. \end{DoxyCompactList}\item 
+void \hyperlink{class_triton_1_1_util_1_1_exe_string_a4ebb0dc3b6a86459cbc44fe52f8011a4}{Set\+String} (const std\+::string string)
+\begin{DoxyCompactList}\small\item\em Sets this string as string. \end{DoxyCompactList}\item 
+void \hyperlink{class_triton_1_1_util_1_1_exe_string_a1fa06a0a2cda617635b6ad48d8c929e2}{Set\+String} (const std\+::string $\ast$string)
+\begin{DoxyCompactList}\small\item\em Sets this string as string. \end{DoxyCompactList}\item 
+void \hyperlink{class_triton_1_1_util_1_1_exe_string_a59847feb3b10d8086272c2bd2ced0a82}{Set\+String} (const std\+::string \&string)
+\begin{DoxyCompactList}\small\item\em Sets this string as string. \end{DoxyCompactList}\item 
+void \hyperlink{class_triton_1_1_util_1_1_exe_string_acb20c0d73ff8a325e337ef23e27fecf6}{Set\+String} (const wchar\+\_\+t string)
+\begin{DoxyCompactList}\small\item\em Sets this string as string. \end{DoxyCompactList}\item 
+void \hyperlink{class_triton_1_1_util_1_1_exe_string_a5439179d3f241cb25e2a29516b516b97}{Set\+String} (const wchar\+\_\+t $\ast$string)
+\begin{DoxyCompactList}\small\item\em Sets this string as string. \end{DoxyCompactList}\item 
+void \hyperlink{class_triton_1_1_util_1_1_exe_string_afe7a6c9bd92bfef95739c747c3f11fd7}{Set\+String} (const wchar\+\_\+t \&string)
+\begin{DoxyCompactList}\small\item\em Sets this string as string. \end{DoxyCompactList}\item 
+void \hyperlink{class_triton_1_1_util_1_1_exe_string_a2795ae9972ca8196882f64a1a3a6aa85}{Set\+String} (const \hyperlink{class_triton_1_1_util_1_1_exe_string}{Exe\+String} string)
+\begin{DoxyCompactList}\small\item\em Sets this string as string. \end{DoxyCompactList}\item 
+void \hyperlink{class_triton_1_1_util_1_1_exe_string_a2dbcc4a4dc47d33b243c75ea32018258}{Set\+String} (const \hyperlink{class_triton_1_1_util_1_1_exe_string}{Exe\+String} $\ast$string)
+\begin{DoxyCompactList}\small\item\em Sets this string as string. \end{DoxyCompactList}\item 
+void \hyperlink{class_triton_1_1_util_1_1_exe_string_a43f4a1b9a3d8b96bd22a7e5cc887b894}{Set\+String} (const \hyperlink{class_triton_1_1_util_1_1_exe_string}{Exe\+String} \&string)
+\begin{DoxyCompactList}\small\item\em Sets this string as string. \end{DoxyCompactList}\item 
+void \hyperlink{class_triton_1_1_util_1_1_exe_string_aa35300020a30ea813e98dd7f1e9a9ffc}{Add\+To\+String} (const char string)
+\begin{DoxyCompactList}\small\item\em Adds to this string using string. \end{DoxyCompactList}\item 
+void \hyperlink{class_triton_1_1_util_1_1_exe_string_a724c4047395919e0720b0dfb0239d3b1}{Add\+To\+String} (const char $\ast$string)
+\begin{DoxyCompactList}\small\item\em Adds to this string using string. \end{DoxyCompactList}\item 
+void \hyperlink{class_triton_1_1_util_1_1_exe_string_ae96cfe80e8e5f6d8f038b59ab10f33b9}{Add\+To\+String} (const char \&string)
+\begin{DoxyCompactList}\small\item\em Adds to this string using string. \end{DoxyCompactList}\item 
+void \hyperlink{class_triton_1_1_util_1_1_exe_string_aac5a97d888e222cd201c8fb821a14fd5}{Add\+To\+String} (const std\+::string string)
+\begin{DoxyCompactList}\small\item\em Adds to this string using string. \end{DoxyCompactList}\item 
+void \hyperlink{class_triton_1_1_util_1_1_exe_string_a942a69d1ff1a0e7c644c57c2ef87aaa9}{Add\+To\+String} (const std\+::string $\ast$string)
+\begin{DoxyCompactList}\small\item\em Adds to this string using string. \end{DoxyCompactList}\item 
+void \hyperlink{class_triton_1_1_util_1_1_exe_string_ae39fe2f5d6584a9421a9ba3a49945928}{Add\+To\+String} (const std\+::string \&string)
+\begin{DoxyCompactList}\small\item\em Adds to this string using string. \end{DoxyCompactList}\item 
+void \hyperlink{class_triton_1_1_util_1_1_exe_string_ad4be8d6e40ca7491f041c81c81735ffd}{Add\+To\+String} (const wchar\+\_\+t string)
+\begin{DoxyCompactList}\small\item\em Adds to this string using string. \end{DoxyCompactList}\item 
+void \hyperlink{class_triton_1_1_util_1_1_exe_string_ad8be7ca63a5f279b70b8b09adf17566e}{Add\+To\+String} (const wchar\+\_\+t $\ast$string)
+\begin{DoxyCompactList}\small\item\em Adds to this string using string. \end{DoxyCompactList}\item 
+void \hyperlink{class_triton_1_1_util_1_1_exe_string_a616caba376e25fe342df95d9763457cc}{Add\+To\+String} (const wchar\+\_\+t \&string)
+\begin{DoxyCompactList}\small\item\em Adds to this string using string. \end{DoxyCompactList}\item 
+void \hyperlink{class_triton_1_1_util_1_1_exe_string_a01fafa390c4e5f555118728922cc2f89}{Add\+To\+String} (const \hyperlink{class_triton_1_1_util_1_1_exe_string}{Exe\+String} string)
+\begin{DoxyCompactList}\small\item\em Adds to this string using string. \end{DoxyCompactList}\item 
+void \hyperlink{class_triton_1_1_util_1_1_exe_string_a316bfd73e44d7dbfb700744e83870dbe}{Add\+To\+String} (const \hyperlink{class_triton_1_1_util_1_1_exe_string}{Exe\+String} $\ast$string)
+\begin{DoxyCompactList}\small\item\em Adds to this string using string. \end{DoxyCompactList}\item 
+void \hyperlink{class_triton_1_1_util_1_1_exe_string_a316bfd73e44d7dbfb700744e83870dbe}{Add\+To\+String} (const \hyperlink{class_triton_1_1_util_1_1_exe_string}{Exe\+String} $\ast$string)
+\begin{DoxyCompactList}\small\item\em Adds to this string using string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename str\+\_\+t $>$ }\\\hyperlink{class_triton_1_1_util_1_1_exe_string}{Exe\+String} \hyperlink{class_triton_1_1_util_1_1_exe_string_a39806d6e0c1844d9e262b196034caafb}{operator+} (const \hyperlink{class_triton_1_1_util_1_1_exe_string}{Exe\+String} \&lhs, const str\+\_\+t rhs)
+\begin{DoxyCompactList}\small\item\em Adds an \hyperlink{class_triton_1_1_util_1_1_exe_string}{Triton\+::\+Util\+::\+Exe\+String} and an object of str\+\_\+t together. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename str\+\_\+t $>$ }\\\hyperlink{class_triton_1_1_util_1_1_exe_string}{Exe\+String} \hyperlink{class_triton_1_1_util_1_1_exe_string_ac94b1281e2ba4a38327d8f096009d1e7}{operator+} (const \hyperlink{class_triton_1_1_util_1_1_exe_string}{Exe\+String} $\ast$lhs, const str\+\_\+t rhs)
+\begin{DoxyCompactList}\small\item\em Adds an \hyperlink{class_triton_1_1_util_1_1_exe_string}{Triton\+::\+Util\+::\+Exe\+String} pointer and an object of str\+\_\+t together. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename str\+\_\+t $>$ }\\\hyperlink{class_triton_1_1_util_1_1_exe_string}{Exe\+String} \hyperlink{class_triton_1_1_util_1_1_exe_string_a0ea829de41f245abec1708fa2afcc070}{operator+} (const str\+\_\+t lhs, const \hyperlink{class_triton_1_1_util_1_1_exe_string}{Exe\+String} \&rhs)
+\begin{DoxyCompactList}\small\item\em Adds an \hyperlink{class_triton_1_1_util_1_1_exe_string}{Triton\+::\+Util\+::\+Exe\+String} and an object of str\+\_\+t together. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename str\+\_\+t $>$ }\\\hyperlink{class_triton_1_1_util_1_1_exe_string}{Exe\+String} \hyperlink{class_triton_1_1_util_1_1_exe_string_a125b93d5ec6b8dd2aab35e1e7b524228}{operator+} (const str\+\_\+t rhs, const \hyperlink{class_triton_1_1_util_1_1_exe_string}{Exe\+String} $\ast$rhs)
+\begin{DoxyCompactList}\small\item\em Adds an \hyperlink{class_triton_1_1_util_1_1_exe_string}{Triton\+::\+Util\+::\+Exe\+String} pointer and an object of str\+\_\+t together. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Utility string class which is made to use in exceptions. 
+
+\begin{DoxyNote}{Note}
+Every method will never throw an exception to keep it exception-\/safe 
+\end{DoxyNote}
+
+
+Definition at line 19 of file Exception\+String.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_triton_1_1_util_1_1_exe_string_aa1e51c0f3eeb4e76940c5169c88cae0f}{}\index{Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}!Exe\+String@{Exe\+String}}
+\index{Exe\+String@{Exe\+String}!Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}}
+\subsubsection[{Exe\+String}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename str\+\_\+t $>$ Triton\+::\+Util\+::\+Exe\+String\+::\+Exe\+String (
+\begin{DoxyParamCaption}
+\item[{str\+\_\+t}]{string = {\ttfamily \textquotesingle{}\textquotesingle{}}}
+\end{DoxyParamCaption}
+)}\label{class_triton_1_1_util_1_1_exe_string_aa1e51c0f3eeb4e76940c5169c88cae0f}
+
+
+The template constructor that works with all standard strings, can be used as default constructor. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_triton_1_1_util_1_1_exe_string_a8c683476d22ac8dc336d07548826a758}{Triton\+::\+Util\+::\+Exe\+String\+::\+Set\+String}
+\end{DoxySeeAlso}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em str\+\_\+t} & a string type or chararcter type\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the string or character to input into this object \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_triton_1_1_util_1_1_exe_string_aa35300020a30ea813e98dd7f1e9a9ffc}{}\index{Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}!Add\+To\+String@{Add\+To\+String}}
+\index{Add\+To\+String@{Add\+To\+String}!Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}}
+\subsubsection[{Add\+To\+String}]{\setlength{\rightskip}{0pt plus 5cm}void Triton\+::\+Util\+::\+Exe\+String\+::\+Add\+To\+String (
+\begin{DoxyParamCaption}
+\item[{const char}]{string}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_triton_1_1_util_1_1_exe_string_aa35300020a30ea813e98dd7f1e9a9ffc}
+
+
+Adds to this string using string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the string to append \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_triton_1_1_util_1_1_exe_string_a724c4047395919e0720b0dfb0239d3b1}{}\index{Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}!Add\+To\+String@{Add\+To\+String}}
+\index{Add\+To\+String@{Add\+To\+String}!Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}}
+\subsubsection[{Add\+To\+String}]{\setlength{\rightskip}{0pt plus 5cm}void Triton\+::\+Util\+::\+Exe\+String\+::\+Add\+To\+String (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{string}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_triton_1_1_util_1_1_exe_string_a724c4047395919e0720b0dfb0239d3b1}
+
+
+Adds to this string using string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the string to append \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_triton_1_1_util_1_1_exe_string_ae96cfe80e8e5f6d8f038b59ab10f33b9}{}\index{Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}!Add\+To\+String@{Add\+To\+String}}
+\index{Add\+To\+String@{Add\+To\+String}!Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}}
+\subsubsection[{Add\+To\+String}]{\setlength{\rightskip}{0pt plus 5cm}void Triton\+::\+Util\+::\+Exe\+String\+::\+Add\+To\+String (
+\begin{DoxyParamCaption}
+\item[{const char \&}]{string}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_triton_1_1_util_1_1_exe_string_ae96cfe80e8e5f6d8f038b59ab10f33b9}
+
+
+Adds to this string using string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the string to append \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_triton_1_1_util_1_1_exe_string_aac5a97d888e222cd201c8fb821a14fd5}{}\index{Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}!Add\+To\+String@{Add\+To\+String}}
+\index{Add\+To\+String@{Add\+To\+String}!Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}}
+\subsubsection[{Add\+To\+String}]{\setlength{\rightskip}{0pt plus 5cm}void Triton\+::\+Util\+::\+Exe\+String\+::\+Add\+To\+String (
+\begin{DoxyParamCaption}
+\item[{const std\+::string}]{string}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_triton_1_1_util_1_1_exe_string_aac5a97d888e222cd201c8fb821a14fd5}
+
+
+Adds to this string using string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the string to append \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_triton_1_1_util_1_1_exe_string_a942a69d1ff1a0e7c644c57c2ef87aaa9}{}\index{Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}!Add\+To\+String@{Add\+To\+String}}
+\index{Add\+To\+String@{Add\+To\+String}!Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}}
+\subsubsection[{Add\+To\+String}]{\setlength{\rightskip}{0pt plus 5cm}void Triton\+::\+Util\+::\+Exe\+String\+::\+Add\+To\+String (
+\begin{DoxyParamCaption}
+\item[{const std\+::string $\ast$}]{string}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_triton_1_1_util_1_1_exe_string_a942a69d1ff1a0e7c644c57c2ef87aaa9}
+
+
+Adds to this string using string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the string to append \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_triton_1_1_util_1_1_exe_string_ae39fe2f5d6584a9421a9ba3a49945928}{}\index{Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}!Add\+To\+String@{Add\+To\+String}}
+\index{Add\+To\+String@{Add\+To\+String}!Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}}
+\subsubsection[{Add\+To\+String}]{\setlength{\rightskip}{0pt plus 5cm}void Triton\+::\+Util\+::\+Exe\+String\+::\+Add\+To\+String (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{string}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_triton_1_1_util_1_1_exe_string_ae39fe2f5d6584a9421a9ba3a49945928}
+
+
+Adds to this string using string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the string to append \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_triton_1_1_util_1_1_exe_string_ad4be8d6e40ca7491f041c81c81735ffd}{}\index{Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}!Add\+To\+String@{Add\+To\+String}}
+\index{Add\+To\+String@{Add\+To\+String}!Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}}
+\subsubsection[{Add\+To\+String}]{\setlength{\rightskip}{0pt plus 5cm}void Triton\+::\+Util\+::\+Exe\+String\+::\+Add\+To\+String (
+\begin{DoxyParamCaption}
+\item[{const wchar\+\_\+t}]{string}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_triton_1_1_util_1_1_exe_string_ad4be8d6e40ca7491f041c81c81735ffd}
+
+
+Adds to this string using string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the string to append \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_triton_1_1_util_1_1_exe_string_ad8be7ca63a5f279b70b8b09adf17566e}{}\index{Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}!Add\+To\+String@{Add\+To\+String}}
+\index{Add\+To\+String@{Add\+To\+String}!Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}}
+\subsubsection[{Add\+To\+String}]{\setlength{\rightskip}{0pt plus 5cm}void Triton\+::\+Util\+::\+Exe\+String\+::\+Add\+To\+String (
+\begin{DoxyParamCaption}
+\item[{const wchar\+\_\+t $\ast$}]{string}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_triton_1_1_util_1_1_exe_string_ad8be7ca63a5f279b70b8b09adf17566e}
+
+
+Adds to this string using string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the string to append \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_triton_1_1_util_1_1_exe_string_a616caba376e25fe342df95d9763457cc}{}\index{Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}!Add\+To\+String@{Add\+To\+String}}
+\index{Add\+To\+String@{Add\+To\+String}!Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}}
+\subsubsection[{Add\+To\+String}]{\setlength{\rightskip}{0pt plus 5cm}void Triton\+::\+Util\+::\+Exe\+String\+::\+Add\+To\+String (
+\begin{DoxyParamCaption}
+\item[{const wchar\+\_\+t \&}]{string}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_triton_1_1_util_1_1_exe_string_a616caba376e25fe342df95d9763457cc}
+
+
+Adds to this string using string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the string to append \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_triton_1_1_util_1_1_exe_string_a01fafa390c4e5f555118728922cc2f89}{}\index{Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}!Add\+To\+String@{Add\+To\+String}}
+\index{Add\+To\+String@{Add\+To\+String}!Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}}
+\subsubsection[{Add\+To\+String}]{\setlength{\rightskip}{0pt plus 5cm}void Triton\+::\+Util\+::\+Exe\+String\+::\+Add\+To\+String (
+\begin{DoxyParamCaption}
+\item[{const {\bf Exe\+String}}]{string}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_triton_1_1_util_1_1_exe_string_a01fafa390c4e5f555118728922cc2f89}
+
+
+Adds to this string using string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the string to append \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_triton_1_1_util_1_1_exe_string_a316bfd73e44d7dbfb700744e83870dbe}{}\index{Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}!Add\+To\+String@{Add\+To\+String}}
+\index{Add\+To\+String@{Add\+To\+String}!Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}}
+\subsubsection[{Add\+To\+String}]{\setlength{\rightskip}{0pt plus 5cm}void Triton\+::\+Util\+::\+Exe\+String\+::\+Add\+To\+String (
+\begin{DoxyParamCaption}
+\item[{const {\bf Exe\+String} $\ast$}]{string}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_triton_1_1_util_1_1_exe_string_a316bfd73e44d7dbfb700744e83870dbe}
+
+
+Adds to this string using string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the string to append \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_triton_1_1_util_1_1_exe_string_a316bfd73e44d7dbfb700744e83870dbe}{}\index{Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}!Add\+To\+String@{Add\+To\+String}}
+\index{Add\+To\+String@{Add\+To\+String}!Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}}
+\subsubsection[{Add\+To\+String}]{\setlength{\rightskip}{0pt plus 5cm}void Triton\+::\+Util\+::\+Exe\+String\+::\+Add\+To\+String (
+\begin{DoxyParamCaption}
+\item[{const {\bf Exe\+String} $\ast$}]{string}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_triton_1_1_util_1_1_exe_string_a316bfd73e44d7dbfb700744e83870dbe}
+
+
+Adds to this string using string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the string to append \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_triton_1_1_util_1_1_exe_string_ac0cab9d04e014ba6367467e0fadf1727}{}\index{Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}!at@{at}}
+\index{at@{at}!Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}}
+\subsubsection[{at}]{\setlength{\rightskip}{0pt plus 5cm}char\& Triton\+::\+Util\+::\+Exe\+String\+::at (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\label{class_triton_1_1_util_1_1_exe_string_ac0cab9d04e014ba6367467e0fadf1727}
+
+
+Returns the character reference at index, based on std\+::string\+::c\+\_\+str() 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & the index to retrieve \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_triton_1_1_util_1_1_exe_string_acb2c38034d6d1938418bfebf7c59eb01}{}\index{Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}!at@{at}}
+\index{at@{at}!Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}}
+\subsubsection[{at}]{\setlength{\rightskip}{0pt plus 5cm}const char\& Triton\+::\+Util\+::\+Exe\+String\+::at (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const}\label{class_triton_1_1_util_1_1_exe_string_acb2c38034d6d1938418bfebf7c59eb01}
+
+
+Returns the constant character reference at index, based on std\+::string\+::c\+\_\+str() 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & the index to retrieve \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_triton_1_1_util_1_1_exe_string_aafca5e0900fa1ed18b87125eaa11055b}{}\index{Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}!c\+\_\+str@{c\+\_\+str}}
+\index{c\+\_\+str@{c\+\_\+str}!Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}}
+\subsubsection[{c\+\_\+str}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Triton\+::\+Util\+::\+Exe\+String\+::c\+\_\+str (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_triton_1_1_util_1_1_exe_string_aafca5e0900fa1ed18b87125eaa11055b}
+
+
+Returns the cstring pointer, based on std\+::string\+::c\+\_\+str() 
+
+\hypertarget{class_triton_1_1_util_1_1_exe_string_aee04e2282a4e43fa520235d6fc83c43f}{}\index{Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}!clear@{clear}}
+\index{clear@{clear}!Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Triton\+::\+Util\+::\+Exe\+String\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_triton_1_1_util_1_1_exe_string_aee04e2282a4e43fa520235d6fc83c43f}
+
+
+Clears the string, based on std\+::string\+::c\+\_\+str() 
+
+\hypertarget{class_triton_1_1_util_1_1_exe_string_a25d440c02f9fb26551d083ac8703eb04}{}\index{Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}!empty@{empty}}
+\index{empty@{empty}!Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}}
+\subsubsection[{empty}]{\setlength{\rightskip}{0pt plus 5cm}bool Triton\+::\+Util\+::\+Exe\+String\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_triton_1_1_util_1_1_exe_string_a25d440c02f9fb26551d083ac8703eb04}
+
+
+Returns whether this string is empty, based on std\+::string\+::c\+\_\+str() 
+
+\hypertarget{class_triton_1_1_util_1_1_exe_string_ad5530545d9ed9179bc66d0192f201eff}{}\index{Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}!length@{length}}
+\index{length@{length}!Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}}
+\subsubsection[{length}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t Triton\+::\+Util\+::\+Exe\+String\+::length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_triton_1_1_util_1_1_exe_string_ad5530545d9ed9179bc66d0192f201eff}
+
+
+Returns the length, based on std\+::string\+::c\+\_\+str() 
+
+\hypertarget{class_triton_1_1_util_1_1_exe_string_a48acb0a114a0ad132c3e8cd3a2f7af68}{}\index{Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}}
+\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename str\+\_\+t $>$ {\bf Exe\+String}\& Triton\+::\+Util\+::\+Exe\+String\+::operator+= (
+\begin{DoxyParamCaption}
+\item[{str\+\_\+t}]{str}
+\end{DoxyParamCaption}
+)}\label{class_triton_1_1_util_1_1_exe_string_a48acb0a114a0ad132c3e8cd3a2f7af68}
+
+
+The plus-\/equal operator that returns the modified \hyperlink{class_triton_1_1_util_1_1_exe_string}{Triton\+::\+Util\+::\+Exe\+String} reference, based on std\+::string\+::c\+\_\+str() 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_triton_1_1_util_1_1_exe_string_aa35300020a30ea813e98dd7f1e9a9ffc}{Exe\+String\+::\+Add\+To\+String}
+\end{DoxySeeAlso}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em str\+\_\+t} & the string type\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em str} & the string that modifies this string \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_triton_1_1_util_1_1_exe_string_a6dad27a5608a29f386d684dbd00882bd}{}\index{Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}!operator=@{operator=}}
+\index{operator=@{operator=}!Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename str\+\_\+t $>$ {\bf Exe\+String}\& Triton\+::\+Util\+::\+Exe\+String\+::operator= (
+\begin{DoxyParamCaption}
+\item[{str\+\_\+t}]{str}
+\end{DoxyParamCaption}
+)}\label{class_triton_1_1_util_1_1_exe_string_a6dad27a5608a29f386d684dbd00882bd}
+
+
+The equal operator that returns the modified \hyperlink{class_triton_1_1_util_1_1_exe_string}{Triton\+::\+Util\+::\+Exe\+String} reference, based on std\+::string\+::c\+\_\+str() 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_triton_1_1_util_1_1_exe_string_a8c683476d22ac8dc336d07548826a758}{Exe\+String\+::\+Set\+String}
+\end{DoxySeeAlso}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em str\+\_\+t} & the string type\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em str} & the string that modifies this string \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_triton_1_1_util_1_1_exe_string_a4268c0f089139eb0dd328ccf95bfaef0}{}\index{Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}char\& Triton\+::\+Util\+::\+Exe\+String\+::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\label{class_triton_1_1_util_1_1_exe_string_a4268c0f089139eb0dd328ccf95bfaef0}
+
+
+The bracket operator that returns the character reference at index, based on std\+::string\+::c\+\_\+str() 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & the index to retrieve \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_triton_1_1_util_1_1_exe_string_aa3aca8d6b0adb98c73041f79b124072b}{}\index{Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}const char\& Triton\+::\+Util\+::\+Exe\+String\+::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const}\label{class_triton_1_1_util_1_1_exe_string_aa3aca8d6b0adb98c73041f79b124072b}
+
+
+The bracket operator that returns the constant character reference at index, based on std\+::string\+::c\+\_\+str() 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & the index to retrieve \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_triton_1_1_util_1_1_exe_string_a8c683476d22ac8dc336d07548826a758}{}\index{Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}!Set\+String@{Set\+String}}
+\index{Set\+String@{Set\+String}!Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}}
+\subsubsection[{Set\+String}]{\setlength{\rightskip}{0pt plus 5cm}void Triton\+::\+Util\+::\+Exe\+String\+::\+Set\+String (
+\begin{DoxyParamCaption}
+\item[{const char}]{string}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_triton_1_1_util_1_1_exe_string_a8c683476d22ac8dc336d07548826a758}
+
+
+Sets this string as string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the string to set this string as \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_triton_1_1_util_1_1_exe_string_ae687b9b2a0dddc0a59d6605c1486cab3}{}\index{Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}!Set\+String@{Set\+String}}
+\index{Set\+String@{Set\+String}!Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}}
+\subsubsection[{Set\+String}]{\setlength{\rightskip}{0pt plus 5cm}void Triton\+::\+Util\+::\+Exe\+String\+::\+Set\+String (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{string}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_triton_1_1_util_1_1_exe_string_ae687b9b2a0dddc0a59d6605c1486cab3}
+
+
+Sets this string as string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the string to set this string as \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_triton_1_1_util_1_1_exe_string_a4faf549d8eb962d6f3568248c3573443}{}\index{Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}!Set\+String@{Set\+String}}
+\index{Set\+String@{Set\+String}!Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}}
+\subsubsection[{Set\+String}]{\setlength{\rightskip}{0pt plus 5cm}void Triton\+::\+Util\+::\+Exe\+String\+::\+Set\+String (
+\begin{DoxyParamCaption}
+\item[{const char \&}]{string}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_triton_1_1_util_1_1_exe_string_a4faf549d8eb962d6f3568248c3573443}
+
+
+Sets this string as string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the string to set this string as \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_triton_1_1_util_1_1_exe_string_a4ebb0dc3b6a86459cbc44fe52f8011a4}{}\index{Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}!Set\+String@{Set\+String}}
+\index{Set\+String@{Set\+String}!Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}}
+\subsubsection[{Set\+String}]{\setlength{\rightskip}{0pt plus 5cm}void Triton\+::\+Util\+::\+Exe\+String\+::\+Set\+String (
+\begin{DoxyParamCaption}
+\item[{const std\+::string}]{string}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_triton_1_1_util_1_1_exe_string_a4ebb0dc3b6a86459cbc44fe52f8011a4}
+
+
+Sets this string as string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the string to set this string as \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_triton_1_1_util_1_1_exe_string_a1fa06a0a2cda617635b6ad48d8c929e2}{}\index{Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}!Set\+String@{Set\+String}}
+\index{Set\+String@{Set\+String}!Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}}
+\subsubsection[{Set\+String}]{\setlength{\rightskip}{0pt plus 5cm}void Triton\+::\+Util\+::\+Exe\+String\+::\+Set\+String (
+\begin{DoxyParamCaption}
+\item[{const std\+::string $\ast$}]{string}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_triton_1_1_util_1_1_exe_string_a1fa06a0a2cda617635b6ad48d8c929e2}
+
+
+Sets this string as string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the string to set this string as \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_triton_1_1_util_1_1_exe_string_a59847feb3b10d8086272c2bd2ced0a82}{}\index{Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}!Set\+String@{Set\+String}}
+\index{Set\+String@{Set\+String}!Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}}
+\subsubsection[{Set\+String}]{\setlength{\rightskip}{0pt plus 5cm}void Triton\+::\+Util\+::\+Exe\+String\+::\+Set\+String (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{string}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_triton_1_1_util_1_1_exe_string_a59847feb3b10d8086272c2bd2ced0a82}
+
+
+Sets this string as string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the string to set this string as \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_triton_1_1_util_1_1_exe_string_acb20c0d73ff8a325e337ef23e27fecf6}{}\index{Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}!Set\+String@{Set\+String}}
+\index{Set\+String@{Set\+String}!Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}}
+\subsubsection[{Set\+String}]{\setlength{\rightskip}{0pt plus 5cm}void Triton\+::\+Util\+::\+Exe\+String\+::\+Set\+String (
+\begin{DoxyParamCaption}
+\item[{const wchar\+\_\+t}]{string}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_triton_1_1_util_1_1_exe_string_acb20c0d73ff8a325e337ef23e27fecf6}
+
+
+Sets this string as string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the string to set this string as \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_triton_1_1_util_1_1_exe_string_a5439179d3f241cb25e2a29516b516b97}{}\index{Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}!Set\+String@{Set\+String}}
+\index{Set\+String@{Set\+String}!Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}}
+\subsubsection[{Set\+String}]{\setlength{\rightskip}{0pt plus 5cm}void Triton\+::\+Util\+::\+Exe\+String\+::\+Set\+String (
+\begin{DoxyParamCaption}
+\item[{const wchar\+\_\+t $\ast$}]{string}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_triton_1_1_util_1_1_exe_string_a5439179d3f241cb25e2a29516b516b97}
+
+
+Sets this string as string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the string to set this string as \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_triton_1_1_util_1_1_exe_string_afe7a6c9bd92bfef95739c747c3f11fd7}{}\index{Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}!Set\+String@{Set\+String}}
+\index{Set\+String@{Set\+String}!Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}}
+\subsubsection[{Set\+String}]{\setlength{\rightskip}{0pt plus 5cm}void Triton\+::\+Util\+::\+Exe\+String\+::\+Set\+String (
+\begin{DoxyParamCaption}
+\item[{const wchar\+\_\+t \&}]{string}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_triton_1_1_util_1_1_exe_string_afe7a6c9bd92bfef95739c747c3f11fd7}
+
+
+Sets this string as string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the string to set this string as \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_triton_1_1_util_1_1_exe_string_a2795ae9972ca8196882f64a1a3a6aa85}{}\index{Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}!Set\+String@{Set\+String}}
+\index{Set\+String@{Set\+String}!Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}}
+\subsubsection[{Set\+String}]{\setlength{\rightskip}{0pt plus 5cm}void Triton\+::\+Util\+::\+Exe\+String\+::\+Set\+String (
+\begin{DoxyParamCaption}
+\item[{const {\bf Exe\+String}}]{string}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_triton_1_1_util_1_1_exe_string_a2795ae9972ca8196882f64a1a3a6aa85}
+
+
+Sets this string as string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the string to set this string as \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_triton_1_1_util_1_1_exe_string_a2dbcc4a4dc47d33b243c75ea32018258}{}\index{Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}!Set\+String@{Set\+String}}
+\index{Set\+String@{Set\+String}!Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}}
+\subsubsection[{Set\+String}]{\setlength{\rightskip}{0pt plus 5cm}void Triton\+::\+Util\+::\+Exe\+String\+::\+Set\+String (
+\begin{DoxyParamCaption}
+\item[{const {\bf Exe\+String} $\ast$}]{string}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_triton_1_1_util_1_1_exe_string_a2dbcc4a4dc47d33b243c75ea32018258}
+
+
+Sets this string as string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the string to set this string as \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_triton_1_1_util_1_1_exe_string_a43f4a1b9a3d8b96bd22a7e5cc887b894}{}\index{Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}!Set\+String@{Set\+String}}
+\index{Set\+String@{Set\+String}!Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}}
+\subsubsection[{Set\+String}]{\setlength{\rightskip}{0pt plus 5cm}void Triton\+::\+Util\+::\+Exe\+String\+::\+Set\+String (
+\begin{DoxyParamCaption}
+\item[{const {\bf Exe\+String} \&}]{string}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_triton_1_1_util_1_1_exe_string_a43f4a1b9a3d8b96bd22a7e5cc887b894}
+
+
+Sets this string as string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the string to set this string as \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_triton_1_1_util_1_1_exe_string_a5c54fb86aab92b08f1e62c05aa9335a4}{}\index{Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}!size@{size}}
+\index{size@{size}!Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t Triton\+::\+Util\+::\+Exe\+String\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_triton_1_1_util_1_1_exe_string_a5c54fb86aab92b08f1e62c05aa9335a4}
+
+
+Returns the length, based on std\+::string\+::c\+\_\+str() 
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_triton_1_1_util_1_1_exe_string_a39806d6e0c1844d9e262b196034caafb}{}\index{Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}!operator+@{operator+}}
+\index{operator+@{operator+}!Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename str\+\_\+t $>$ {\bf Exe\+String} operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Exe\+String} \&}]{lhs, }
+\item[{const str\+\_\+t}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_triton_1_1_util_1_1_exe_string_a39806d6e0c1844d9e262b196034caafb}
+
+
+Adds an \hyperlink{class_triton_1_1_util_1_1_exe_string}{Triton\+::\+Util\+::\+Exe\+String} and an object of str\+\_\+t together. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_triton_1_1_util_1_1_exe_string_aa35300020a30ea813e98dd7f1e9a9ffc}{Exe\+String\+::\+Add\+To\+String}
+\end{DoxySeeAlso}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em str\+\_\+t} & the string object to add to \hyperlink{class_triton_1_1_util_1_1_exe_string}{Exe\+String}\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & the left string \\
+\hline
+{\em rhs} & the right string \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_triton_1_1_util_1_1_exe_string_ac94b1281e2ba4a38327d8f096009d1e7}{}\index{Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}!operator+@{operator+}}
+\index{operator+@{operator+}!Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename str\+\_\+t $>$ {\bf Exe\+String} operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Exe\+String} $\ast$}]{lhs, }
+\item[{const str\+\_\+t}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_triton_1_1_util_1_1_exe_string_ac94b1281e2ba4a38327d8f096009d1e7}
+
+
+Adds an \hyperlink{class_triton_1_1_util_1_1_exe_string}{Triton\+::\+Util\+::\+Exe\+String} pointer and an object of str\+\_\+t together. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_triton_1_1_util_1_1_exe_string_aa35300020a30ea813e98dd7f1e9a9ffc}{Exe\+String\+::\+Add\+To\+String}
+\end{DoxySeeAlso}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em str\+\_\+t} & the string object to add to \hyperlink{class_triton_1_1_util_1_1_exe_string}{Exe\+String}\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & the left string \\
+\hline
+{\em rhs} & the right string \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_triton_1_1_util_1_1_exe_string_a0ea829de41f245abec1708fa2afcc070}{}\index{Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}!operator+@{operator+}}
+\index{operator+@{operator+}!Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename str\+\_\+t $>$ {\bf Exe\+String} operator+ (
+\begin{DoxyParamCaption}
+\item[{const str\+\_\+t}]{lhs, }
+\item[{const {\bf Exe\+String} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_triton_1_1_util_1_1_exe_string_a0ea829de41f245abec1708fa2afcc070}
+
+
+Adds an \hyperlink{class_triton_1_1_util_1_1_exe_string}{Triton\+::\+Util\+::\+Exe\+String} and an object of str\+\_\+t together. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_triton_1_1_util_1_1_exe_string_aa35300020a30ea813e98dd7f1e9a9ffc}{Exe\+String\+::\+Add\+To\+String}
+\end{DoxySeeAlso}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em str\+\_\+t} & the string object to add to \hyperlink{class_triton_1_1_util_1_1_exe_string}{Exe\+String}\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & the left string \\
+\hline
+{\em rhs} & the right string \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_triton_1_1_util_1_1_exe_string_a125b93d5ec6b8dd2aab35e1e7b524228}{}\index{Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}!operator+@{operator+}}
+\index{operator+@{operator+}!Triton\+::\+Util\+::\+Exe\+String@{Triton\+::\+Util\+::\+Exe\+String}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename str\+\_\+t $>$ {\bf Exe\+String} operator+ (
+\begin{DoxyParamCaption}
+\item[{const str\+\_\+t}]{rhs, }
+\item[{const {\bf Exe\+String} $\ast$}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_triton_1_1_util_1_1_exe_string_a125b93d5ec6b8dd2aab35e1e7b524228}
+
+
+Adds an \hyperlink{class_triton_1_1_util_1_1_exe_string}{Triton\+::\+Util\+::\+Exe\+String} pointer and an object of str\+\_\+t together. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_triton_1_1_util_1_1_exe_string_aa35300020a30ea813e98dd7f1e9a9ffc}{Exe\+String\+::\+Add\+To\+String}
+\end{DoxySeeAlso}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em str\+\_\+t} & the string object to add to \hyperlink{class_triton_1_1_util_1_1_exe_string}{Exe\+String}\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & the left string \\
+\hline
+{\em rhs} & the right string \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+util/\+Exception/\hyperlink{_exception_string_8hpp}{Exception\+String.\+hpp}\end{DoxyCompactItemize}

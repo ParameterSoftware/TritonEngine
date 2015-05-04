@@ -5,7 +5,7 @@
 #incudle <vector>
 #include <memory>
 
-namespace Tri
+namespace Triton
 {
 	namespace Util
 	{

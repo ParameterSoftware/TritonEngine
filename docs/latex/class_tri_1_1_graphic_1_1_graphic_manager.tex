@@ -1,0 +1,125 @@
+\hypertarget{class_tri_1_1_graphic_1_1_graphic_manager}{}\section{Tri\+:\+:Graphic\+:\+:Graphic\+Manager Class Reference}
+\label{class_tri_1_1_graphic_1_1_graphic_manager}\index{Tri\+::\+Graphic\+::\+Graphic\+Manager@{Tri\+::\+Graphic\+::\+Graphic\+Manager}}
+
+
+{\ttfamily \#include $<$util.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tri_1_1_graphic_1_1_graphic_manager_a1c859cd3579ac7f174f41155e9e850e4}{Open\+G\+L\+Manager} ()
+\item 
+\hyperlink{class_tri_1_1_graphic_1_1_graphic_manager_a472fe570c5cc75942330bf3b4a137d32}{$\sim$\+Open\+G\+L\+Manager} ()
+\item 
+Render\+::\+Draw\+Object $\ast$ \hyperlink{class_tri_1_1_graphic_1_1_graphic_manager_aab2ac5b4847dcdf9083ab3cc88cbd285}{Add\+Drawable} (Render\+::\+Draw\+Object $\ast$p\+Draw)
+\begin{DoxyCompactList}\small\item\em Simple addition of drawable objects. \end{DoxyCompactList}\item 
+glsettings\+\_\+t $\ast$ \hyperlink{class_tri_1_1_graphic_1_1_graphic_manager_a3d5a8e96349899110189d6fdb6f07aea}{Get\+Settings} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current (mutable) settings. \end{DoxyCompactList}\item 
+\hyperlink{namespace_tri_1_1_graphic_a7b3538cdaff9bf96489c56a4f48a5f9a}{Mat4} \hyperlink{class_tri_1_1_graphic_1_1_graphic_manager_a00d8bb1aec0fe078ebcc66a338eedd3b}{Get\+Projection\+Matrix} ()
+\item 
+\hyperlink{namespace_tri_1_1_graphic_a7b3538cdaff9bf96489c56a4f48a5f9a}{Mat4} \hyperlink{class_tri_1_1_graphic_1_1_graphic_manager_a127658447d27febc589df6207773f07b}{Get\+M\+V\+P\+For} (Render\+::\+I\+Draw draw)
+\item 
+unsigned int \hyperlink{class_tri_1_1_graphic_1_1_graphic_manager_ad877d9503a37f69f6406474e08772676}{Get\+Tick\+Update} ()
+\item 
+void \hyperlink{class_tri_1_1_graphic_1_1_graphic_manager_a63a7dee2163f0bbfd5eb1acd35c1d17f}{Render} ()
+\item 
+bool \hyperlink{class_tri_1_1_graphic_1_1_graphic_manager_a22a887c39e00775be78981ca95cd9ea6}{Is3\+D\+Enabled} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 20 of file util.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_tri_1_1_graphic_1_1_graphic_manager_a472fe570c5cc75942330bf3b4a137d32}{}\index{Tri\+::\+Graphic\+::\+Graphic\+Manager@{Tri\+::\+Graphic\+::\+Graphic\+Manager}!````~Open\+G\+L\+Manager@{$\sim$\+Open\+G\+L\+Manager}}
+\index{````~Open\+G\+L\+Manager@{$\sim$\+Open\+G\+L\+Manager}!Tri\+::\+Graphic\+::\+Graphic\+Manager@{Tri\+::\+Graphic\+::\+Graphic\+Manager}}
+\subsubsection[{$\sim$\+Open\+G\+L\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}Tri\+::\+Graphic\+::\+Graphic\+Manager\+::$\sim$\+Open\+G\+L\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_tri_1_1_graphic_1_1_graphic_manager_a472fe570c5cc75942330bf3b4a137d32}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_tri_1_1_graphic_1_1_graphic_manager_aab2ac5b4847dcdf9083ab3cc88cbd285}{}\index{Tri\+::\+Graphic\+::\+Graphic\+Manager@{Tri\+::\+Graphic\+::\+Graphic\+Manager}!Add\+Drawable@{Add\+Drawable}}
+\index{Add\+Drawable@{Add\+Drawable}!Tri\+::\+Graphic\+::\+Graphic\+Manager@{Tri\+::\+Graphic\+::\+Graphic\+Manager}}
+\subsubsection[{Add\+Drawable}]{\setlength{\rightskip}{0pt plus 5cm}Render\+::\+Draw\+Object$\ast$ Tri\+::\+Graphic\+::\+Graphic\+Manager\+::\+Add\+Drawable (
+\begin{DoxyParamCaption}
+\item[{Render\+::\+Draw\+Object $\ast$}]{p\+Draw}
+\end{DoxyParamCaption}
+)}\label{class_tri_1_1_graphic_1_1_graphic_manager_aab2ac5b4847dcdf9083ab3cc88cbd285}
+
+
+Simple addition of drawable objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Draw} & A pointer to a drawable object defined by L\+E\+A\+K\+\_\+\+U\+S\+E\+\_\+2\+D, 2\+D only if stated, 3\+D otherwsie \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_tri_1_1_graphic_1_1_graphic_manager_a127658447d27febc589df6207773f07b}{}\index{Tri\+::\+Graphic\+::\+Graphic\+Manager@{Tri\+::\+Graphic\+::\+Graphic\+Manager}!Get\+M\+V\+P\+For@{Get\+M\+V\+P\+For}}
+\index{Get\+M\+V\+P\+For@{Get\+M\+V\+P\+For}!Tri\+::\+Graphic\+::\+Graphic\+Manager@{Tri\+::\+Graphic\+::\+Graphic\+Manager}}
+\subsubsection[{Get\+M\+V\+P\+For}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Mat4} Tri\+::\+Graphic\+::\+Graphic\+Manager\+::\+Get\+M\+V\+P\+For (
+\begin{DoxyParamCaption}
+\item[{Render\+::\+I\+Draw}]{draw}
+\end{DoxyParamCaption}
+)}\label{class_tri_1_1_graphic_1_1_graphic_manager_a127658447d27febc589df6207773f07b}
+\hypertarget{class_tri_1_1_graphic_1_1_graphic_manager_a00d8bb1aec0fe078ebcc66a338eedd3b}{}\index{Tri\+::\+Graphic\+::\+Graphic\+Manager@{Tri\+::\+Graphic\+::\+Graphic\+Manager}!Get\+Projection\+Matrix@{Get\+Projection\+Matrix}}
+\index{Get\+Projection\+Matrix@{Get\+Projection\+Matrix}!Tri\+::\+Graphic\+::\+Graphic\+Manager@{Tri\+::\+Graphic\+::\+Graphic\+Manager}}
+\subsubsection[{Get\+Projection\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Mat4} Tri\+::\+Graphic\+::\+Graphic\+Manager\+::\+Get\+Projection\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_tri_1_1_graphic_1_1_graphic_manager_a00d8bb1aec0fe078ebcc66a338eedd3b}
+\hypertarget{class_tri_1_1_graphic_1_1_graphic_manager_a3d5a8e96349899110189d6fdb6f07aea}{}\index{Tri\+::\+Graphic\+::\+Graphic\+Manager@{Tri\+::\+Graphic\+::\+Graphic\+Manager}!Get\+Settings@{Get\+Settings}}
+\index{Get\+Settings@{Get\+Settings}!Tri\+::\+Graphic\+::\+Graphic\+Manager@{Tri\+::\+Graphic\+::\+Graphic\+Manager}}
+\subsubsection[{Get\+Settings}]{\setlength{\rightskip}{0pt plus 5cm}glsettings\+\_\+t$\ast$ Tri\+::\+Graphic\+::\+Graphic\+Manager\+::\+Get\+Settings (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_tri_1_1_graphic_1_1_graphic_manager_a3d5a8e96349899110189d6fdb6f07aea}
+
+
+Retrieves the current (mutable) settings. 
+
+\hypertarget{class_tri_1_1_graphic_1_1_graphic_manager_ad877d9503a37f69f6406474e08772676}{}\index{Tri\+::\+Graphic\+::\+Graphic\+Manager@{Tri\+::\+Graphic\+::\+Graphic\+Manager}!Get\+Tick\+Update@{Get\+Tick\+Update}}
+\index{Get\+Tick\+Update@{Get\+Tick\+Update}!Tri\+::\+Graphic\+::\+Graphic\+Manager@{Tri\+::\+Graphic\+::\+Graphic\+Manager}}
+\subsubsection[{Get\+Tick\+Update}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Tri\+::\+Graphic\+::\+Graphic\+Manager\+::\+Get\+Tick\+Update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_tri_1_1_graphic_1_1_graphic_manager_ad877d9503a37f69f6406474e08772676}
+\hypertarget{class_tri_1_1_graphic_1_1_graphic_manager_a22a887c39e00775be78981ca95cd9ea6}{}\index{Tri\+::\+Graphic\+::\+Graphic\+Manager@{Tri\+::\+Graphic\+::\+Graphic\+Manager}!Is3\+D\+Enabled@{Is3\+D\+Enabled}}
+\index{Is3\+D\+Enabled@{Is3\+D\+Enabled}!Tri\+::\+Graphic\+::\+Graphic\+Manager@{Tri\+::\+Graphic\+::\+Graphic\+Manager}}
+\subsubsection[{Is3\+D\+Enabled}]{\setlength{\rightskip}{0pt plus 5cm}bool Tri\+::\+Graphic\+::\+Graphic\+Manager\+::\+Is3\+D\+Enabled (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_tri_1_1_graphic_1_1_graphic_manager_a22a887c39e00775be78981ca95cd9ea6}
+
+
+Definition at line 56 of file util.\+h.
+
+\hypertarget{class_tri_1_1_graphic_1_1_graphic_manager_a1c859cd3579ac7f174f41155e9e850e4}{}\index{Tri\+::\+Graphic\+::\+Graphic\+Manager@{Tri\+::\+Graphic\+::\+Graphic\+Manager}!Open\+G\+L\+Manager@{Open\+G\+L\+Manager}}
+\index{Open\+G\+L\+Manager@{Open\+G\+L\+Manager}!Tri\+::\+Graphic\+::\+Graphic\+Manager@{Tri\+::\+Graphic\+::\+Graphic\+Manager}}
+\subsubsection[{Open\+G\+L\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}Tri\+::\+Graphic\+::\+Graphic\+Manager\+::\+Open\+G\+L\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_tri_1_1_graphic_1_1_graphic_manager_a1c859cd3579ac7f174f41155e9e850e4}
+\hypertarget{class_tri_1_1_graphic_1_1_graphic_manager_a63a7dee2163f0bbfd5eb1acd35c1d17f}{}\index{Tri\+::\+Graphic\+::\+Graphic\+Manager@{Tri\+::\+Graphic\+::\+Graphic\+Manager}!Render@{Render}}
+\index{Render@{Render}!Tri\+::\+Graphic\+::\+Graphic\+Manager@{Tri\+::\+Graphic\+::\+Graphic\+Manager}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}void Tri\+::\+Graphic\+::\+Graphic\+Manager\+::\+Render (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_tri_1_1_graphic_1_1_graphic_manager_a63a7dee2163f0bbfd5eb1acd35c1d17f}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+graphic/\hyperlink{graphic_2util_8h}{util.\+h}\end{DoxyCompactItemize}

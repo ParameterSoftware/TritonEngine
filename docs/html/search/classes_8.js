@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['socket',['Socket',['../classsen_1_1_socket.html',1,'sen']]]
+  ['key',['Key',['../struct_tri_1_1_input_1_1_key.html',1,'Tri::Input']]],
+  ['keybind',['Keybind',['../class_tri_1_1_input_1_1_keybind.html',1,'Tri::Input']]]
 ];

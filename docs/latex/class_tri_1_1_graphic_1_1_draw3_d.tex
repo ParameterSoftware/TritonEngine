@@ -1,0 +1,175 @@
+\hypertarget{class_tri_1_1_graphic_1_1_draw3_d}{}\section{Tri\+:\+:Graphic\+:\+:Draw3\+D Class Reference}
+\label{class_tri_1_1_graphic_1_1_draw3_d}\index{Tri\+::\+Graphic\+::\+Draw3\+D@{Tri\+::\+Graphic\+::\+Draw3\+D}}
+
+
+{\ttfamily \#include $<$render.\+h$>$}
+
+Inheritance diagram for Tri\+:\+:Graphic\+:\+:Draw3\+D\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tri_1_1_graphic_1_1_draw3_d}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tri_1_1_graphic_1_1_draw3_d_a484cb66283010d4753461707fa0cbee0}{Draw3\+D} (Resource\+::\+Image texture, Resource\+::\+Model model)
+\item 
+bool \hyperlink{class_tri_1_1_graphic_1_1_draw3_d_a0a51e5e9ce64c32fd34572bca25151d8}{Assign\+Texture} (Resource\+::\+Image texture)
+\item 
+bool \hyperlink{class_tri_1_1_graphic_1_1_draw3_d_a7a8cad2d1fe74bb22dec83257ee6dba8}{Assign\+Model} (Resource\+::\+Model model)
+\item 
+void \hyperlink{class_tri_1_1_graphic_1_1_draw3_d_a2918187361ba98fe0495526e3f6d7637}{Rotate} (Util\+::\+Vec3$<$ Angle $>$ rotation)
+\item 
+void \hyperlink{class_tri_1_1_graphic_1_1_draw3_d_a72b1738a37ee3103794293baa513cdfb}{Move\+To} (Util\+::\+Vec3$<$ double $>$ position)
+\item 
+void \hyperlink{class_tri_1_1_graphic_1_1_draw3_d_a6b1edf2afb23174b24f4896f1596b848}{Rescale} (Util\+::\+Vec3$<$ float $>$ scale)
+\item 
+Util\+::\+Vec3$<$ double $>$ \hyperlink{class_tri_1_1_graphic_1_1_draw3_d_a893a85143357d9e0635cee5ec0ce33ea}{Get\+Position} ()
+\item 
+Util\+::\+Vec3$<$ Util\+::\+Radian $>$ \hyperlink{class_tri_1_1_graphic_1_1_draw3_d_a0bed6e0fc43eedd53e1624c62d5e6a0d}{Get\+Rotation} ()
+\item 
+Util\+::\+Vec3$<$ float $>$ \hyperlink{class_tri_1_1_graphic_1_1_draw3_d_a0ecf83003607b789ab22613ccc5651cc}{Get\+Scale} ()
+\item 
+\hyperlink{namespace_tri_1_1_graphic_a7b3538cdaff9bf96489c56a4f48a5f9a}{Mat4} \hyperlink{class_tri_1_1_graphic_1_1_draw3_d_a32ab7b7f0f956c0058a4a24a20ff4efc}{Get\+Model\+Matrix} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_tri_1_1_graphic_1_1_draw3_d_a57889cd2622cc96fe924f6e5c890dcfb}{on\+Rotate} (Util\+::\+Vec3$<$ Angle $>$ \&r\+Rotations)
+\item 
+virtual void \hyperlink{class_tri_1_1_graphic_1_1_draw3_d_af5aaac36ec4674988d33189be6f2d2b0}{on\+Move} (Util\+::\+Vec3$<$ double $>$ \&r\+Position)
+\item 
+virtual void \hyperlink{class_tri_1_1_graphic_1_1_draw3_d_a77629dcfb43aa7a1487a104dfa550073}{on\+Rescale} (Util\+::\+Vec3$<$ float $>$ \&r\+Scale)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 94 of file render.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_tri_1_1_graphic_1_1_draw3_d_a484cb66283010d4753461707fa0cbee0}{}\index{Tri\+::\+Graphic\+::\+Draw3\+D@{Tri\+::\+Graphic\+::\+Draw3\+D}!Draw3\+D@{Draw3\+D}}
+\index{Draw3\+D@{Draw3\+D}!Tri\+::\+Graphic\+::\+Draw3\+D@{Tri\+::\+Graphic\+::\+Draw3\+D}}
+\subsubsection[{Draw3\+D}]{\setlength{\rightskip}{0pt plus 5cm}Tri\+::\+Graphic\+::\+Draw3\+D\+::\+Draw3\+D (
+\begin{DoxyParamCaption}
+\item[{Resource\+::\+Image}]{texture, }
+\item[{Resource\+::\+Model}]{model}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_tri_1_1_graphic_1_1_draw3_d_a484cb66283010d4753461707fa0cbee0}
+
+
+Definition at line 106 of file render.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_tri_1_1_graphic_1_1_draw3_d_a7a8cad2d1fe74bb22dec83257ee6dba8}{}\index{Tri\+::\+Graphic\+::\+Draw3\+D@{Tri\+::\+Graphic\+::\+Draw3\+D}!Assign\+Model@{Assign\+Model}}
+\index{Assign\+Model@{Assign\+Model}!Tri\+::\+Graphic\+::\+Draw3\+D@{Tri\+::\+Graphic\+::\+Draw3\+D}}
+\subsubsection[{Assign\+Model}]{\setlength{\rightskip}{0pt plus 5cm}bool Tri\+::\+Graphic\+::\+Draw3\+D\+::\+Assign\+Model (
+\begin{DoxyParamCaption}
+\item[{Resource\+::\+Model}]{model}
+\end{DoxyParamCaption}
+)}\label{class_tri_1_1_graphic_1_1_draw3_d_a7a8cad2d1fe74bb22dec83257ee6dba8}
+\hypertarget{class_tri_1_1_graphic_1_1_draw3_d_a0a51e5e9ce64c32fd34572bca25151d8}{}\index{Tri\+::\+Graphic\+::\+Draw3\+D@{Tri\+::\+Graphic\+::\+Draw3\+D}!Assign\+Texture@{Assign\+Texture}}
+\index{Assign\+Texture@{Assign\+Texture}!Tri\+::\+Graphic\+::\+Draw3\+D@{Tri\+::\+Graphic\+::\+Draw3\+D}}
+\subsubsection[{Assign\+Texture}]{\setlength{\rightskip}{0pt plus 5cm}bool Tri\+::\+Graphic\+::\+Draw3\+D\+::\+Assign\+Texture (
+\begin{DoxyParamCaption}
+\item[{Resource\+::\+Image}]{texture}
+\end{DoxyParamCaption}
+)}\label{class_tri_1_1_graphic_1_1_draw3_d_a0a51e5e9ce64c32fd34572bca25151d8}
+\hypertarget{class_tri_1_1_graphic_1_1_draw3_d_a32ab7b7f0f956c0058a4a24a20ff4efc}{}\index{Tri\+::\+Graphic\+::\+Draw3\+D@{Tri\+::\+Graphic\+::\+Draw3\+D}!Get\+Model\+Matrix@{Get\+Model\+Matrix}}
+\index{Get\+Model\+Matrix@{Get\+Model\+Matrix}!Tri\+::\+Graphic\+::\+Draw3\+D@{Tri\+::\+Graphic\+::\+Draw3\+D}}
+\subsubsection[{Get\+Model\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Mat4} Tri\+::\+Graphic\+::\+Draw3\+D\+::\+Get\+Model\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_tri_1_1_graphic_1_1_draw3_d_a32ab7b7f0f956c0058a4a24a20ff4efc}
+
+
+Implements \hyperlink{class_tri_1_1_graphic_1_1_i_draw_ae6c6b2e08c6d6e2d4f8a07b24de0018c}{Tri\+::\+Graphic\+::\+I\+Draw}.
+
+\hypertarget{class_tri_1_1_graphic_1_1_draw3_d_a893a85143357d9e0635cee5ec0ce33ea}{}\index{Tri\+::\+Graphic\+::\+Draw3\+D@{Tri\+::\+Graphic\+::\+Draw3\+D}!Get\+Position@{Get\+Position}}
+\index{Get\+Position@{Get\+Position}!Tri\+::\+Graphic\+::\+Draw3\+D@{Tri\+::\+Graphic\+::\+Draw3\+D}}
+\subsubsection[{Get\+Position}]{\setlength{\rightskip}{0pt plus 5cm}Util\+::\+Vec3$<$double$>$ Tri\+::\+Graphic\+::\+Draw3\+D\+::\+Get\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_tri_1_1_graphic_1_1_draw3_d_a893a85143357d9e0635cee5ec0ce33ea}
+\hypertarget{class_tri_1_1_graphic_1_1_draw3_d_a0bed6e0fc43eedd53e1624c62d5e6a0d}{}\index{Tri\+::\+Graphic\+::\+Draw3\+D@{Tri\+::\+Graphic\+::\+Draw3\+D}!Get\+Rotation@{Get\+Rotation}}
+\index{Get\+Rotation@{Get\+Rotation}!Tri\+::\+Graphic\+::\+Draw3\+D@{Tri\+::\+Graphic\+::\+Draw3\+D}}
+\subsubsection[{Get\+Rotation}]{\setlength{\rightskip}{0pt plus 5cm}Util\+::\+Vec3$<$Util\+::\+Radian$>$ Tri\+::\+Graphic\+::\+Draw3\+D\+::\+Get\+Rotation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_tri_1_1_graphic_1_1_draw3_d_a0bed6e0fc43eedd53e1624c62d5e6a0d}
+\hypertarget{class_tri_1_1_graphic_1_1_draw3_d_a0ecf83003607b789ab22613ccc5651cc}{}\index{Tri\+::\+Graphic\+::\+Draw3\+D@{Tri\+::\+Graphic\+::\+Draw3\+D}!Get\+Scale@{Get\+Scale}}
+\index{Get\+Scale@{Get\+Scale}!Tri\+::\+Graphic\+::\+Draw3\+D@{Tri\+::\+Graphic\+::\+Draw3\+D}}
+\subsubsection[{Get\+Scale}]{\setlength{\rightskip}{0pt plus 5cm}Util\+::\+Vec3$<$float$>$ Tri\+::\+Graphic\+::\+Draw3\+D\+::\+Get\+Scale (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_tri_1_1_graphic_1_1_draw3_d_a0ecf83003607b789ab22613ccc5651cc}
+\hypertarget{class_tri_1_1_graphic_1_1_draw3_d_a72b1738a37ee3103794293baa513cdfb}{}\index{Tri\+::\+Graphic\+::\+Draw3\+D@{Tri\+::\+Graphic\+::\+Draw3\+D}!Move\+To@{Move\+To}}
+\index{Move\+To@{Move\+To}!Tri\+::\+Graphic\+::\+Draw3\+D@{Tri\+::\+Graphic\+::\+Draw3\+D}}
+\subsubsection[{Move\+To}]{\setlength{\rightskip}{0pt plus 5cm}void Tri\+::\+Graphic\+::\+Draw3\+D\+::\+Move\+To (
+\begin{DoxyParamCaption}
+\item[{Util\+::\+Vec3$<$ double $>$}]{position}
+\end{DoxyParamCaption}
+)}\label{class_tri_1_1_graphic_1_1_draw3_d_a72b1738a37ee3103794293baa513cdfb}
+\hypertarget{class_tri_1_1_graphic_1_1_draw3_d_af5aaac36ec4674988d33189be6f2d2b0}{}\index{Tri\+::\+Graphic\+::\+Draw3\+D@{Tri\+::\+Graphic\+::\+Draw3\+D}!on\+Move@{on\+Move}}
+\index{on\+Move@{on\+Move}!Tri\+::\+Graphic\+::\+Draw3\+D@{Tri\+::\+Graphic\+::\+Draw3\+D}}
+\subsubsection[{on\+Move}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Tri\+::\+Graphic\+::\+Draw3\+D\+::on\+Move (
+\begin{DoxyParamCaption}
+\item[{Util\+::\+Vec3$<$ double $>$ \&}]{r\+Position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_tri_1_1_graphic_1_1_draw3_d_af5aaac36ec4674988d33189be6f2d2b0}
+
+
+Definition at line 103 of file render.\+h.
+
+\hypertarget{class_tri_1_1_graphic_1_1_draw3_d_a77629dcfb43aa7a1487a104dfa550073}{}\index{Tri\+::\+Graphic\+::\+Draw3\+D@{Tri\+::\+Graphic\+::\+Draw3\+D}!on\+Rescale@{on\+Rescale}}
+\index{on\+Rescale@{on\+Rescale}!Tri\+::\+Graphic\+::\+Draw3\+D@{Tri\+::\+Graphic\+::\+Draw3\+D}}
+\subsubsection[{on\+Rescale}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Tri\+::\+Graphic\+::\+Draw3\+D\+::on\+Rescale (
+\begin{DoxyParamCaption}
+\item[{Util\+::\+Vec3$<$ float $>$ \&}]{r\+Scale}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_tri_1_1_graphic_1_1_draw3_d_a77629dcfb43aa7a1487a104dfa550073}
+
+
+Definition at line 104 of file render.\+h.
+
+\hypertarget{class_tri_1_1_graphic_1_1_draw3_d_a57889cd2622cc96fe924f6e5c890dcfb}{}\index{Tri\+::\+Graphic\+::\+Draw3\+D@{Tri\+::\+Graphic\+::\+Draw3\+D}!on\+Rotate@{on\+Rotate}}
+\index{on\+Rotate@{on\+Rotate}!Tri\+::\+Graphic\+::\+Draw3\+D@{Tri\+::\+Graphic\+::\+Draw3\+D}}
+\subsubsection[{on\+Rotate}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Tri\+::\+Graphic\+::\+Draw3\+D\+::on\+Rotate (
+\begin{DoxyParamCaption}
+\item[{Util\+::\+Vec3$<$ Angle $>$ \&}]{r\+Rotations}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_tri_1_1_graphic_1_1_draw3_d_a57889cd2622cc96fe924f6e5c890dcfb}
+
+
+Definition at line 102 of file render.\+h.
+
+\hypertarget{class_tri_1_1_graphic_1_1_draw3_d_a6b1edf2afb23174b24f4896f1596b848}{}\index{Tri\+::\+Graphic\+::\+Draw3\+D@{Tri\+::\+Graphic\+::\+Draw3\+D}!Rescale@{Rescale}}
+\index{Rescale@{Rescale}!Tri\+::\+Graphic\+::\+Draw3\+D@{Tri\+::\+Graphic\+::\+Draw3\+D}}
+\subsubsection[{Rescale}]{\setlength{\rightskip}{0pt plus 5cm}void Tri\+::\+Graphic\+::\+Draw3\+D\+::\+Rescale (
+\begin{DoxyParamCaption}
+\item[{Util\+::\+Vec3$<$ float $>$}]{scale}
+\end{DoxyParamCaption}
+)}\label{class_tri_1_1_graphic_1_1_draw3_d_a6b1edf2afb23174b24f4896f1596b848}
+\hypertarget{class_tri_1_1_graphic_1_1_draw3_d_a2918187361ba98fe0495526e3f6d7637}{}\index{Tri\+::\+Graphic\+::\+Draw3\+D@{Tri\+::\+Graphic\+::\+Draw3\+D}!Rotate@{Rotate}}
+\index{Rotate@{Rotate}!Tri\+::\+Graphic\+::\+Draw3\+D@{Tri\+::\+Graphic\+::\+Draw3\+D}}
+\subsubsection[{Rotate}]{\setlength{\rightskip}{0pt plus 5cm}void Tri\+::\+Graphic\+::\+Draw3\+D\+::\+Rotate (
+\begin{DoxyParamCaption}
+\item[{Util\+::\+Vec3$<$ Angle $>$}]{rotation}
+\end{DoxyParamCaption}
+)}\label{class_tri_1_1_graphic_1_1_draw3_d_a2918187361ba98fe0495526e3f6d7637}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+graphic/\hyperlink{render_8h}{render.\+h}\end{DoxyCompactItemize}

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['distance',['distance',['../namespacesem.html#a45839d27506e31218ea07fca43346cf2',1,'sem']]]
+  ['basestring',['BaseString',['../class_triton_1_1_util_1_1_basic_c_string.html#a447877a937847af393e6781c0a7b20cc',1,'Triton::Util::BasicCString::BaseString()'],['../class_triton_1_1_util_1_1_basic_c_string.html#acbbe555dcaf7b19fafcead09229bad7d',1,'Triton::Util::BasicCString::BaseString(charT *str)']]]
 ];

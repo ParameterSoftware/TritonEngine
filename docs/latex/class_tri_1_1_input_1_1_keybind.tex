@@ -1,0 +1,92 @@
+\hypertarget{class_tri_1_1_input_1_1_keybind}{}\section{Tri\+:\+:Input\+:\+:Keybind Class Reference}
+\label{class_tri_1_1_input_1_1_keybind}\index{Tri\+::\+Input\+::\+Keybind@{Tri\+::\+Input\+::\+Keybind}}
+
+
+{\ttfamily \#include $<$key.\+h$>$}
+
+Inheritance diagram for Tri\+:\+:Input\+:\+:Keybind\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_tri_1_1_input_1_1_keybind}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \hyperlink{class_tri_1_1_input_1_1_keybind_ad673cad554dbcc91f9158d0e28ddde35}{keycallfun}) (int, \hyperlink{namespace_tri_1_1_input_1_1_system_a79600e9f4ed835251eed1706ce96bed0}{System\+::\+Action}, int)
+\begin{DoxyCompactList}\small\item\em The function signature for key callbacks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tri_1_1_input_1_1_keybind_a24061b2a16170f851af53c4895b00c21}{Key\+Bind} (\hyperlink{struct_tri_1_1_input_1_1_key_a0b1f54fb1b7be8fe2e920ca8552f86dc}{Key\+Index} index)
+\item 
+void \hyperlink{class_tri_1_1_input_1_1_keybind_a4d71f6463f2e057e024fc6e4018b2207}{Set\+Key} (\hyperlink{struct_tri_1_1_input_1_1_key_a0b1f54fb1b7be8fe2e920ca8552f86dc}{Key\+Index} index)
+\item 
+void \hyperlink{class_tri_1_1_input_1_1_keybind_abdb6f9de4e66aed3c24f90c62aed1043}{Set\+Key\+Callback} (\hyperlink{class_tri_1_1_input_1_1_keybind_ad673cad554dbcc91f9158d0e28ddde35}{keycallfun} callback)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 64 of file key.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_tri_1_1_input_1_1_keybind_ad673cad554dbcc91f9158d0e28ddde35}{}\index{Tri\+::\+Input\+::\+Keybind@{Tri\+::\+Input\+::\+Keybind}!keycallfun@{keycallfun}}
+\index{keycallfun@{keycallfun}!Tri\+::\+Input\+::\+Keybind@{Tri\+::\+Input\+::\+Keybind}}
+\subsubsection[{keycallfun}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$  Tri\+::\+Input\+::\+Keybind\+::keycallfun) (int, {\bf System\+::\+Action}, int)}\label{class_tri_1_1_input_1_1_keybind_ad673cad554dbcc91f9158d0e28ddde35}
+
+
+The function signature for key callbacks. 
+
+The function signature for key callbacks for use with keybinds
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em scancode} & The scancode that is currently representing the key \\
+\hline
+\mbox{\tt in}  & {\em action} & The action the key is currently expressing \\
+\hline
+\mbox{\tt in}  & {\em mods} & The current bit field modifier describing what modifier keys were held \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 75 of file key.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_tri_1_1_input_1_1_keybind_a24061b2a16170f851af53c4895b00c21}{}\index{Tri\+::\+Input\+::\+Keybind@{Tri\+::\+Input\+::\+Keybind}!Key\+Bind@{Key\+Bind}}
+\index{Key\+Bind@{Key\+Bind}!Tri\+::\+Input\+::\+Keybind@{Tri\+::\+Input\+::\+Keybind}}
+\subsubsection[{Key\+Bind}]{\setlength{\rightskip}{0pt plus 5cm}Tri\+::\+Input\+::\+Keybind\+::\+Key\+Bind (
+\begin{DoxyParamCaption}
+\item[{{\bf Key\+Index}}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_tri_1_1_input_1_1_keybind_a24061b2a16170f851af53c4895b00c21}
+
+
+Definition at line 77 of file key.\+h.
+
+\hypertarget{class_tri_1_1_input_1_1_keybind_a4d71f6463f2e057e024fc6e4018b2207}{}\index{Tri\+::\+Input\+::\+Keybind@{Tri\+::\+Input\+::\+Keybind}!Set\+Key@{Set\+Key}}
+\index{Set\+Key@{Set\+Key}!Tri\+::\+Input\+::\+Keybind@{Tri\+::\+Input\+::\+Keybind}}
+\subsubsection[{Set\+Key}]{\setlength{\rightskip}{0pt plus 5cm}void Tri\+::\+Input\+::\+Keybind\+::\+Set\+Key (
+\begin{DoxyParamCaption}
+\item[{{\bf Key\+Index}}]{index}
+\end{DoxyParamCaption}
+)}\label{class_tri_1_1_input_1_1_keybind_a4d71f6463f2e057e024fc6e4018b2207}
+\hypertarget{class_tri_1_1_input_1_1_keybind_abdb6f9de4e66aed3c24f90c62aed1043}{}\index{Tri\+::\+Input\+::\+Keybind@{Tri\+::\+Input\+::\+Keybind}!Set\+Key\+Callback@{Set\+Key\+Callback}}
+\index{Set\+Key\+Callback@{Set\+Key\+Callback}!Tri\+::\+Input\+::\+Keybind@{Tri\+::\+Input\+::\+Keybind}}
+\subsubsection[{Set\+Key\+Callback}]{\setlength{\rightskip}{0pt plus 5cm}void Tri\+::\+Input\+::\+Keybind\+::\+Set\+Key\+Callback (
+\begin{DoxyParamCaption}
+\item[{{\bf keycallfun}}]{callback}
+\end{DoxyParamCaption}
+)}\label{class_tri_1_1_input_1_1_keybind_abdb6f9de4e66aed3c24f90c62aed1043}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+input/\hyperlink{key_8h}{key.\+h}\end{DoxyCompactItemize}

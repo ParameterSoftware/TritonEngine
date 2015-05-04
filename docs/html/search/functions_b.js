@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['unpack754',['unpack754',['../pack_8h.html#a06ab819dcb8081c6dac0669552439acf',1,'pack.h']]],
-  ['unpackinteger',['unpackInteger',['../namespaceseu.html#a46b06a8970cad363f230dca68bbd8b58',1,'seu']]],
-  ['update',['Update',['../classsep_1_1_physics_entity.html#a119723e421c1e12e77244e894c00c7b2',1,'sep::PhysicsEntity::Update()'],['../classseg_1_1_object.html#ab2216f5f9b1997d44dcfe1a50a10d726',1,'seg::Object::Update()'],['../classseg_1_1_flat_object.html#ae4d707996b748f09228b37b6daba1f39',1,'seg::FlatObject::Update()']]],
-  ['updategraphics',['UpdateGraphics',['../classseg_1_1_object.html#a4e12d9c54ae3f823c3ad8992afc67b21',1,'seg::Object::UpdateGraphics()'],['../classseg_1_1_flat_object.html#aa954037018bd26fb39a94d50222e4b5f',1,'seg::FlatObject::UpdateGraphics()']]],
-  ['usesalternatephysics',['UsesAlternatePhysics',['../classsep_1_1_physics_properties.html#aa1afb09d035a5bb0f3772b4cdef05973',1,'sep::PhysicsProperties']]]
+  ['model',['Model',['../class_tri_1_1_graphic_1_1_model.html#a57f8abc051d104b925e6a2cbb253b56c',1,'Tri::Graphic::Model']]],
+  ['mouse',['Mouse',['../class_tri_1_1_input_1_1_mouse.html#af4442e246b375684a579eddf12c85c7f',1,'Tri::Input::Mouse']]],
+  ['moveto',['MoveTo',['../class_tri_1_1_graphic_1_1_camera.html#a589dd8cde32e62172946f532c816d3c5',1,'Tri::Graphic::Camera::MoveTo()'],['../class_tri_1_1_graphic_1_1_draw2_d.html#a02434f6c9d46a00009afa18e9a2599f6',1,'Tri::Graphic::Draw2D::MoveTo()'],['../class_tri_1_1_graphic_1_1_draw3_d.html#a72b1738a37ee3103794293baa513cdfb',1,'Tri::Graphic::Draw3D::MoveTo()']]]
 ];

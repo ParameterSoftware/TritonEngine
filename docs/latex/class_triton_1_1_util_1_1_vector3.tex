@@ -1,0 +1,535 @@
+\hypertarget{class_triton_1_1_util_1_1_vector3}{}\section{Triton\+:\+:Util\+:\+:Vector3$<$ T $>$ Class Template Reference}
+\label{class_triton_1_1_util_1_1_vector3}\index{Triton\+::\+Util\+::\+Vector3$<$ T $>$@{Triton\+::\+Util\+::\+Vector3$<$ T $>$}}
+
+
+Utility template class to store and manipulate 3-\/dimensional vector positions.  
+
+
+
+
+{\ttfamily \#include $<$Vector3.\+hpp$>$}
+
+Inheritance diagram for Triton\+:\+:Util\+:\+:Vector3$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_triton_1_1_util_1_1_vector3}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_triton_1_1_util_1_1_vector3_a7ff2d48cbf361a1c29dcfa7922cc7f76}{Vector3} (T X=0, T Y=0, T Z=0)
+\begin{DoxyCompactList}\small\item\em Construct the vector from its coordinates, also treated as default constructor. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\hyperlink{class_triton_1_1_util_1_1_vector3_a38db25895019ecbfd2f4bfb7af4ea569}{Vector3} (const \hyperlink{class_triton_1_1_util_1_1_vector1}{Vector1}$<$ U $>$ \&vector, T Y=0, T Z=0)
+\begin{DoxyCompactList}\small\item\em Construct the vector from a \hyperlink{class_triton_1_1_util_1_1_vector1}{Triton\+::\+Util\+::\+Vector1}, a Y coordinate, and Z coordinate. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\hyperlink{class_triton_1_1_util_1_1_vector3_ad4d789aa3a7b5974230b7c4c6018d1f1}{Vector3} (const \hyperlink{class_triton_1_1_util_1_1_vector2}{Vector2}$<$ U $>$ \&vector, T Z=0)
+\begin{DoxyCompactList}\small\item\em Construct the vector from a \hyperlink{class_triton_1_1_util_1_1_vector2}{Triton\+::\+Util\+::\+Vector2} and a Z coordinate. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\hyperlink{class_triton_1_1_util_1_1_vector3}{Vector3}$<$ T $>$ \& \hyperlink{class_triton_1_1_util_1_1_vector3_a73fccfb26f18c94bb62e33de03ecf9c1}{operator=} (const \hyperlink{class_triton_1_1_util_1_1_vector1}{Vector1}$<$ U $>$ \&vector, T Y=0, T Z=0)
+\begin{DoxyCompactList}\small\item\em An operator for evaluating \hyperlink{class_triton_1_1_util_1_1_vector1}{Triton\+::\+Util\+::\+Vector1} to a \hyperlink{class_triton_1_1_util_1_1_vector3}{Triton\+::\+Util\+::\+Vector3} using Y and Z coordinate parameters. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\hyperlink{class_triton_1_1_util_1_1_vector3}{Vector3}$<$ T $>$ \& \hyperlink{class_triton_1_1_util_1_1_vector3_ac27ac77c9ed4cca294ae21a51fa1cdfc}{operator=} (const \hyperlink{class_triton_1_1_util_1_1_vector2}{Vector2}$<$ U $>$ \&vector, T Z=0)
+\begin{DoxyCompactList}\small\item\em An operator for evaluating \hyperlink{class_triton_1_1_util_1_1_vector2}{Triton\+::\+Util\+::\+Vector2} to a \hyperlink{class_triton_1_1_util_1_1_vector3}{Triton\+::\+Util\+::\+Vector3} using a Z coordinate parameter. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\hyperlink{class_triton_1_1_util_1_1_vector3}{Vector3}$<$ T $>$ \hyperlink{class_triton_1_1_util_1_1_vector3_a00f99640d34d3c596c5c665384249c3e}{distance} (\hyperlink{class_triton_1_1_util_1_1_vector3}{Vector3}$<$ U $>$ vector)
+\begin{DoxyCompactList}\small\item\em Returns a vector that holds the distance between this and vector. \end{DoxyCompactList}\item 
+\hyperlink{class_triton_1_1_util_1_1_vector3}{Vector3}$<$ T $>$ \hyperlink{class_triton_1_1_util_1_1_vector3_a3b86bff74414a8de65ce908a9e4a686f}{abs\+V3} ()
+\begin{DoxyCompactList}\small\item\em Constructs a \hyperlink{class_triton_1_1_util_1_1_vector3}{Triton\+::\+Util\+::\+Vector3} with an absolute value of this vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+T \hyperlink{class_triton_1_1_util_1_1_vector3_ac42aa6f29ac37a866b49cbc1d8e66f74}{m\+\_\+\+Z\+Position}
+\begin{DoxyCompactList}\small\item\em Z coordinate of the vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Related Functions}
+(Note that these are not member functions.) \begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{class_triton_1_1_util_1_1_vector3}{Vector3}$<$ T $>$ \hyperlink{class_triton_1_1_util_1_1_vector3_a9b75d2fb9b0f2fd9fe33f8f06f9dda75}{operator-\/} (const \hyperlink{class_triton_1_1_util_1_1_vector3}{Vector3}$<$ T $>$ \&left)
+\begin{DoxyCompactList}\small\item\em Overload of unary operator -\/. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{class_triton_1_1_util_1_1_vector3}{Vector3}$<$ T $>$ \& \hyperlink{class_triton_1_1_util_1_1_vector3_abc28859af163c63318ea2723b81c5ad9}{operator+=} (\hyperlink{class_triton_1_1_util_1_1_vector3}{Vector3}$<$ T $>$ \&left, const \hyperlink{class_triton_1_1_util_1_1_vector3}{Vector3}$<$ T $>$ \&right)
+\begin{DoxyCompactList}\small\item\em Overload of binary operator +=. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{class_triton_1_1_util_1_1_vector3}{Vector3}$<$ T $>$ \& \hyperlink{class_triton_1_1_util_1_1_vector3_aa465672d2a4ee5fd354e585cf08d2ab9}{operator-\/=} (\hyperlink{class_triton_1_1_util_1_1_vector3}{Vector3}$<$ T $>$ \&left, const \hyperlink{class_triton_1_1_util_1_1_vector3}{Vector3}$<$ T $>$ \&right)
+\begin{DoxyCompactList}\small\item\em Overload of binary operator -\/=. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{class_triton_1_1_util_1_1_vector3}{Vector3}$<$ T $>$ \hyperlink{class_triton_1_1_util_1_1_vector3_a6500a0cb00e07801e9e9d7e96852ddd3}{operator+} (const \hyperlink{class_triton_1_1_util_1_1_vector3}{Vector3}$<$ T $>$ \&left, const \hyperlink{class_triton_1_1_util_1_1_vector3}{Vector3}$<$ T $>$ \&right)
+\begin{DoxyCompactList}\small\item\em Overload of binary operator +. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{class_triton_1_1_util_1_1_vector3}{Vector3}$<$ T $>$ \hyperlink{class_triton_1_1_util_1_1_vector3_abe0b9411c00cf807bf8a5f835874bd2a}{operator-\/} (const \hyperlink{class_triton_1_1_util_1_1_vector3}{Vector3}$<$ T $>$ \&left, const \hyperlink{class_triton_1_1_util_1_1_vector3}{Vector3}$<$ T $>$ \&right)
+\begin{DoxyCompactList}\small\item\em Overload of binary operator -\/. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{class_triton_1_1_util_1_1_vector3}{Vector3}$<$ T $>$ \hyperlink{class_triton_1_1_util_1_1_vector3_a44ec312b31c1a85dcff4863795f98329}{operator$\ast$} (const \hyperlink{class_triton_1_1_util_1_1_vector3}{Vector3}$<$ T $>$ \&left, T right)
+\begin{DoxyCompactList}\small\item\em Overload of binary operator $\ast$. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{class_triton_1_1_util_1_1_vector3}{Vector3}$<$ T $>$ \hyperlink{class_triton_1_1_util_1_1_vector3_aa6f2b0d9f79c1b9774759b7087affbb1}{operator$\ast$} (T left, const \hyperlink{class_triton_1_1_util_1_1_vector3}{Vector3}$<$ T $>$ \&right)
+\begin{DoxyCompactList}\small\item\em Overload of binary operator $\ast$. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{class_triton_1_1_util_1_1_vector3}{Vector3}$<$ T $>$ \& \hyperlink{class_triton_1_1_util_1_1_vector3_ad5fb972775ce8ab58cd9670789e806a7}{operator$\ast$=} (\hyperlink{class_triton_1_1_util_1_1_vector3}{Vector3}$<$ T $>$ \&left, T right)
+\begin{DoxyCompactList}\small\item\em Overload of binary operator $\ast$=. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{class_triton_1_1_util_1_1_vector3}{Vector3}$<$ T $>$ \hyperlink{class_triton_1_1_util_1_1_vector3_ad4ba4a83de236ddeb92a7b759187e90d}{operator/} (const \hyperlink{class_triton_1_1_util_1_1_vector3}{Vector3}$<$ T $>$ \&left, T right)
+\begin{DoxyCompactList}\small\item\em Overload of binary operator /. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{class_triton_1_1_util_1_1_vector3}{Vector3}$<$ T $>$ \& \hyperlink{class_triton_1_1_util_1_1_vector3_a8995a700f9dffccc6dddb3696ae17b64}{operator/=} (\hyperlink{class_triton_1_1_util_1_1_vector3}{Vector3}$<$ T $>$ \&left, T right)
+\begin{DoxyCompactList}\small\item\em Overload of binary operator /=. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\bool \hyperlink{class_triton_1_1_util_1_1_vector3_a388d72db973306a35ba467016b3dee30}{operator==} (const \hyperlink{class_triton_1_1_util_1_1_vector3}{Vector3}$<$ T $>$ \&left, const \hyperlink{class_triton_1_1_util_1_1_vector3}{Vector3}$<$ T $>$ \&right)
+\begin{DoxyCompactList}\small\item\em Overload of binary operator ==. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\bool \hyperlink{class_triton_1_1_util_1_1_vector3_a608500d1ad3b78082cb5bb4356742bd4}{operator!=} (const \hyperlink{class_triton_1_1_util_1_1_vector3}{Vector3}$<$ T $>$ \&left, const \hyperlink{class_triton_1_1_util_1_1_vector3}{Vector3}$<$ T $>$ \&right)
+\begin{DoxyCompactList}\small\item\em Overload of binary operator !=. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T = int$>$class Triton\+::\+Util\+::\+Vector3$<$ T $>$}
+
+Utility template class to store and manipulate 3-\/dimensional vector positions. 
+
+Definition at line 17 of file Vector3.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_triton_1_1_util_1_1_vector3_a7ff2d48cbf361a1c29dcfa7922cc7f76}{}\index{Triton\+::\+Util\+::\+Vector3@{Triton\+::\+Util\+::\+Vector3}!Vector3@{Vector3}}
+\index{Vector3@{Vector3}!Triton\+::\+Util\+::\+Vector3@{Triton\+::\+Util\+::\+Vector3}}
+\subsubsection[{Vector3}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T = int$>$ {\bf Triton\+::\+Util\+::\+Vector3}$<$ T $>$\+::{\bf Vector3} (
+\begin{DoxyParamCaption}
+\item[{T}]{X = {\ttfamily 0}, }
+\item[{T}]{Y = {\ttfamily 0}, }
+\item[{T}]{Z = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_triton_1_1_util_1_1_vector3_a7ff2d48cbf361a1c29dcfa7922cc7f76}
+
+
+Construct the vector from its coordinates, also treated as default constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & X coordinate \\
+\hline
+{\em Y} & Y coordinate \\
+\hline
+{\em Z} & Z coordinate \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_triton_1_1_util_1_1_vector3_a38db25895019ecbfd2f4bfb7af4ea569}{}\index{Triton\+::\+Util\+::\+Vector3@{Triton\+::\+Util\+::\+Vector3}!Vector3@{Vector3}}
+\index{Vector3@{Vector3}!Triton\+::\+Util\+::\+Vector3@{Triton\+::\+Util\+::\+Vector3}}
+\subsubsection[{Vector3}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T = int$>$ template$<$typename U $>$ {\bf Triton\+::\+Util\+::\+Vector3}$<$ T $>$\+::{\bf Vector3} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector1}$<$ U $>$ \&}]{vector, }
+\item[{T}]{Y = {\ttfamily 0}, }
+\item[{T}]{Z = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_triton_1_1_util_1_1_vector3_a38db25895019ecbfd2f4bfb7af4ea569}
+
+
+Construct the vector from a \hyperlink{class_triton_1_1_util_1_1_vector1}{Triton\+::\+Util\+::\+Vector1}, a Y coordinate, and Z coordinate. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception\+Cast\+Fail} & thrown when U can\textquotesingle{}t be casted to T\\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameters}
+{\em vector} & Vector to convert \\
+\hline
+{\em Y} & the new Y coordinate \\
+\hline
+{\em Z} & the new Z coordinate \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_triton_1_1_util_1_1_vector3_ad4d789aa3a7b5974230b7c4c6018d1f1}{}\index{Triton\+::\+Util\+::\+Vector3@{Triton\+::\+Util\+::\+Vector3}!Vector3@{Vector3}}
+\index{Vector3@{Vector3}!Triton\+::\+Util\+::\+Vector3@{Triton\+::\+Util\+::\+Vector3}}
+\subsubsection[{Vector3}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T = int$>$ template$<$typename U $>$ {\bf Triton\+::\+Util\+::\+Vector3}$<$ T $>$\+::{\bf Vector3} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector2}$<$ U $>$ \&}]{vector, }
+\item[{T}]{Z = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_triton_1_1_util_1_1_vector3_ad4d789aa3a7b5974230b7c4c6018d1f1}
+
+
+Construct the vector from a \hyperlink{class_triton_1_1_util_1_1_vector2}{Triton\+::\+Util\+::\+Vector2} and a Z coordinate. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception\+Cast\+Fail} & thrown when U can\textquotesingle{}t be casted to T\\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameters}
+{\em vector} & Vector to convert \\
+\hline
+{\em Z} & the new Z coordinate \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_triton_1_1_util_1_1_vector3_a3b86bff74414a8de65ce908a9e4a686f}{}\index{Triton\+::\+Util\+::\+Vector3@{Triton\+::\+Util\+::\+Vector3}!abs\+V3@{abs\+V3}}
+\index{abs\+V3@{abs\+V3}!Triton\+::\+Util\+::\+Vector3@{Triton\+::\+Util\+::\+Vector3}}
+\subsubsection[{abs\+V3}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T = int$>$ {\bf Vector3}$<$T$>$ {\bf Triton\+::\+Util\+::\+Vector3}$<$ T $>$\+::abs\+V3 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_triton_1_1_util_1_1_vector3_a3b86bff74414a8de65ce908a9e4a686f}
+
+
+Constructs a \hyperlink{class_triton_1_1_util_1_1_vector3}{Triton\+::\+Util\+::\+Vector3} with an absolute value of this vector. 
+
+\hypertarget{class_triton_1_1_util_1_1_vector3_a00f99640d34d3c596c5c665384249c3e}{}\index{Triton\+::\+Util\+::\+Vector3@{Triton\+::\+Util\+::\+Vector3}!distance@{distance}}
+\index{distance@{distance}!Triton\+::\+Util\+::\+Vector3@{Triton\+::\+Util\+::\+Vector3}}
+\subsubsection[{distance}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T = int$>$ template$<$typename U $>$ {\bf Vector3}$<$T$>$ {\bf Triton\+::\+Util\+::\+Vector3}$<$ T $>$\+::distance (
+\begin{DoxyParamCaption}
+\item[{{\bf Vector3}$<$ U $>$}]{vector}
+\end{DoxyParamCaption}
+)}\label{class_triton_1_1_util_1_1_vector3_a00f99640d34d3c596c5c665384249c3e}
+
+
+Returns a vector that holds the distance between this and vector. 
+
+\begin{DoxyNote}{Note}
+The distance is an absolute value
+\end{DoxyNote}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception\+Cast\+Fail} & thrown when U can\textquotesingle{}t be casted to T\\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameters}
+{\em vector} & Vector to other vector \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_triton_1_1_util_1_1_vector3_a73fccfb26f18c94bb62e33de03ecf9c1}{}\index{Triton\+::\+Util\+::\+Vector3@{Triton\+::\+Util\+::\+Vector3}!operator=@{operator=}}
+\index{operator=@{operator=}!Triton\+::\+Util\+::\+Vector3@{Triton\+::\+Util\+::\+Vector3}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T = int$>$ template$<$typename U $>$ {\bf Vector3}$<$T$>$\& {\bf Triton\+::\+Util\+::\+Vector3}$<$ T $>$\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector1}$<$ U $>$ \&}]{vector, }
+\item[{T}]{Y = {\ttfamily 0}, }
+\item[{T}]{Z = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_triton_1_1_util_1_1_vector3_a73fccfb26f18c94bb62e33de03ecf9c1}
+
+
+An operator for evaluating \hyperlink{class_triton_1_1_util_1_1_vector1}{Triton\+::\+Util\+::\+Vector1} to a \hyperlink{class_triton_1_1_util_1_1_vector3}{Triton\+::\+Util\+::\+Vector3} using Y and Z coordinate parameters. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception\+Cast\+Fail} & thrown when U can\textquotesingle{}t be casted to T\\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameters}
+{\em vector} & Vector to convert \\
+\hline
+{\em Y} & the new Y coordinate \\
+\hline
+{\em Z} & the new Z coordinate \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_triton_1_1_util_1_1_vector3_ac27ac77c9ed4cca294ae21a51fa1cdfc}{}\index{Triton\+::\+Util\+::\+Vector3@{Triton\+::\+Util\+::\+Vector3}!operator=@{operator=}}
+\index{operator=@{operator=}!Triton\+::\+Util\+::\+Vector3@{Triton\+::\+Util\+::\+Vector3}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T = int$>$ template$<$typename U $>$ {\bf Vector3}$<$T$>$\& {\bf Triton\+::\+Util\+::\+Vector3}$<$ T $>$\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector2}$<$ U $>$ \&}]{vector, }
+\item[{T}]{Z = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_triton_1_1_util_1_1_vector3_ac27ac77c9ed4cca294ae21a51fa1cdfc}
+
+
+An operator for evaluating \hyperlink{class_triton_1_1_util_1_1_vector2}{Triton\+::\+Util\+::\+Vector2} to a \hyperlink{class_triton_1_1_util_1_1_vector3}{Triton\+::\+Util\+::\+Vector3} using a Z coordinate parameter. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception\+Cast\+Fail} & thrown when U can\textquotesingle{}t be casted to T\\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameters}
+{\em vector} & Vector to convert \\
+\hline
+{\em Z} & the new Z coordinate \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_triton_1_1_util_1_1_vector3_a608500d1ad3b78082cb5bb4356742bd4}{}\index{Triton\+::\+Util\+::\+Vector3@{Triton\+::\+Util\+::\+Vector3}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Triton\+::\+Util\+::\+Vector3@{Triton\+::\+Util\+::\+Vector3}}
+\subsubsection[{operator"!=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector3}$<$ T $>$ \&}]{left, }
+\item[{const {\bf Vector3}$<$ T $>$ \&}]{right}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [related]}}\label{class_triton_1_1_util_1_1_vector3_a608500d1ad3b78082cb5bb4356742bd4}
+
+
+Overload of binary operator !=. 
+
+This operator compares strict difference between two vectors.
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & Left operand (a vector) \\
+\hline
+{\em right} & Right operand (a vector)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if {\itshape left} is not equal to {\itshape right} 
+\end{DoxyReturn}
+\hypertarget{class_triton_1_1_util_1_1_vector3_a44ec312b31c1a85dcff4863795f98329}{}\index{Triton\+::\+Util\+::\+Vector3@{Triton\+::\+Util\+::\+Vector3}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Triton\+::\+Util\+::\+Vector3@{Triton\+::\+Util\+::\+Vector3}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Vector3}$<$ T $>$ operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector3}$<$ T $>$ \&}]{left, }
+\item[{T}]{right}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [related]}}\label{class_triton_1_1_util_1_1_vector3_a44ec312b31c1a85dcff4863795f98329}
+
+
+Overload of binary operator $\ast$. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & Left operand (a vector) \\
+\hline
+{\em right} & Right operand (a scalar value)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Memberwise multiplication by {\itshape right} 
+\end{DoxyReturn}
+\hypertarget{class_triton_1_1_util_1_1_vector3_aa6f2b0d9f79c1b9774759b7087affbb1}{}\index{Triton\+::\+Util\+::\+Vector3@{Triton\+::\+Util\+::\+Vector3}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Triton\+::\+Util\+::\+Vector3@{Triton\+::\+Util\+::\+Vector3}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Vector3}$<$ T $>$ operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{T}]{left, }
+\item[{const {\bf Vector3}$<$ T $>$ \&}]{right}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [related]}}\label{class_triton_1_1_util_1_1_vector3_aa6f2b0d9f79c1b9774759b7087affbb1}
+
+
+Overload of binary operator $\ast$. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & Left operand (a scalar value) \\
+\hline
+{\em right} & Right operand (a vector)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Memberwise multiplication by {\itshape left} 
+\end{DoxyReturn}
+\hypertarget{class_triton_1_1_util_1_1_vector3_ad5fb972775ce8ab58cd9670789e806a7}{}\index{Triton\+::\+Util\+::\+Vector3@{Triton\+::\+Util\+::\+Vector3}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!Triton\+::\+Util\+::\+Vector3@{Triton\+::\+Util\+::\+Vector3}}
+\subsubsection[{operator$\ast$=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Vector3}$<$ T $>$ \& operator$\ast$= (
+\begin{DoxyParamCaption}
+\item[{{\bf Vector3}$<$ T $>$ \&}]{left, }
+\item[{T}]{right}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [related]}}\label{class_triton_1_1_util_1_1_vector3_ad5fb972775ce8ab58cd9670789e806a7}
+
+
+Overload of binary operator $\ast$=. 
+
+This operator performs a memberwise multiplication by {\itshape right}, and assigns the result to {\itshape left}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & Left operand (a vector) \\
+\hline
+{\em right} & Right operand (a scalar value)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to {\itshape left} 
+\end{DoxyReturn}
+\hypertarget{class_triton_1_1_util_1_1_vector3_a6500a0cb00e07801e9e9d7e96852ddd3}{}\index{Triton\+::\+Util\+::\+Vector3@{Triton\+::\+Util\+::\+Vector3}!operator+@{operator+}}
+\index{operator+@{operator+}!Triton\+::\+Util\+::\+Vector3@{Triton\+::\+Util\+::\+Vector3}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Vector3}$<$ T $>$ operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector3}$<$ T $>$ \&}]{left, }
+\item[{const {\bf Vector3}$<$ T $>$ \&}]{right}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [related]}}\label{class_triton_1_1_util_1_1_vector3_a6500a0cb00e07801e9e9d7e96852ddd3}
+
+
+Overload of binary operator +. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & Left operand (a vector) \\
+\hline
+{\em right} & Right operand (a vector)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Memberwise addition of both vectors 
+\end{DoxyReturn}
+\hypertarget{class_triton_1_1_util_1_1_vector3_abc28859af163c63318ea2723b81c5ad9}{}\index{Triton\+::\+Util\+::\+Vector3@{Triton\+::\+Util\+::\+Vector3}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Triton\+::\+Util\+::\+Vector3@{Triton\+::\+Util\+::\+Vector3}}
+\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Vector3}$<$ T $>$ \& operator+= (
+\begin{DoxyParamCaption}
+\item[{{\bf Vector3}$<$ T $>$ \&}]{left, }
+\item[{const {\bf Vector3}$<$ T $>$ \&}]{right}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [related]}}\label{class_triton_1_1_util_1_1_vector3_abc28859af163c63318ea2723b81c5ad9}
+
+
+Overload of binary operator +=. 
+
+This operator performs a memberwise addition of both vectors, and assigns the result to {\itshape left}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & Left operand (a vector) \\
+\hline
+{\em right} & Right operand (a vector)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to {\itshape left} 
+\end{DoxyReturn}
+\hypertarget{class_triton_1_1_util_1_1_vector3_a9b75d2fb9b0f2fd9fe33f8f06f9dda75}{}\index{Triton\+::\+Util\+::\+Vector3@{Triton\+::\+Util\+::\+Vector3}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Triton\+::\+Util\+::\+Vector3@{Triton\+::\+Util\+::\+Vector3}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Vector3}$<$ T $>$ operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector3}$<$ T $>$ \&}]{left}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [related]}}\label{class_triton_1_1_util_1_1_vector3_a9b75d2fb9b0f2fd9fe33f8f06f9dda75}
+
+
+Overload of unary operator -\/. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & Vector to negate\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Memberwise opposite of the vector 
+\end{DoxyReturn}
+\hypertarget{class_triton_1_1_util_1_1_vector3_abe0b9411c00cf807bf8a5f835874bd2a}{}\index{Triton\+::\+Util\+::\+Vector3@{Triton\+::\+Util\+::\+Vector3}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Triton\+::\+Util\+::\+Vector3@{Triton\+::\+Util\+::\+Vector3}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Vector3}$<$ T $>$ operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector3}$<$ T $>$ \&}]{left, }
+\item[{const {\bf Vector3}$<$ T $>$ \&}]{right}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [related]}}\label{class_triton_1_1_util_1_1_vector3_abe0b9411c00cf807bf8a5f835874bd2a}
+
+
+Overload of binary operator -\/. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & Left operand (a vector) \\
+\hline
+{\em right} & Right operand (a vector)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Memberwise subtraction of both vectors 
+\end{DoxyReturn}
+\hypertarget{class_triton_1_1_util_1_1_vector3_aa465672d2a4ee5fd354e585cf08d2ab9}{}\index{Triton\+::\+Util\+::\+Vector3@{Triton\+::\+Util\+::\+Vector3}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!Triton\+::\+Util\+::\+Vector3@{Triton\+::\+Util\+::\+Vector3}}
+\subsubsection[{operator-\/=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Vector3}$<$ T $>$ \& operator-\/= (
+\begin{DoxyParamCaption}
+\item[{{\bf Vector3}$<$ T $>$ \&}]{left, }
+\item[{const {\bf Vector3}$<$ T $>$ \&}]{right}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [related]}}\label{class_triton_1_1_util_1_1_vector3_aa465672d2a4ee5fd354e585cf08d2ab9}
+
+
+Overload of binary operator -\/=. 
+
+This operator performs a memberwise subtraction of both vectors, and assigns the result to {\itshape left}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & Left operand (a vector) \\
+\hline
+{\em right} & Right operand (a vector)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to {\itshape left} 
+\end{DoxyReturn}
+\hypertarget{class_triton_1_1_util_1_1_vector3_ad4ba4a83de236ddeb92a7b759187e90d}{}\index{Triton\+::\+Util\+::\+Vector3@{Triton\+::\+Util\+::\+Vector3}!operator/@{operator/}}
+\index{operator/@{operator/}!Triton\+::\+Util\+::\+Vector3@{Triton\+::\+Util\+::\+Vector3}}
+\subsubsection[{operator/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Vector3}$<$ T $>$ operator/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector3}$<$ T $>$ \&}]{left, }
+\item[{T}]{right}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [related]}}\label{class_triton_1_1_util_1_1_vector3_ad4ba4a83de236ddeb92a7b759187e90d}
+
+
+Overload of binary operator /. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & Left operand (a vector) \\
+\hline
+{\em right} & Right operand (a scalar value)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Memberwise division by {\itshape right} 
+\end{DoxyReturn}
+\hypertarget{class_triton_1_1_util_1_1_vector3_a8995a700f9dffccc6dddb3696ae17b64}{}\index{Triton\+::\+Util\+::\+Vector3@{Triton\+::\+Util\+::\+Vector3}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!Triton\+::\+Util\+::\+Vector3@{Triton\+::\+Util\+::\+Vector3}}
+\subsubsection[{operator/=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Vector3}$<$ T $>$ \& operator/= (
+\begin{DoxyParamCaption}
+\item[{{\bf Vector3}$<$ T $>$ \&}]{left, }
+\item[{T}]{right}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [related]}}\label{class_triton_1_1_util_1_1_vector3_a8995a700f9dffccc6dddb3696ae17b64}
+
+
+Overload of binary operator /=. 
+
+This operator performs a memberwise division by {\itshape right}, and assigns the result to {\itshape left}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & Left operand (a vector) \\
+\hline
+{\em right} & Right operand (a scalar value)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to {\itshape left} 
+\end{DoxyReturn}
+\hypertarget{class_triton_1_1_util_1_1_vector3_a388d72db973306a35ba467016b3dee30}{}\index{Triton\+::\+Util\+::\+Vector3@{Triton\+::\+Util\+::\+Vector3}!operator==@{operator==}}
+\index{operator==@{operator==}!Triton\+::\+Util\+::\+Vector3@{Triton\+::\+Util\+::\+Vector3}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector3}$<$ T $>$ \&}]{left, }
+\item[{const {\bf Vector3}$<$ T $>$ \&}]{right}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [related]}}\label{class_triton_1_1_util_1_1_vector3_a388d72db973306a35ba467016b3dee30}
+
+
+Overload of binary operator ==. 
+
+This operator compares strict equality between two vectors.
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & Left operand (a vector) \\
+\hline
+{\em right} & Right operand (a vector)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if {\itshape left} is equal to {\itshape right} 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_triton_1_1_util_1_1_vector3_ac42aa6f29ac37a866b49cbc1d8e66f74}{}\index{Triton\+::\+Util\+::\+Vector3@{Triton\+::\+Util\+::\+Vector3}!m\+\_\+\+Z\+Position@{m\+\_\+\+Z\+Position}}
+\index{m\+\_\+\+Z\+Position@{m\+\_\+\+Z\+Position}!Triton\+::\+Util\+::\+Vector3@{Triton\+::\+Util\+::\+Vector3}}
+\subsubsection[{m\+\_\+\+Z\+Position}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T = int$>$ T {\bf Triton\+::\+Util\+::\+Vector3}$<$ T $>$\+::m\+\_\+\+Z\+Position}\label{class_triton_1_1_util_1_1_vector3_ac42aa6f29ac37a866b49cbc1d8e66f74}
+
+
+Z coordinate of the vector. 
+
+
+
+Definition at line 118 of file Vector3.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+util/\hyperlink{_vector3_8hpp}{Vector3.\+hpp}\end{DoxyCompactItemize}

@@ -1,7 +1,7 @@
 #ifndef _LUS_ANGLE_H_
 #define _LUS_ANGLE_H_
 
-namespace Tri
+namespace Triton
 {
 	namespace Util
 	{
